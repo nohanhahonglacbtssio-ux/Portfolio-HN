@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
-        <title>Infrastructure | Nohan HA-HONG-LAC</title>
+        <title>NovaTech | Nohan HA-HONG-LAC</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -19,6 +19,7 @@
                 color: var(--soft-white);
             }
 
+            /* Sidebar Prestige */
             #header { 
                 background-color: var(--deep-black) !important; 
                 border-right: 1px solid var(--gold);
@@ -43,6 +44,7 @@
 
             .image.avatar:hover { transform: scale(1.05) rotate(2deg); }
 
+            /* Navigation & Boutons */
             nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
             nav ul li { margin-bottom: 15px; }
 
@@ -65,6 +67,7 @@
                 transform: translateY(-2px);
             }
 
+            /* Contenu Principal */
             h2 { 
                 color: var(--gold); 
                 border-bottom: 2px solid var(--gold); 
@@ -76,6 +79,7 @@
             }
 
             #main { padding: 5em; }
+
             strong { color: var(--gold); }
             
             section {
@@ -93,6 +97,7 @@
             <div class="inner">
                 <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
                 <h1><strong>Nohan HA-HONG-LAC</strong></h1>
+                <p style="color: var(--gold); font-style: italic;">Contexte Professionnel</p>
                 <nav>
                     <ul>
                         <li><a href="index.html" class="button fit">Accueil</a></li>
@@ -106,17 +111,22 @@
         </header>
 
         <div id="main">
-            <section>
+            <section id="one">
                 <header class="major">
-                    <h2>Infrastructure NovaTech</h2>
+                    <h2>Infrastructure NovaTech IT</h2>
                 </header>
-                <h3 style="color: var(--gold);">Environnement de Production</h3>
-                <p>Gestion d'un système virtualisé sous <strong>Proxmox</strong> comprenant :</p>
+                <p><strong>NovaTech IT</strong> est le contexte fil rouge utilisé durant ma formation. Il simule une entreprise de services du numérique gérant une infrastructure complexe et hybride.</p>
+                
+                <h3 style="color: var(--gold);">Environnement Technique</h3>
                 <ul>
-                    <li><strong>Active Directory :</strong> Gestion des utilisateurs et GPO.</li>
-                    <li><strong>VLANs :</strong> Segmentation réseau pour la sécurité des flux.</li>
-                    <li><strong>Supervision :</strong> Monitoring des services avec <strong>Zabbix</strong>.</li>
+                    <li><strong>Virtualisation :</strong> Cluster de serveurs sous <strong>Proxmox VE</strong> assurant la haute disponibilité.</li>
+                    <li><strong>Services Réseau :</strong> Architecture segmentée via <strong>VLANs</strong>, pare-feu <strong>pfsense</strong> et routage inter-VLAN.</li>
+                    <li><strong>Systèmes :</strong> Gestion d'un parc mixte <strong>Windows Server</strong> (Active Directory, GPO) et serveurs <strong>Linux Debian/Ubuntu</strong>.</li>
+                    <li><strong>Supervision :</strong> Monitoring permanent des services critiques via <strong>Zabbix</strong> et remontée d'alertes.</li>
                 </ul>
+
+                <h3 style="color: var(--gold);">Enjeux de Cybersécurité</h3>
+                <p>Le contexte NovaTech intègre des problématiques réelles de protection des données, de gestion des droits d'accès et de maintien en condition opérationnelle (MCO) face aux menaces actuelles.</p>
             </section>
         </div>
     </body>
