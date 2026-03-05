@@ -39,11 +39,11 @@
             .image.avatar { 
                 border: 2px solid var(--gold); 
                 padding: 0; 
-                transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+                transition: transform 0.5s ease, box-shadow 0.5s ease;
                 background: none;
                 display: inline-block;
                 
-                /* Dimensions identiques obligatoires pour éviter l'ovale */
+                /* Largeur et hauteur égales pour garantir un cercle */
                 width: 150px; 
                 height: 150px; 
                 border-radius: 50% !important; 
@@ -54,8 +54,10 @@
             .image.avatar img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover; /* Remplit le cercle sans déformer l'image */
-                object-position: center 20%; /* Centre sur ton visage */
+                /* Remplit le cercle sans déformer */
+                object-fit: cover; 
+                /* Centre l'image sur ton visage */
+                object-position: center 20%; 
                 border-radius: 50%;
                 display: block;
             }
@@ -63,7 +65,7 @@
             .image.avatar:hover { 
                 transform: scale(1.05) rotate(2deg); 
                 box-shadow: 0 0 15px var(--gold); 
-                border-color: #fff; /* Lueur blanche au survol */
+                border-color: #fff;
             }
 
             /* Navigation & Boutons */
