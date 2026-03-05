@@ -6,84 +6,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <style>
-            /* --- CONFIGURATION DYNASTIE --- */
+            /* --- CONFIGURATION GENERALE --- */
             :root {
                 --gold: #D4AF37;
                 --deep-black: #0a0a0a;
-                --soft-white: #e0e0e0;
             }
 
             body { 
                 background: radial-gradient(circle at top right, #1a1a1a, #050505);
-                font-family: 'Georgia', serif !important; 
-                color: var(--soft-white);
+                color: #e0e0e0;
             }
 
-            /* Sidebar Prestige */
             #header { 
                 background-color: var(--deep-black) !important; 
                 border-right: 1px solid var(--gold);
-                box-shadow: 5px 0 25px rgba(0,0,0,0.7);
                 text-align: center;
             }
 
-            /* --- RÉGLAGE CERCLE ABSOLU --- */
-            .image.avatar { 
-                border: 2px solid var(--gold) !important; 
+            /* --- FORCE LE CERCLE PARFAIT --- */
+            #mon-avatar-rond { 
+                display: block !important;
+                margin: 0 auto 2em auto !important;
+                width: 150px !important;  /* Largeur fixe */
+                height: 150px !important; /* Hauteur identique pour le cercle */
+                border-radius: 50% !important; /* Arrondi parfait */
+                border: 2px solid var(--gold) !important;
+                overflow: hidden !important; /* Coupe l'image qui dépasse */
                 padding: 0 !important;
-                transition: transform 0.5s ease, box-shadow 0.5s ease;
-                display: inline-block !important;
-                
-                /* On force le carré parfait pour éviter l'ovale des captures */
-                width: 160px !important; 
-                height: 160px !important; 
-                border-radius: 50% !important; 
-                overflow: hidden !important; 
-                box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-                background: none !important;
+                box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
             }
 
-            .image.avatar img {
+            #mon-avatar-rond img {
                 width: 100% !important;
                 height: 100% !important;
-                object-fit: cover !important; /* Pour que ta photo rectangulaire remplisse le cercle */
-                object-position: center 25%; /* Ajusté pour bien voir ton visage */
+                object-fit: cover !important; /* Zoom pour remplir le cercle */
+                object-position: center 20% !important; /* Cadre ton visage */
                 border-radius: 50% !important;
-                display: block !important;
             }
 
-            .image.avatar:hover { 
-                transform: scale(1.05) rotate(2deg); 
-                box-shadow: 0 0 20px var(--gold); 
-            }
-
-            /* Typographie & Boutons */
+            /* --- NAVIGATION ET TYPO --- */
             h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 4px; }
-            h2 { color: var(--gold); border-bottom: 2px solid var(--gold); text-transform: uppercase; }
-            
             .button.fit { 
                 background: rgba(212, 175, 55, 0.05) !important; 
                 border: 1px solid rgba(212, 175, 55, 0.3) !important; 
-                color: var(--gold) !important; 
-                border-radius: 0; 
+                color: var(--gold) !important;
+                margin-bottom: 10px;
             }
-
-            .button.fit:hover { 
-                background: var(--gold) !important;
-                color: #000 !important;
-            }
-
-            #main { padding: 5em; }
-            strong { color: var(--gold); }
+            .button.fit:hover { background: var(--gold) !important; color: #000 !important; }
+            h2 { color: var(--gold); border-bottom: 2px solid var(--gold); }
         </style>
     </head>
     <body class="is-preload">
 
         <header id="header">
             <div class="inner">
-                <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
+                <div id="mon-avatar-rond">
+                    <img src="images/avatar.jpg" alt="Nohan" />
+                </div>
                 <h1><strong>Nohan HA-HONG-LAC</strong></h1>
-                <p style="color: var(--gold); font-style: italic; margin-top: 10px;">Étudiant BTS SIO</p>
+                <p style="color: var(--gold); font-style: italic;">Étudiant BTS SIO</p>
                 
                 <nav id="nav">
                     <ul>
@@ -98,29 +79,19 @@
         </header>
 
         <div id="main">
-            <section id="one">
-                <header class="major">
-                    <h2>Expertise & Ambition</h2>
-                </header>
-                <p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
-                <p>Mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
-                <ul class="actions">
-                    <li><a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">Explorer mon parcours</a></li>
-                </ul>
+            <section>
+                <h2>Expertise & Ambition</h2>
+                <p>Bienvenue sur mon portfolio. Étudiant en <strong>BTS SIO</strong> option SISR, je me spécialise dans l'administration système et la sécurité.</p>
+                <p>Mon objectif : rejoindre la <strong>Gendarmerie Nationale</strong> en tant qu'enquêteur <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
+                <a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">Mon Parcours</a>
             </section>
 
-            <section id="three">
-                <h2>Me Contacter</h2>
-                <ul class="labeled-icons">
-                    <li>
-                        <h3 class="icon solid fa-envelope" style="color:var(--gold)"><span class="label">Email</span></h3>
-                        <a href="mailto:nohan.hahonglac.bts.sio@gmail.com" style="color:var(--gold)">nohan.hahonglac.bts.sio@gmail.com</a>
-                    </li>
-                    <li>
-                        <h3 class="icon solid fa-home" style="color:var(--gold)"><span class="label">Lieu</span></h3>
-                        Saint-Joseph, La Réunion
-                    </li>
-                </ul>
+            <section>
+                <h2>Contact</h2>
+                <p>
+                    <i class="icon solid fa-envelope"></i> <a href="mailto:nohan.hahonglac.bts.sio@gmail.com" style="color:var(--gold)">nohan.hahonglac.bts.sio@gmail.com</a><br />
+                    <i class="icon solid fa-home"></i> Saint-Joseph, La Réunion
+                </p>
             </section>
         </div>
 
@@ -131,11 +102,6 @@
         </footer>
 
         <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.poptrox.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
     </body>
 </html>
