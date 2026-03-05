@@ -41,20 +41,22 @@
                 padding: 4px; 
                 transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
                 background: none;
-                border-radius: 50%; /* Rend l'image circulaire */
+                border-radius: 50%; /* Forme circulaire */
                 overflow: hidden;
                 display: inline-block;
             }
 
             .image.avatar img {
-                border-radius: 50%; /* Assure que l'image interne suit le cercle */
+                border-radius: 50%; /* L'image épouse le cercle */
                 display: block;
+                width: 100%;
+                height: auto;
             }
 
             .image.avatar:hover { 
                 transform: scale(1.05) rotate(2deg); 
                 box-shadow: 0 0 15px var(--gold); /* Lueur dorée */
-                border-color: #fff; /* Bord devient blanc brillant */
+                border-color: #fff; /* Bord blanc brillant */
             }
 
             /* Navigation & Boutons */
@@ -102,6 +104,11 @@
                 from { opacity: 0; transform: translateY(10px); }
                 to { opacity: 1; transform: translateY(0); }
             }
+
+            /* Icônes de contact */
+            .labeled-icons li h3 { color: var(--gold) !important; }
+            .labeled-icons li a { color: var(--gold) !important; text-decoration: none; }
+            .labeled-icons li a:hover { text-decoration: underline; }
         </style>
     </head>
     <body class="is-preload">
@@ -130,10 +137,10 @@
                 <header class="major">
                     <h2>Expertise & Ambition</h2>
                 </header>
-                <p>Bienvenue sur mon portfolio professionnel. Étudiant passionné par les systèmes d'information et la cybersécurité, je forge actuellement mes compétences en <strong>BTS SISR</strong>.</p>
-                <p>Mon objectif est clair : mettre mon expertise technique au service de la loi en intégrant la <strong>Gendarmerie Nationale</strong> en tant qu'enquêteur <strong>N-TECH</strong>.</p>
+                <p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SISR</strong>, je développe des compétences pointues en administration systèmes et réseaux.</p>
+                <p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH</strong> (Enquêteur en Technologies Numériques).</p>
                 <ul class="actions">
-                    <li><a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">En savoir plus sur mon parcours</a></li>
+                    <li><a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">Explorer mon parcours</a></li>
                 </ul>
             </section>
 
@@ -141,12 +148,12 @@
                 <h2>Domaines d'Intervention</h2>
                 <div class="row">
                     <article class="col-6 col-12-xsmall work-item">
-                        <h3 style="color: var(--gold);">Cyber-Sécurité</h3>
-                        <p>Surveillance SIEM avec Wazuh, audit de vulnérabilités et veille technologique constante.</p>
+                        <h3 style="color: var(--gold);">Cybersécurité</h3>
+                        <p>Surveillance SIEM, analyse de logs et sécurisation des accès distants.</p>
                     </article>
                     <article class="col-6 col-12-xsmall work-item">
-                        <h3 style="color: var(--gold);">Infrastructure</h3>
-                        <p>Virtualisation sous Proxmox, gestion Active Directory et segmentation réseau (VLAN).</p>
+                        <h3 style="color: var(--gold);">Infrastructures</h3>
+                        <p>Administration Proxmox, Windows Server, Linux et segmentation réseau.</p>
                     </article>
                 </div>
             </section>
@@ -157,12 +164,12 @@
                     <div class="col-8 col-12-small">
                         <ul class="labeled-icons">
                             <li>
-                                <h3 class="icon solid fa-home"><span class="label">Lieu</span></h3>
-                                Saint-Joseph, La Réunion
+                                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                                <a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
                             </li>
                             <li>
-                                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                                <a href="mailto:votre-email@exemple.com" style="color: var(--gold);">nohan.hahonglac@exemple.com</a>
+                                <h3 class="icon solid fa-home"><span class="label">Localisation</span></h3>
+                                Saint-Joseph, La Réunion
                             </li>
                         </ul>
                     </div>
