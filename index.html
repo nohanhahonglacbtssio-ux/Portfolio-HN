@@ -1,42 +1,36 @@
 <!DOCTYPE HTML>
-<html lang="fr">
+<html>
 	<head>
 		<title>Nohan HA-HONG-LAC | Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- STYLE PRESTIGE --- */
+			/* Ajustements légers pour respecter tes demandes sans casser l'ancien style */
 			#header h1 strong { color: #D4AF37 !important; }
 			h2 { color: #D4AF37 !important; border-bottom-color: #D4AF37 !important; }
 			
-			/* --- NAVIGATION SANS POINTS (image_81a93b.png) --- */
-			#nav ul { 
-				list-style: none !important; 
-				padding: 0 !important; 
-				margin: 2em 0 0 0 !important;
-			}
-
-			#nav ul li {
-				padding: 0 !important;
-				margin-bottom: 10px;
-			}
-
-			/* --- CERCLE PARFAIT (image_81b4bd.png) --- */
+			/* Correction définitive du cercle pour l'image */
 			.image.avatar {
 				width: 150px !important;
 				height: 150px !important;
-				border-radius: 50% !important;
-				overflow: hidden !important;
-				display: inline-block !important;
-				border: 2px solid #D4AF37 !important;
-				padding: 0 !important;
+				border-radius: 100% !important;
+				overflow: hidden;
+				display: inline-block;
+				border: 2px solid #D4AF37;
+				padding: 0; /* Suppression du padding pour un cercle net */
 			}
 			.image.avatar img {
 				width: 100% !important;
 				height: 100% !important;
-				object-fit: cover !important; /* Empêche l'ovale */
-				object-position: center 20%;
+				object-fit: cover; /* Empêche l'ovale */
+				border-radius: 100%;
+			}
+
+			/* Suppression des points à gauche dans la navigation */
+			#nav ul {
+				list-style: none !important;
+				padding: 0 !important;
 			}
 		</style>
 	</head>
@@ -44,11 +38,11 @@
 
 		<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Portrait de Nohan" /></a>
 					<h1><strong>Nohan HA-HONG-LAC</strong></h1>
 					<p style="color: #D4AF37; font-style: italic;">Étudiant BTS SIO</p>
 					
-					<nav id="nav">
+					<nav id="nav" style="margin-top: 2em;">
 						<ul>
 							<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
 							<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
