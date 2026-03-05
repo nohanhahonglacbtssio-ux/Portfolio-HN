@@ -6,25 +6,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Ajustements légers pour respecter tes demandes sans casser l'ancien style */
+			/* Ajustements pour le style prestige */
 			#header h1 strong { color: #D4AF37 !important; }
 			h2 { color: #D4AF37 !important; border-bottom-color: #D4AF37 !important; }
 			
-			/* Correction définitive du cercle pour l'image */
+			/* --- SUPPRESSION DES POINTS À GAUCHE --- */
+			#nav ul { 
+				list-style: none !important; /* Enlève les puces */
+				padding: 0 !important; 
+				margin: 0 !important;
+			}
+
+			#nav ul li {
+				padding: 0 !important;
+				margin-bottom: 10px; /* Espace entre les boutons */
+			}
+
+			/* --- FIX DU CERCLE PARFAIT --- */
 			.image.avatar {
-				width: 150px;
-				height: 150px;
-				border-radius: 100% !important;
-				overflow: hidden;
-				display: inline-block;
-				border: 2px solid #D4AF37;
-				padding: 0; /* Suppression du padding pour un cercle net */
+				width: 150px !important;
+				height: 150px !important;
+				border-radius: 50% !important;
+				overflow: hidden !important;
+				display: inline-block !important;
+				border: 2px solid #D4AF37 !important;
+				padding: 0 !important;
 			}
 			.image.avatar img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover; /* Empêche l'ovale */
-				border-radius: 100%;
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover !important; /* Empêche l'ovale */
 			}
 		</style>
 	</head>
@@ -32,12 +43,12 @@
 
 		<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Portrait de Nohan" /></a>
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
 					<h1><strong>Nohan HA-HONG-LAC</strong></h1>
 					<p style="color: #D4AF37; font-style: italic;">Étudiant BTS SIO</p>
 					
-					<nav id="nav" style="margin-top: 2em;">
-						<ul style="list-style: none; padding: 0;">
+					<nav id="nav">
+						<ul>
 							<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
 							<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
 							<li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
@@ -49,33 +60,27 @@
 			</header>
 
 		<div id="main">
-
 				<section id="one">
-						<header class="major">
-							<h2>Expertise & Ambition</h2>
-						</header>
-						<p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
-						<p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
-					</section>
+					<header class="major">
+						<h2>Expertise & Ambition</h2>
+					</header>
+					<p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
+					<p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
+				</section>
 
 				<section id="three">
-						<h2>Me Contacter</h2>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
-									</li>
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Adresse</span></h3>
-										Saint-Joseph, La Réunion
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
+					<h2>Me Contacter</h2>
+					<ul class="labeled-icons">
+						<li>
+							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+							<a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
+						</li>
+						<li>
+							<h3 class="icon solid fa-home"><span class="label">Adresse</span></h3>
+							Saint-Joseph, La Réunion
+						</li>
+					</ul>
+				</section>
 			</div>
 
 		<footer id="footer">
@@ -92,6 +97,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
