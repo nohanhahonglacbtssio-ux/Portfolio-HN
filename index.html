@@ -1,43 +1,126 @@
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
-        <title>Nohan HA-HONG-LAC | Portfolio</title>
+        <title>Nohan HA-HONG-LAC | Excellence SISR</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <style>
-            body, h1, h2, h3, p { font-family: 'Georgia', serif !important; color: #f4f4f4; }
-            #header { background-color: #000; border-right: 2px solid #D4AF37; text-align: center; }
-            h1 strong { color: #D4AF37 !important; text-transform: uppercase; letter-spacing: 2px; }
-            .image.avatar { border: 2px solid #D4AF37; padding: 5px; background: none; }
-            nav ul { list-style: none; padding: 0; margin-top: 2em; }
-            nav ul li { margin-bottom: 12px; }
-            .button.fit { background: transparent !important; border: 1px solid #D4AF37 !important; color: #D4AF37 !important; text-transform: uppercase; transition: all 0.4s ease; }
-            .button.fit:hover { background: #D4AF37 !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
-            h2 { color: #D4AF37; border-bottom: 1px solid #D4AF37; padding-bottom: 10px; text-transform: uppercase; }
+            /* --- CONFIGURATION DYNASTIE --- */
+            :root {
+                --gold: #D4AF37;
+                --deep-black: #0a0a0a;
+                --soft-white: #e0e0e0;
+            }
+
+            body { 
+                background: radial-gradient(circle at top right, #1a1a1a, #050505);
+                font-family: 'Georgia', serif !important; 
+                color: var(--soft-white);
+            }
+
+            /* Sidebar Prestige */
+            #header { 
+                background-color: var(--deep-black) !important; 
+                border-right: 1px solid var(--gold);
+                box-shadow: 5px 0 25px rgba(0,0,0,0.7);
+                text-align: center;
+            }
+
+            h1 strong { 
+                color: var(--gold) !important; 
+                text-transform: uppercase; 
+                letter-spacing: 4px; 
+                font-size: 1.2em;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+
+            .image.avatar { 
+                border: 1px solid var(--gold); 
+                padding: 4px; 
+                transition: transform 0.5s ease;
+                background: none;
+            }
+
+            .image.avatar:hover { transform: scale(1.05) rotate(2deg); }
+
+            /* Navigation & Boutons */
+            nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
+            nav ul li { margin-bottom: 15px; }
+
+            .button.fit { 
+                background: rgba(212, 175, 55, 0.05) !important; 
+                border: 1px solid rgba(212, 175, 55, 0.3) !important; 
+                color: var(--gold) !important; 
+                text-transform: uppercase; 
+                letter-spacing: 2px;
+                font-size: 0.75em !important;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-radius: 0; /* Garder l'aspect tranchant/noble */
+            }
+
+            .button.fit:hover { 
+                border-color: var(--gold) !important;
+                background: var(--gold) !important;
+                color: #000 !important;
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+                transform: translateY(-2px);
+            }
+
+            /* Contenu Principal */
+            h2 { 
+                color: var(--gold); 
+                border-bottom: 2px solid var(--gold); 
+                display: inline-block;
+                padding-bottom: 5px;
+                margin-bottom: 1.5em;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            #main { padding: 5em; }
+
+            strong { color: var(--gold); }
+            
+            /* Animation d'entrée */
+            section {
+                animation: fadeIn 1.2s ease-out;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
         </style>
     </head>
     <body class="is-preload">
         <header id="header">
             <div class="inner">
-                <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+                <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
                 <h1><strong>Nohan HA-HONG-LAC</strong></h1>
-                <p style="color: #D4AF37;">Étudiant en BTS SIO <strong>Option SISR</strong><br />Lycée Pierre Poivre</p>
+                <p style="color: var(--gold); font-style: italic; letter-spacing: 1px;">
+                    Expertise Systèmes & Réseaux<br />
+                    <span style="color: white; font-size: 0.9em;">Lycée Pierre Poivre</span>
+                </p>
                 <nav>
                     <ul>
                         <li><a href="cv.html" class="button fit">Parcours & CV</a></li>
-                        <li><a href="bts-sisr.html" class="button fit">Stages BTS</a></li>
-                        <li><a href="bacpro-sn.html" class="button fit">Stages Bac Pro</a></li>
-                        <li><a href="contexte-bts.html" class="button fit">Contexte BTS</a></li>
-                        <li><a href="veille.html" class="button fit">Veille Tech</a></li>
+                        <li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
+                        <li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
+                        <li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
+                        <li><a href="veille.html" class="button fit">Veille Cyber</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <div id="main" style="background: #0b0b0b;">
+
+        <div id="main">
             <section>
-                <header class="major"><h2>Profil & Objectifs</h2></header>
-                <p>Passionné par les infrastructures réseaux et la cybersécurité. Mon objectif est de poursuivre mes études à <strong>Marseille</strong> pour intégrer la <strong>Gendarmerie Nationale</strong> en tant qu'enquêteur numérique (N-TECH).</p>
+                <header class="major">
+                    <h2>Profil & Ambition</h2>
+                </header>
+                <p>Bienvenue dans cet espace dédié à l'ingénierie des systèmes. Mon parcours est forgé par la rigueur technique et une vision claire : mettre mes compétences au service de la <strong>Gendarmerie Nationale</strong> (N-TECH).</p>
+                <p>Spécialiste en devenir des solutions <strong>Debian, Proxmox et Cisco</strong>, je construis chaque jour les fondations de ma future expertise en cybersécurité.</p>
             </section>
         </div>
     </body>
