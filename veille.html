@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
-        <title>Veille | Nohan HA-HONG-LAC</title>
+        <title>Veille Cyber | Nohan HA-HONG-LAC</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -19,6 +19,7 @@
                 color: var(--soft-white);
             }
 
+            /* Sidebar Prestige */
             #header { 
                 background-color: var(--deep-black) !important; 
                 border-right: 1px solid var(--gold);
@@ -43,6 +44,7 @@
 
             .image.avatar:hover { transform: scale(1.05) rotate(2deg); }
 
+            /* Navigation & Boutons */
             nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
             nav ul li { margin-bottom: 15px; }
 
@@ -65,6 +67,7 @@
                 transform: translateY(-2px);
             }
 
+            /* Contenu Principal */
             h2 { 
                 color: var(--gold); 
                 border-bottom: 2px solid var(--gold); 
@@ -76,6 +79,7 @@
             }
 
             #main { padding: 5em; }
+
             strong { color: var(--gold); }
             
             section {
@@ -93,6 +97,7 @@
             <div class="inner">
                 <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
                 <h1><strong>Nohan HA-HONG-LAC</strong></h1>
+                <p style="color: var(--gold); font-style: italic;">Veille Technologique</p>
                 <nav>
                     <ul>
                         <li><a href="index.html" class="button fit">Accueil</a></li>
@@ -106,16 +111,25 @@
         </header>
 
         <div id="main">
-            <section>
+            <section id="one">
                 <header class="major">
-                    <h2>Veille Cyber</h2>
+                    <h2>Veille Technologique & Cyber</h2>
                 </header>
-                <h3 style="color: var(--gold);">Objectif N-TECH</h3>
-                <p>Dans le but d'intégrer la Gendarmerie en tant qu'enquêteur numérique, je suis l'évolution des cyber-menaces :</p>
+                <p>Ma veille porte sur l'évolution de la <strong>cybercriminalité</strong> et des outils de <strong>Forensics</strong> (investigation numérique). Cette démarche s'inscrit directement dans mon projet professionnel d'intégrer les unités <strong>N-TECH</strong> de la Gendarmerie Nationale.</p>
+                
+                <h3 style="color: var(--gold);">Thématiques Surveillées</h3>
                 <ul>
-                    <li><strong>Phénomènes :</strong> Ransomwares, ingénierie sociale et vulnérabilités Zero-Day.</li>
-                    <li><strong>Sources :</strong> ANSSI, Cybermalveillance.gouv.fr, RSS Feeds.</li>
-                    <li><strong>Forensics :</strong> Étude des méthodes de récupération de données et d'investigation.</li>
+                    <li><strong>Menaces Emergentes :</strong> Analyse des nouveaux types de Ransomwares et des attaques par ingénierie sociale.</li>
+                    <li><strong>Investigation :</strong> Étude des méthodes de récupération de preuves numériques et d'analyse de supports (postes, mobiles).</li>
+                    <li><strong>Vulnérabilités :</strong> Suivi des failles "Zero-Day" via les bulletins de l'ANSSI.</li>
+                </ul>
+
+                <h3 style="color: var(--gold);">Méthodologie et Outils</h3>
+                <p>Pour assurer une veille efficace et structurée, j'utilise plusieurs flux d'informations :</p>
+                <ul>
+                    <li><strong>Flux RSS :</strong> Centralisation des actualités via <em>Feedly</em> (Cybermalveillance.gouv.fr, Le Monde Informatique).</li>
+                    <li><strong>Pratique :</strong> Entraînement régulier sur des plateformes comme <em>TryHackMe</em> pour comprendre les vecteurs d'attaque.</li>
+                    <li><strong>Newsletters :</strong> Abonnement aux alertes critiques du CERT-FR.</li>
                 </ul>
             </section>
         </div>
