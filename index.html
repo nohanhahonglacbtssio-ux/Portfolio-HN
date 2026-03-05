@@ -35,35 +35,31 @@
                 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             }
 
-            /* --- AVATAR ROND PRESTIGE --- */
+            /* --- AVATAR ROND PRESTIGE (image_1.png) --- */
             .image.avatar { 
                 border: 2px solid var(--gold); 
                 padding: 0; 
-                transition: all 0.5s ease;
+                transition: transform 0.5s ease, box-shadow 0.5s ease;
                 background: none;
                 display: inline-block;
                 
                 /* Création du cercle parfait */
                 width: 160px;
                 height: 160px;
-                border-radius: 50% !important; 
+                border-radius: 50%;
                 overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Ombre de profondeur */
             }
 
             .image.avatar img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover; /* Empêche de déformer ta photo */
-                object-position: center top; /* Centre ton visage */
+                object-fit: cover; /* Recadrage automatique sans déformation */
                 border-radius: 50%;
                 display: block;
             }
 
-            .image.avatar:hover { 
-                transform: scale(1.08) rotate(2deg); 
-                box-shadow: 0 0 20px var(--gold); 
-                border-color: #fff; 
-            }
+            .image.avatar:hover { transform: scale(1.05) rotate(2deg); box-shadow: 0 0 15px var(--gold); }
 
             /* Navigation & Boutons */
             nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
@@ -110,9 +106,6 @@
                 from { opacity: 0; transform: translateY(10px); }
                 to { opacity: 1; transform: translateY(0); }
             }
-
-            .labeled-icons li h3 { color: var(--gold) !important; }
-            .labeled-icons li a { color: var(--gold) !important; text-decoration: none; }
         </style>
     </head>
     <body class="is-preload">
@@ -121,7 +114,7 @@
             <div class="inner">
                 <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Nohan HA-HONG-LAC" /></a>
                 <h1><strong>Nohan HA-HONG-LAC</strong></h1>
-                <p style="color: var(--gold); font-style: italic; margin-top: 10px;">Futur Enquêteur Numérique</p>
+                <p style="color: var(--gold); font-style: italic; margin-top: 10px;">Étudiant BTS SIO</p>
                 
                 <nav id="nav">
                     <ul>
@@ -140,8 +133,8 @@
                 <header class="major">
                     <h2>Expertise & Ambition</h2>
                 </header>
-                <p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SISR</strong>, je développe des compétences pointues en administration systèmes et réseaux.</p>
-                <p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH</strong>.</p>
+                <p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
+                <p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités N-TECH.</p>
                 <ul class="actions">
                     <li><a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">Explorer mon parcours</a></li>
                 </ul>
@@ -168,7 +161,7 @@
                         <ul class="labeled-icons">
                             <li>
                                 <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                                <a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
+                                <a href="mailto:nohan.hahonglac.bts.sio@gmail.com" style="color: var(--gold);">nohan.hahonglac.bts.sio@gmail.com</a>
                             </li>
                             <li>
                                 <h3 class="icon solid fa-home"><span class="label">Localisation</span></h3>
