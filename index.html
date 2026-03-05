@@ -1,106 +1,158 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-	<head>
-		<title>Nohan HA-HONG-LAC | Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* On garde juste les couleurs prestige sans casser la structure */
-			:root {
-				--gold: #D4AF37;
-			}
-			#header h1 strong { color: var(--gold) !important; }
-			#header p { color: var(--gold) !important; font-style: italic; }
-			h2 { color: var(--gold) !important; border-bottom-color: var(--gold) !important; }
-			.button.fit { border-color: rgba(212, 175, 55, 0.5) !important; color: var(--gold) !important; }
-			
-			/* Correction pour l'image : on la laisse respirer pour éviter l'ovale forcé */
-			.image.avatar img {
-				border-radius: 100%;
-				border: 2px solid var(--gold);
-				padding: 5px;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+    <head>
+        <title>Nohan HA-HONG-LAC | Excellence SISR</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --gold: #D4AF37;
+                --bg-dark: #0a0a0a;
+            }
 
-		<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-					<p>Étudiant BTS SIO</p>
-					
-					<nav id="nav">
-						<ul>
-							<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
-							<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
-							<li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
-							<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
-							<li><a href="veille.html" class="button fit">Veille Cyber</a></li>
-						</ul>
-					</nav>
-				</div>
-			</header>
+            body { 
+                background: radial-gradient(circle at top right, #1a1a1a, #050505);
+                color: #e0e0e0;
+                font-family: 'Roboto', sans-serif;
+            }
 
-		<div id="main">
+            /* --- HEADER & NAVIGATION --- */
+            #header { 
+                background-color: var(--bg-dark) !important; 
+                border-right: 1px solid var(--gold);
+                text-align: center;
+                padding: 3em 1.5em;
+            }
 
-				<section id="one">
-						<header class="major">
-							<h2>Expertise & Ambition</h2>
-						</header>
-						<p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
-						<p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
-					</section>
+            h1 strong { 
+                font-family: 'Playfair Display', serif;
+                color: var(--gold) !important; 
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
 
-				<section id="two">
-						<h2>Domaines d'Intervention</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<h3 style="color: var(--gold);">Cybersécurité</h3>
-								<p>Surveillance SIEM, analyse de logs et sécurisation des accès distants.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3 style="color: var(--gold);">Infrastructures</h3>
-								<p>Administration Proxmox, Windows Server, Linux et segmentation réseau.</p>
-							</article>
-						</div>
-					</section>
+            /* --- FIX AVATAR CERCLE PARFAIT --- */
+            .image.avatar { 
+                display: block !important;
+                margin: 0 auto 1.5em auto !important;
+                width: 140px !important; 
+                height: 140px !important; 
+                border-radius: 50% !important; 
+                border: 3px solid var(--gold) !important;
+                overflow: hidden !important;
+                padding: 0 !important;
+                background: none !important;
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            }
 
-				<section id="three">
-						<h2>Me Contacter</h2>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
-									</li>
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Adresse</span></h3>
-										Saint-Joseph, La Réunion
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+            .image.avatar img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important; /* Empeche la déformation */
+                object-position: center 20%;
+                display: block !important;
+            }
 
-			</div>
+            .button.fit { 
+                background: transparent !important; 
+                border: 1px solid var(--gold) !important; 
+                color: var(--gold) !important;
+                border-radius: 4px;
+                margin-bottom: 0.8em;
+                transition: 0.3s;
+            }
 
-		<footer id="footer">
-				<div class="inner">
-					<ul class="copyright">
-						<li>&copy; Nohan HA-HONG-LAC</li>
-					</ul>
-				</div>
-			</footer>
+            .button.fit:hover { 
+                background: var(--gold) !important; 
+                color: #000 !important;
+                transform: translateX(5px);
+            }
 
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            /* --- CONTENU --- */
+            h2 { 
+                font-family: 'Playfair Display', serif;
+                color: var(--gold); 
+                border-bottom: 2px solid var(--gold);
+                display: inline-block;
+                margin-bottom: 1.5em;
+            }
 
-	</body>
+            #main { padding: 4em; }
+            .work-item h3 { color: var(--gold); margin-top: 1em; }
+            strong { color: var(--gold); }
+
+            /* --- CONTACT --- */
+            .labeled-icons li h3 { color: var(--gold) !important; }
+            .labeled-icons li a { color: #fff; text-decoration: none; border-bottom: 1px dotted var(--gold); }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <header id="header">
+            <div class="inner">
+                <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
+                <h1><strong>Nohan HA-HONG-LAC</strong></h1>
+                <p style="color: var(--gold); font-style: italic;">Futur Enquêteur Numérique (N-TECH)</p>
+                
+                <nav id="nav">
+                    <ul>
+                        <li><a href="cv.html" class="button fit">Mon Parcours</a></li>
+                        <li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
+                        <li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
+                        <li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
+                        <li><a href="veille.html" class="button fit">Veille Cybersécurité</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="main">
+            <section id="one">
+                <h2>Expertise & Ambition</h2>
+                <p>Étudiant passionné en <strong>BTS SIO (Option SISR)</strong>, je me spécialise dans la sécurisation et l'administration des infrastructures critiques. Mon objectif est de mettre mes compétences au service de la nation en intégrant la Gendarmerie en tant qu'<strong>Enquêteur N-TECH</strong>.</p>
+            </section>
+
+            <section id="two">
+                <h2>Cœur de Compétences</h2>
+                <div class="row">
+                    <article class="col-6 col-12-xsmall work-item">
+                        <h3>Administration Systèmes</h3>
+                        <p>Gestion de serveurs Windows/Linux, Active Directory et environnements virtualisés Proxmox.</p>
+                    </article>
+                    <article class="col-6 col-12-xsmall work-item">
+                        <h3>Sécurité Réseaux</h3>
+                        <p>Segmentation VLAN, configuration de pare-feu et analyse de flux pour prévenir les intrusions.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="three">
+                <h2>Me Contacter</h2>
+                <ul class="labeled-icons">
+                    <li>
+                        <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                        <a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
+                    </li>
+                    <li>
+                        <h3 class="icon solid fa-map-marker-alt"><span class="label">Localisation</span></h3>
+                        Saint-Joseph, La Réunion
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>&copy; Nohan HA-HONG-LAC | Portfolio Professionnel</li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
