@@ -6,22 +6,90 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <style>
-            /* --- COPIE DU BLOC DYNASTIE --- */
-            :root { --gold: #D4AF37; --deep-black: #0a0a0a; --soft-white: #e0e0e0; }
-            body { background: radial-gradient(circle at top right, #1a1a1a, #050505); font-family: 'Georgia', serif !important; color: var(--soft-white); }
-            #header { background-color: var(--deep-black) !important; border-right: 1px solid var(--gold); box-shadow: 5px 0 25px rgba(0,0,0,0.7); text-align: center; }
-            h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 4px; font-size: 1.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-            .image.avatar { border: 1px solid var(--gold); padding: 4px; transition: transform 0.5s ease; background: none; }
+            /* --- CONFIGURATION DYNASTIE --- */
+            :root {
+                --gold: #D4AF37;
+                --deep-black: #0a0a0a;
+                --soft-white: #e0e0e0;
+            }
+
+            body { 
+                background: radial-gradient(circle at top right, #1a1a1a, #050505);
+                font-family: 'Georgia', serif !important; 
+                color: var(--soft-white);
+            }
+
+            /* Sidebar Prestige */
+            #header { 
+                background-color: var(--deep-black) !important; 
+                border-right: 1px solid var(--gold);
+                box-shadow: 5px 0 25px rgba(0,0,0,0.7);
+                text-align: center;
+            }
+
+            h1 strong { 
+                color: var(--gold) !important; 
+                text-transform: uppercase; 
+                letter-spacing: 4px; 
+                font-size: 1.2em;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+
+            .image.avatar { 
+                border: 1px solid var(--gold); 
+                padding: 4px; 
+                transition: transform 0.5s ease;
+                background: none;
+            }
+
             .image.avatar:hover { transform: scale(1.05) rotate(2deg); }
+
+            /* Navigation & Boutons */
             nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
             nav ul li { margin-bottom: 15px; }
-            .button.fit { background: rgba(212, 175, 55, 0.05) !important; border: 1px solid rgba(212, 175, 55, 0.3) !important; color: var(--gold) !important; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75em !important; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 0; }
-            .button.fit:hover { border-color: var(--gold) !important; background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); transform: translateY(-2px); }
-            h2 { color: var(--gold); border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 5px; margin-bottom: 1.5em; text-transform: uppercase; letter-spacing: 2px; }
+
+            .button.fit { 
+                background: rgba(212, 175, 55, 0.05) !important; 
+                border: 1px solid rgba(212, 175, 55, 0.3) !important; 
+                color: var(--gold) !important; 
+                text-transform: uppercase; 
+                letter-spacing: 2px;
+                font-size: 0.75em !important;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-radius: 0; 
+            }
+
+            .button.fit:hover { 
+                border-color: var(--gold) !important;
+                background: var(--gold) !important;
+                color: #000 !important;
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+                transform: translateY(-2px);
+            }
+
+            /* Contenu Principal */
+            h2 { 
+                color: var(--gold); 
+                border-bottom: 2px solid var(--gold); 
+                display: inline-block;
+                padding-bottom: 5px;
+                margin-bottom: 1.5em;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
             #main { padding: 5em; }
+
             strong { color: var(--gold); }
-            section { animation: fadeIn 1.2s ease-out; }
-            @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+            
+            section {
+                animation: fadeIn 1.2s ease-out;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
         </style>
     </head>
     <body class="is-preload">
@@ -29,6 +97,7 @@
             <div class="inner">
                 <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
                 <h1><strong>Nohan HA-HONG-LAC</strong></h1>
+                <p style="color: var(--gold); font-style: italic;">Expertise Systèmes & Réseaux</p>
                 <nav>
                     <ul>
                         <li><a href="index.html" class="button fit">Accueil</a></li>
@@ -40,14 +109,17 @@
                 </nav>
             </div>
         </header>
+
         <div id="main">
             <section>
-                <header class="major"><h2>Missions SISR</h2></header>
+                <header class="major">
+                    <h2>Missions & Stages SISR</h2>
+                </header>
                 <h3 style="color: var(--gold);">Mairie de Saint-Joseph</h3>
-                <p>Projets réalisés en environnement de production :</p>
+                <p>Au cours de mon stage, j'ai eu l'opportunité de déployer des solutions de sécurité et d'accès de haut niveau :</p>
                 <ul>
-                    <li><strong>Wazuh :</strong> Surveillance et détection d'intrusions.</li>
-                    <li><strong>Apache Guacamole :</strong> Centralisation des accès distants sécurisés.</li>
+                    <li><strong>Wazuh :</strong> Implémentation d'un SIEM pour la détection d'intrusions et la centralisation des logs.</li>
+                    <li><strong>Apache Guacamole :</strong> Mise en place d'un portail de rebond pour la gestion sécurisée des accès distants.</li>
                 </ul>
             </section>
         </div>
