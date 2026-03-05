@@ -42,7 +42,10 @@
                 background: none;
             }
 
-            .image.avatar:hover { transform: scale(1.05) rotate(2deg); }
+            .image.avatar:hover { 
+                transform: scale(1.05) rotate(2deg); 
+                box-shadow: 0 0 15px var(--gold);
+            }
 
             /* Navigation & Boutons */
             nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
@@ -56,7 +59,7 @@
                 letter-spacing: 2px;
                 font-size: 0.75em !important;
                 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                border-radius: 0; /* Garder l'aspect tranchant/noble */
+                border-radius: 0; 
             }
 
             .button.fit:hover { 
@@ -82,7 +85,6 @@
 
             strong { color: var(--gold); }
             
-            /* Animation d'entrée */
             section {
                 animation: fadeIn 1.2s ease-out;
             }
@@ -91,23 +93,17 @@
                 from { opacity: 0; transform: translateY(10px); }
                 to { opacity: 1; transform: translateY(0); }
             }
-            .image.avatar:hover { 
-                transform: scale(1.05) rotate(2deg); 
-                box-shadow: 0 0 15px var(--gold); /* Ajoute une lueur dorée */
-                border-color: #fff; /* Le bord devient blanc brillant */
-            }
         </style>
     </head>
     <body class="is-preload">
+
         <header id="header">
             <div class="inner">
-                <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
+                <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Nohan HA-HONG-LAC" /></a>
                 <h1><strong>Nohan HA-HONG-LAC</strong></h1>
-                <p style="color: var(--gold); font-style: italic; letter-spacing: 1px;">
-                    Expertise Systèmes & Réseaux<br />
-                    <span style="color: white; font-size: 0.9em;">Lycée Pierre Poivre</span>
-                </p>
-                <nav>
+                <p style="color: var(--gold); font-style: italic; margin-top: 10px;">Futur Enquêteur Numérique</p>
+                
+                <nav id="nav">
                     <ul>
                         <li><a href="cv.html" class="button fit">Parcours & CV</a></li>
                         <li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
@@ -120,13 +116,67 @@
         </header>
 
         <div id="main">
-            <section>
+
+            <section id="one">
                 <header class="major">
-                    <h2>Profil & Ambition</h2>
+                    <h2>Expertise & Ambition</h2>
                 </header>
-                <p>Bienvenue dans cet espace dédié à l'ingénierie des systèmes. Mon parcours est forgé par la rigueur technique et une vision claire : mettre mes compétences au service de la <strong>Gendarmerie Nationale</strong> (N-TECH).</p>
-                <p>Spécialiste en devenir des solutions <strong>Debian, Proxmox et Cisco</strong>, je construis chaque jour les fondations de ma future expertise en cybersécurité.</p>
+                <p>Bienvenue sur mon portfolio professionnel. Étudiant passionné par les systèmes d'information et la cybersécurité, je forge actuellement mes compétences en <strong>BTS SISR</strong>.</p>
+                <p>Mon objectif est clair : mettre mon expertise technique au service de la loi en intégrant la <strong>Gendarmerie Nationale</strong> en tant qu'enquêteur <strong>N-TECH</strong>. Ce site retrace mon parcours, de mes fondations en Bac Pro SN jusqu'à mes missions d'administration réseau les plus complexes.</p>
+                <ul class="actions">
+                    <li><a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">En savoir plus sur mon parcours</a></li>
+                </ul>
             </section>
+
+            <section id="two">
+                <h2>Domaines d'Intervention</h2>
+                <div class="row">
+                    <article class="col-6 col-12-xsmall work-item">
+                        <h3 style="color: var(--gold);">Cyber-Sécurité</h3>
+                        <p>Surveillance SIEM avec Wazuh, audit de vulnérabilités et veille technologique constante.</p>
+                    </article>
+                    <article class="col-6 col-12-xsmall work-item">
+                        <h3 style="color: var(--gold);">Infrastructure</h3>
+                        <p>Virtualisation sous Proxmox, gestion Active Directory et segmentation réseau (VLAN).</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="three">
+                <h2>Me Contacter</h2>
+                <p>Disponible pour échanger sur des projets de cybersécurité ou des opportunités au sein des forces de l'ordre.</p>
+                <div class="row">
+                    <div class="col-8 col-12-small">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-home"><span class="label">Adresse</span></h3>
+                                Saint-Joseph, La Réunion
+                            </li>
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                                <a href="mailto:votre-email@exemple.com" style="color: var(--gold);">nohan.hahonglac@exemple.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
         </div>
+
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>&copy; Nohan HA-HONG-LAC</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
     </body>
 </html>
