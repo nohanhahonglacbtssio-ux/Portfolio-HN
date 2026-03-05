@@ -35,27 +35,33 @@
                 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             }
 
-            /* Avatar en Cercle avec Effets */
+            /* --- AVATAR ROND PRESTIGE --- */
             .image.avatar { 
-                border: 1px solid var(--gold); 
-                padding: 4px; 
-                transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+                border: 2px solid var(--gold); 
+                padding: 0; 
+                transition: all 0.5s ease;
                 background: none;
-                border-radius: 50%; 
-                overflow: hidden;
                 display: inline-block;
+                
+                /* Création du cercle parfait */
+                width: 160px;
+                height: 160px;
+                border-radius: 50% !important; 
+                overflow: hidden;
             }
 
             .image.avatar img {
-                border-radius: 50%; 
-                display: block;
                 width: 100%;
-                height: auto;
+                height: 100%;
+                object-fit: cover; /* Empêche de déformer ta photo */
+                object-position: center top; /* Centre ton visage */
+                border-radius: 50%;
+                display: block;
             }
 
             .image.avatar:hover { 
-                transform: scale(1.05) rotate(2deg); 
-                box-shadow: 0 0 15px var(--gold); 
+                transform: scale(1.08) rotate(2deg); 
+                box-shadow: 0 0 20px var(--gold); 
                 border-color: #fff; 
             }
 
