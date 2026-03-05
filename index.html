@@ -35,16 +35,26 @@
                 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             }
 
+            /* Avatar en Cercle avec Effets */
             .image.avatar { 
                 border: 1px solid var(--gold); 
                 padding: 4px; 
-                transition: transform 0.5s ease;
+                transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
                 background: none;
+                border-radius: 50%; /* Rend l'image circulaire */
+                overflow: hidden;
+                display: inline-block;
+            }
+
+            .image.avatar img {
+                border-radius: 50%; /* Assure que l'image interne suit le cercle */
+                display: block;
             }
 
             .image.avatar:hover { 
                 transform: scale(1.05) rotate(2deg); 
-                box-shadow: 0 0 15px var(--gold);
+                box-shadow: 0 0 15px var(--gold); /* Lueur dorée */
+                border-color: #fff; /* Bord devient blanc brillant */
             }
 
             /* Navigation & Boutons */
@@ -82,7 +92,6 @@
             }
 
             #main { padding: 5em; }
-
             strong { color: var(--gold); }
             
             section {
@@ -122,7 +131,7 @@
                     <h2>Expertise & Ambition</h2>
                 </header>
                 <p>Bienvenue sur mon portfolio professionnel. Étudiant passionné par les systèmes d'information et la cybersécurité, je forge actuellement mes compétences en <strong>BTS SISR</strong>.</p>
-                <p>Mon objectif est clair : mettre mon expertise technique au service de la loi en intégrant la <strong>Gendarmerie Nationale</strong> en tant qu'enquêteur <strong>N-TECH</strong>. Ce site retrace mon parcours, de mes fondations en Bac Pro SN jusqu'à mes missions d'administration réseau les plus complexes.</p>
+                <p>Mon objectif est clair : mettre mon expertise technique au service de la loi en intégrant la <strong>Gendarmerie Nationale</strong> en tant qu'enquêteur <strong>N-TECH</strong>.</p>
                 <ul class="actions">
                     <li><a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">En savoir plus sur mon parcours</a></li>
                 </ul>
@@ -144,12 +153,11 @@
 
             <section id="three">
                 <h2>Me Contacter</h2>
-                <p>Disponible pour échanger sur des projets de cybersécurité ou des opportunités au sein des forces de l'ordre.</p>
                 <div class="row">
                     <div class="col-8 col-12-small">
                         <ul class="labeled-icons">
                             <li>
-                                <h3 class="icon solid fa-home"><span class="label">Adresse</span></h3>
+                                <h3 class="icon solid fa-home"><span class="label">Lieu</span></h3>
                                 Saint-Joseph, La Réunion
                             </li>
                             <li>
@@ -166,7 +174,7 @@
         <footer id="footer">
             <div class="inner">
                 <ul class="copyright">
-                    <li>&copy; Nohan HA-HONG-LAC</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    <li>&copy; Nohan HA-HONG-LAC</li>
                 </ul>
             </div>
         </footer>
