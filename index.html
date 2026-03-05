@@ -1,107 +1,106 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-    <head>
-        <title>Nohan HA-HONG-LAC | Excellence SISR</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <style>
-            /* --- CONFIGURATION GENERALE --- */
-            :root {
-                --gold: #D4AF37;
-                --deep-black: #0a0a0a;
-            }
+	<head>
+		<title>Nohan HA-HONG-LAC | Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* On garde juste les couleurs prestige sans casser la structure */
+			:root {
+				--gold: #D4AF37;
+			}
+			#header h1 strong { color: var(--gold) !important; }
+			#header p { color: var(--gold) !important; font-style: italic; }
+			h2 { color: var(--gold) !important; border-bottom-color: var(--gold) !important; }
+			.button.fit { border-color: rgba(212, 175, 55, 0.5) !important; color: var(--gold) !important; }
+			
+			/* Correction pour l'image : on la laisse respirer pour éviter l'ovale forcé */
+			.image.avatar img {
+				border-radius: 100%;
+				border: 2px solid var(--gold);
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-            body { 
-                background: radial-gradient(circle at top right, #1a1a1a, #050505);
-                color: #e0e0e0;
-            }
+		<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Nohan HA-HONG-LAC</strong></h1>
+					<p>Étudiant BTS SIO</p>
+					
+					<nav id="nav">
+						<ul>
+							<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
+							<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
+							<li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
+							<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
+							<li><a href="veille.html" class="button fit">Veille Cyber</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 
-            #header { 
-                background-color: var(--deep-black) !important; 
-                border-right: 1px solid var(--gold);
-                text-align: center;
-            }
+		<div id="main">
 
-            /* --- FORCE LE CERCLE PARFAIT --- */
-            #mon-avatar-rond { 
-                display: block !important;
-                margin: 0 auto 2em auto !important;
-                width: 150px !important;  /* Largeur fixe */
-                height: 150px !important; /* Hauteur identique pour le cercle */
-                border-radius: 50% !important; /* Arrondi parfait */
-                border: 2px solid var(--gold) !important;
-                overflow: hidden !important; /* Coupe l'image qui dépasse */
-                padding: 0 !important;
-                box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-            }
+				<section id="one">
+						<header class="major">
+							<h2>Expertise & Ambition</h2>
+						</header>
+						<p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
+						<p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
+					</section>
 
-            #mon-avatar-rond img {
-                width: 100% !important;
-                height: 100% !important;
-                object-fit: cover !important; /* Zoom pour remplir le cercle */
-                object-position: center 20% !important; /* Cadre ton visage */
-                border-radius: 50% !important;
-            }
+				<section id="two">
+						<h2>Domaines d'Intervention</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<h3 style="color: var(--gold);">Cybersécurité</h3>
+								<p>Surveillance SIEM, analyse de logs et sécurisation des accès distants.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<h3 style="color: var(--gold);">Infrastructures</h3>
+								<p>Administration Proxmox, Windows Server, Linux et segmentation réseau.</p>
+							</article>
+						</div>
+					</section>
 
-            /* --- NAVIGATION ET TYPO --- */
-            h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 4px; }
-            .button.fit { 
-                background: rgba(212, 175, 55, 0.05) !important; 
-                border: 1px solid rgba(212, 175, 55, 0.3) !important; 
-                color: var(--gold) !important;
-                margin-bottom: 10px;
-            }
-            .button.fit:hover { background: var(--gold) !important; color: #000 !important; }
-            h2 { color: var(--gold); border-bottom: 2px solid var(--gold); }
-        </style>
-    </head>
-    <body class="is-preload">
+				<section id="three">
+						<h2>Me Contacter</h2>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
+									</li>
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Adresse</span></h3>
+										Saint-Joseph, La Réunion
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
 
-        <header id="header">
-            <div class="inner">
-                <div id="mon-avatar-rond">
-                    <img src="images/avatar.jpg" alt="Nohan" />
-                </div>
-                <h1><strong>Nohan HA-HONG-LAC</strong></h1>
-                <p style="color: var(--gold); font-style: italic;">Étudiant BTS SIO</p>
-                
-                <nav id="nav">
-                    <ul>
-                        <li><a href="cv.html" class="button fit">Parcours & CV</a></li>
-                        <li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
-                        <li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
-                        <li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
-                        <li><a href="veille.html" class="button fit">Veille Cyber</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+			</div>
 
-        <div id="main">
-            <section>
-                <h2>Expertise & Ambition</h2>
-                <p>Bienvenue sur mon portfolio. Étudiant en <strong>BTS SIO</strong> option SISR, je me spécialise dans l'administration système et la sécurité.</p>
-                <p>Mon objectif : rejoindre la <strong>Gendarmerie Nationale</strong> en tant qu'enquêteur <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
-                <a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">Mon Parcours</a>
-            </section>
+		<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>&copy; Nohan HA-HONG-LAC</li>
+					</ul>
+				</div>
+			</footer>
 
-            <section>
-                <h2>Contact</h2>
-                <p>
-                    <i class="icon solid fa-envelope"></i> <a href="mailto:nohan.hahonglac.bts.sio@gmail.com" style="color:var(--gold)">nohan.hahonglac.bts.sio@gmail.com</a><br />
-                    <i class="icon solid fa-home"></i> Saint-Joseph, La Réunion
-                </p>
-            </section>
-        </div>
+		<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-        <footer id="footer">
-            <div class="inner">
-                <ul class="copyright"><li>&copy; Nohan HA-HONG-LAC</li></ul>
-            </div>
-        </footer>
-
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+	</body>
 </html>
