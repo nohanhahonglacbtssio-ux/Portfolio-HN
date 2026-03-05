@@ -1,28 +1,28 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="fr">
 	<head>
 		<title>Nohan HA-HONG-LAC | Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Ajustements pour le style prestige */
+			/* --- STYLE PRESTIGE --- */
 			#header h1 strong { color: #D4AF37 !important; }
 			h2 { color: #D4AF37 !important; border-bottom-color: #D4AF37 !important; }
 			
-			/* --- SUPPRESSION DES POINTS À GAUCHE --- */
+			/* --- NAVIGATION SANS POINTS (image_81a93b.png) --- */
 			#nav ul { 
-				list-style: none !important; /* Enlève les puces */
+				list-style: none !important; 
 				padding: 0 !important; 
-				margin: 0 !important;
+				margin: 2em 0 0 0 !important;
 			}
 
 			#nav ul li {
 				padding: 0 !important;
-				margin-bottom: 10px; /* Espace entre les boutons */
+				margin-bottom: 10px;
 			}
 
-			/* --- FIX DU CERCLE PARFAIT --- */
+			/* --- CERCLE PARFAIT (image_81b4bd.png) --- */
 			.image.avatar {
 				width: 150px !important;
 				height: 150px !important;
@@ -36,6 +36,7 @@
 				width: 100% !important;
 				height: 100% !important;
 				object-fit: cover !important; /* Empêche l'ovale */
+				object-position: center 20%;
 			}
 		</style>
 	</head>
@@ -60,27 +61,33 @@
 			</header>
 
 		<div id="main">
+
 				<section id="one">
-					<header class="major">
-						<h2>Expertise & Ambition</h2>
-					</header>
-					<p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
-					<p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
-				</section>
+						<header class="major">
+							<h2>Expertise & Ambition</h2>
+						</header>
+						<p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
+						<p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
+					</section>
 
 				<section id="three">
-					<h2>Me Contacter</h2>
-					<ul class="labeled-icons">
-						<li>
-							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-							<a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
-						</li>
-						<li>
-							<h3 class="icon solid fa-home"><span class="label">Adresse</span></h3>
-							Saint-Joseph, La Réunion
-						</li>
-					</ul>
-				</section>
+						<h2>Me Contacter</h2>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
+									</li>
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Adresse</span></h3>
+										Saint-Joseph, La Réunion
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
 			</div>
 
 		<footer id="footer">
@@ -97,5 +104,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
 	</body>
 </html>
