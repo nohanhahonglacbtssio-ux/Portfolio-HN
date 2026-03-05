@@ -27,102 +27,61 @@
                 text-align: center;
             }
 
-            h1 strong { 
-                color: var(--gold) !important; 
-                text-transform: uppercase; 
-                letter-spacing: 4px; 
-                font-size: 1.2em;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            }
-
-            /* --- SOLUTION DU CERCLE PARFAIT --- */
+            /* --- RÉGLAGE CERCLE ABSOLU --- */
             .image.avatar { 
-                border: 2px solid var(--gold); 
-                padding: 0; 
+                border: 2px solid var(--gold) !important; 
+                padding: 0 !important;
                 transition: transform 0.5s ease, box-shadow 0.5s ease;
-                background: none;
-                display: inline-block;
+                display: inline-block !important;
                 
-                /* Largeur et hauteur égales pour garantir un cercle */
-                width: 150px; 
-                height: 150px; 
+                /* On force le carré parfait pour éviter l'ovale des captures */
+                width: 160px !important; 
+                height: 160px !important; 
                 border-radius: 50% !important; 
-                overflow: hidden; 
+                overflow: hidden !important; 
                 box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+                background: none !important;
             }
 
             .image.avatar img {
-                width: 100%;
-                height: 100%;
-                /* Remplit le cercle sans déformer */
-                object-fit: cover; 
-                /* Centre l'image sur ton visage */
-                object-position: center 20%; 
-                border-radius: 50%;
-                display: block;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important; /* Pour que ta photo rectangulaire remplisse le cercle */
+                object-position: center 25%; /* Ajusté pour bien voir ton visage */
+                border-radius: 50% !important;
+                display: block !important;
             }
 
             .image.avatar:hover { 
                 transform: scale(1.05) rotate(2deg); 
-                box-shadow: 0 0 15px var(--gold); 
-                border-color: #fff;
+                box-shadow: 0 0 20px var(--gold); 
             }
 
-            /* Navigation & Boutons */
-            nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
-            nav ul li { margin-bottom: 15px; }
-
+            /* Typographie & Boutons */
+            h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 4px; }
+            h2 { color: var(--gold); border-bottom: 2px solid var(--gold); text-transform: uppercase; }
+            
             .button.fit { 
                 background: rgba(212, 175, 55, 0.05) !important; 
                 border: 1px solid rgba(212, 175, 55, 0.3) !important; 
                 color: var(--gold) !important; 
-                text-transform: uppercase; 
-                letter-spacing: 2px;
-                font-size: 0.75em !important;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 border-radius: 0; 
             }
 
             .button.fit:hover { 
-                border-color: var(--gold) !important;
                 background: var(--gold) !important;
                 color: #000 !important;
-                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-                transform: translateY(-2px);
-            }
-
-            /* Contenu Principal */
-            h2 { 
-                color: var(--gold); 
-                border-bottom: 2px solid var(--gold); 
-                display: inline-block;
-                padding-bottom: 5px;
-                margin-bottom: 1.5em;
-                text-transform: uppercase;
-                letter-spacing: 2px;
             }
 
             #main { padding: 5em; }
             strong { color: var(--gold); }
-            
-            section {
-                animation: fadeIn 1.2s ease-out;
-            }
-
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-
-            .labeled-icons li h3 { color: var(--gold) !important; }
-            .labeled-icons li a { color: var(--gold) !important; text-decoration: none; }
         </style>
     </head>
     <body class="is-preload">
 
         <header id="header">
             <div class="inner">
-                <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Nohan HA-HONG-LAC" /></a>
+                <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
                 <h1><strong>Nohan HA-HONG-LAC</strong></h1>
                 <p style="color: var(--gold); font-style: italic; margin-top: 10px;">Étudiant BTS SIO</p>
                 
@@ -139,13 +98,12 @@
         </header>
 
         <div id="main">
-
             <section id="one">
                 <header class="major">
                     <h2>Expertise & Ambition</h2>
                 </header>
                 <p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
-                <p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
+                <p>Mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
                 <ul class="actions">
                     <li><a href="cv.html" class="button" style="border-color: var(--gold); color: var(--gold);">Explorer mon parcours</a></li>
                 </ul>
@@ -153,29 +111,22 @@
 
             <section id="three">
                 <h2>Me Contacter</h2>
-                <div class="row">
-                    <div class="col-8 col-12-small">
-                        <ul class="labeled-icons">
-                            <li>
-                                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                                <a href="mailto:nohan.hahonglac.bts.sio@gmail.com">nohan.hahonglac.bts.sio@gmail.com</a>
-                            </li>
-                            <li>
-                                <h3 class="icon solid fa-home"><span class="label">Localisation</span></h3>
-                                Saint-Joseph, La Réunion
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="labeled-icons">
+                    <li>
+                        <h3 class="icon solid fa-envelope" style="color:var(--gold)"><span class="label">Email</span></h3>
+                        <a href="mailto:nohan.hahonglac.bts.sio@gmail.com" style="color:var(--gold)">nohan.hahonglac.bts.sio@gmail.com</a>
+                    </li>
+                    <li>
+                        <h3 class="icon solid fa-home" style="color:var(--gold)"><span class="label">Lieu</span></h3>
+                        Saint-Joseph, La Réunion
+                    </li>
+                </ul>
             </section>
-
         </div>
 
         <footer id="footer">
             <div class="inner">
-                <ul class="copyright">
-                    <li>&copy; Nohan HA-HONG-LAC</li>
-                </ul>
+                <ul class="copyright"><li>&copy; Nohan HA-HONG-LAC</li></ul>
             </div>
         </footer>
 
