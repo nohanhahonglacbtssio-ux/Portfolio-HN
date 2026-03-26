@@ -1,130 +1,166 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-    <head>
-        <title>Bac Pro SN | Nohan HA-HONG-LAC</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <style>
-            /* --- CONFIGURATION DYNASTIE --- */
-            :root {
-                --gold: #D4AF37;
-                --deep-black: #0a0a0a;
-                --soft-white: #e0e0e0;
-            }
+	<head>
+		<title>Missions SISR | Nohan HA-HONG-LAC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* --- CONFIGURATION DYNASTIE (COHÉRENCE TOTALE) --- */
+			:root {
+				--gold: #D4AF37;
+				--deep-black: #0a0a0a;
+			}
 
-            body { 
-                background: radial-gradient(circle at top right, #1a1a1a, #050505);
-                font-family: 'Georgia', serif !important; 
-                color: var(--soft-white);
-            }
+			body { 
+				background: radial-gradient(circle at top right, #1a1a1a, #050505) !important;
+				color: #e0e0e0 !important;
+				font-family: 'Georgia', serif !important;
+			}
 
-            /* Sidebar Prestige */
-            #header { 
-                background-color: var(--deep-black) !important; 
-                border-right: 1px solid var(--gold);
-                box-shadow: 5px 0 25px rgba(0,0,0,0.7);
-                text-align: center;
-            }
+			#header { 
+				background-color: var(--deep-black) !important; 
+				border-right: 1px solid var(--gold) !important;
+				text-align: center;
+			}
 
-            h1 strong { 
-                color: var(--gold) !important; 
-                text-transform: uppercase; 
-                letter-spacing: 4px; 
-                font-size: 1.2em;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            }
+			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 
-            .image.avatar { 
-                border: 1px solid var(--gold); 
-                padding: 4px; 
-                transition: transform 0.5s ease;
-                background: none;
-            }
+			/* --- CERCLE PARFAIT (AVATAR) --- */
+			.image.avatar { 
+				display: inline-block !important;
+				width: 150px !important; 
+				height: 150px !important; 
+				border-radius: 50% !important; 
+				border: 2px solid var(--gold) !important;
+				overflow: hidden !important; 
+				padding: 0 !important;
+				background: none !important;
+			}
 
-            .image.avatar:hover { transform: scale(1.05) rotate(2deg); }
+			.image.avatar img {
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover !important;
+				border-radius: 50% !important;
+			}
 
-            /* Navigation & Boutons */
-            nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
-            nav ul li { margin-bottom: 15px; }
+			/* --- NAVIGATION --- */
+			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
+			#nav ul li { padding: 0 !important; }
 
-            .button.fit { 
-                background: rgba(212, 175, 55, 0.05) !important; 
-                border: 1px solid rgba(212, 175, 55, 0.3) !important; 
-                color: var(--gold) !important; 
-                text-transform: uppercase; 
-                letter-spacing: 2px;
-                font-size: 0.75em !important;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                border-radius: 0; 
-            }
+			.button.fit { 
+				background: rgba(212, 175, 55, 0.05) !important; 
+				border: 1px solid rgba(212, 175, 55, 0.3) !important; 
+				color: var(--gold) !important; 
+				margin-bottom: 12px;
+				text-transform: uppercase;
+			}
 
-            .button.fit:hover { 
-                border-color: var(--gold) !important;
-                background: var(--gold) !important;
-                color: #000 !important;
-                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-                transform: translateY(-2px);
-            }
+			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-            /* Contenu Principal */
-            h2 { 
-                color: var(--gold); 
-                border-bottom: 2px solid var(--gold); 
-                display: inline-block;
-                padding-bottom: 5px;
-                margin-bottom: 1.5em;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
+			/* --- STRUCTURE DES MISSIONS --- */
+			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; }
+			h3 { color: var(--gold) !important; margin-top: 1em; }
+			strong { color: var(--gold) !important; }
+			
+			.mission-card { 
+				border: 1px solid rgba(212, 175, 55, 0.2); 
+				padding: 2em; 
+				border-radius: 12px; 
+				background: rgba(255, 255, 255, 0.02); 
+				margin-bottom: 2em;
+				transition: transform 0.3s ease;
+			}
+			.mission-card:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); }
+			
+			.tech-stack { font-size: 0.85em; color: var(--gold); font-weight: bold; margin-top: 10px; display: block; }
+		</style>
+	</head>
+	<body class="is-preload">
 
-            #main { padding: 5em; }
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
+				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
+				<p style="color: var(--gold); font-style: italic;">Expertise SISR</p>
+				
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html" class="button fit">Accueil</a></li>
+						<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
+						<li><a href="bacpro-sn.html" class="button fit">BAC PRO SN</a></li>
+						<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
+						<li><a href="veille.html" class="button fit">Veille Cyber</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-            strong { color: var(--gold); }
-            
-            section {
-                animation: fadeIn 1.2s ease-out;
-            }
+		<div id="main">
 
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        </style>
-    </head>
-    <body class="is-preload">
-        <header id="header">
-            <div class="inner">
-                <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
-                <h1><strong>Nohan HA-HONG-LAC</strong></h1>
-                <p style="color: var(--gold); font-style: italic;">Fondations Systèmes Numériques</p>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="button fit">Accueil</a></li>
-                        <li><a href="cv.html" class="button fit">Parcours & CV</a></li>
-                        <li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
-                        <li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
-                        <li><a href="veille.html" class="button fit">Veille Cyber</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+			<section id="one">
+				<h2>Missions SISR : Systèmes & Réseaux</h2>
+				<p>Au cours de mon <strong>BTS SIO option SISR</strong>, j'ai réalisé plusieurs missions techniques simulant des besoins réels d'entreprises. Ces projets m'ont permis de valider mes compétences en administration, sécurisation et gestion de parcs informatiques.</p>
+			</section>
 
-        <div id="main">
-            <section id="one">
-                <header class="major">
-                    <h2>Fondations : Bac Pro SN</h2>
-                </header>
-                <p>Mon parcours a débuté par un Baccalauréat Professionnel <strong>Systèmes Numériques</strong> au Lycée Pierre Poivre. Cette formation m'a permis d'acquérir les bases solides nécessaires en infrastructure réseau et maintenance informatique.</p>
-                
-                <h3 style="color: var(--gold);">Expérience Internationale Erasmus+ (Allemagne)</h3>
-                <p>L'un des points forts de ma formation a été ma mobilité de 4 semaines en Allemagne, une immersion totale qui a renforcé ma rigueur et mon autonomie :</p>
-                <ul>
-                    <li><strong>Maintenance Hardware :</strong> Diagnostic de pannes, remplacement de composants et optimisation de postes de travail.</li>
-                    <li><strong>Réseaux Locaux :</strong> Configuration de base et raccordement d'équipements terminaux.</li>
-                    <li><strong>Compétences Transverses :</strong> Adaptation à un environnement professionnel étranger et développement de l'anglais technique.</li>
-                </ul>
-            </section>
-        </div>
-    </body>
+			<section id="two">
+				
+				<div class="mission-card">
+					<h3>Infrastructure & Virtualisation</h3>
+					<p>Déploiement d'un environnement virtualisé pour une PME. Mise en place d'une infrastructure robuste permettant d'isoler les services et d'optimiser les ressources matérielles.</p>
+					<ul>
+						<li>Installation et configuration de l'hyperviseur <strong>Proxmox</strong>.</li>
+						<li>Création de machines virtuelles (VM) sous Linux et Windows Server.</li>
+						<li>Mise en place de sauvegardes automatisées.</li>
+					</ul>
+					<span class="tech-stack">Technologies : Proxmox, Debian, Windows Server</span>
+				</div>
+
+				<div class="mission-card">
+					<h3>Administration Services Réseaux</h3>
+					<p>Configuration complète d'un domaine d'entreprise pour la gestion centralisée des utilisateurs et des ressources.</p>
+					<ul>
+						<li>Installation d'un contrôleur de domaine <strong>Active Directory</strong>.</li>
+						<li>Mise en place de stratégies de groupe (<strong>GPO</strong>) pour sécuriser les postes clients.</li>
+						<li>Configuration des services <strong>DHCP</strong> et <strong>DNS</strong>.</li>
+					</ul>
+					<span class="tech-stack">Technologies : AD DS, DNS, DHCP, GPO</span>
+				</div>
+
+				<div class="mission-card">
+					<h3>Sécurisation & Segmentation</h3>
+					<p>Protection des données et du réseau interne via une architecture segmentée.</p>
+					<ul>
+						<li>Création de <strong>VLAN</strong> pour isoler les services (Comptabilité, Direction, Invités).</li>
+						<li>Mise en place d'une <strong>DMZ</strong> pour héberger les services publics en toute sécurité.</li>
+						<li>Configuration de règles de pare-feu (Firewall) restrictives.</li>
+					</ul>
+					<span class="tech-stack">Technologies : VLAN, DMZ, Firewall (pfsense/Stormshield)</span>
+				</div>
+
+				<div class="mission-card">
+					<h3>Gestion de Parc & Support</h3>
+					<p>Optimisation du suivi du matériel et des demandes d'assistance des utilisateurs.</p>
+					<ul>
+						<li>Déploiement de l'outil de gestion de tickets <strong>GLPI</strong>.</li>
+						<li>Inventaire automatique du parc informatique via <strong>OCS Inventory</strong>.</li>
+						<li>Rédaction de procédures techniques et guides utilisateurs.</li>
+					</ul>
+					<span class="tech-stack">Technologies : GLPI, OCS Inventory, SNMP</span>
+				</div>
+
+			</section>
+
+		</div>
+
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Portfolio Professionnel</li></ul>
+			</div>
+		</footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
 </html>
