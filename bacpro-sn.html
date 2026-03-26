@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
-		<title>Bac Pro SN | Nohan HA-HONG-LAC</title>
+		<title>Bac Pro SN RISC | Nohan HA-HONG-LAC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- COPIE CONFORME DU STYLE DYNASTIE DE L'ACCUEIL --- */
+			/* --- STYLE DYNASTIE (COHÉRENCE ACCUEIL) --- */
 			:root {
 				--gold: #D4AF37;
 				--deep-black: #0a0a0a;
@@ -18,20 +18,15 @@
 				font-family: 'Georgia', serif !important;
 			}
 
-			/* Sidebar / Header */
 			#header { 
 				background-color: var(--deep-black) !important; 
 				border-right: 1px solid var(--gold) !important;
 				text-align: center;
 			}
 
-			h1 strong { 
-				color: var(--gold) !important; 
-				text-transform: uppercase; 
-				letter-spacing: 3px; 
-			}
+			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 
-			/* --- FIX AVATAR CERCLE PARFAIT --- */
+			/* --- CERCLE PARFAIT --- */
 			.image.avatar { 
 				display: inline-block !important;
 				width: 150px !important; 
@@ -50,13 +45,8 @@
 				border-radius: 50% !important;
 			}
 
-			/* --- FIX NAVIGATION SANS POINTS --- */
-			#nav ul { 
-				list-style: none !important; 
-				padding: 0 !important; 
-				margin-top: 2em !important;
-			}
-
+			/* --- NAVIGATION SANS POINTS --- */
+			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
 			#nav ul li { padding: 0 !important; }
 
 			.button.fit { 
@@ -65,46 +55,27 @@
 				color: var(--gold) !important; 
 				margin-bottom: 12px;
 				text-transform: uppercase;
-				transition: all 0.3s ease;
 			}
 
-			.button.fit:hover { 
-				background: var(--gold) !important;
-				color: #000 !important;
-				box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
-			}
+			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-			/* Titres Dorés */
-			h2 { 
-				color: var(--gold) !important; 
-				border-bottom: 2px solid var(--gold) !important; 
-				text-transform: uppercase;
-				padding-bottom: 0.5em;
-			}
-			
+			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; }
+			h3 { color: var(--gold) !important; margin-top: 1.5em; }
 			strong { color: var(--gold) !important; }
-			.lang-badge { 
-				color: var(--gold); 
-				border: 1px solid var(--gold); 
-				padding: 2px 8px; 
-				border-radius: 4px; 
-				font-size: 0.8em; 
-				margin-right: 5px; 
-				font-weight: bold; 
-			}
+			.project-box { border: 1px solid rgba(212, 175, 55, 0.3); padding: 1.5em; border-radius: 8px; background: rgba(255, 255, 255, 0.02); margin-bottom: 1em; }
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<header id="header">
 			<div class="inner">
-				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait de Nohan" /></a>
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
 				<p style="color: var(--gold); font-style: italic;">Fondations : Bac Pro SN</p>
 				
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html" class="button fit">Retour à l'Accueil</a></li>
+						<li><a href="index.html" class="button fit">Accueil</a></li>
 						<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
 						<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
 						<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
@@ -117,43 +88,42 @@
 		<div id="main">
 
 			<section id="one">
-				<header class="major">
-					<h2>Parcours Initial : Lycée Pierre Poivre</h2>
-				</header>
-				<p>Mon aventure dans le monde du numérique a commencé au <strong>Lycée Pierre Poivre</strong> à Saint-Joseph, où j'ai obtenu mon <strong>Bac Pro SN (Systèmes Numériques)</strong>. Cette formation a posé les bases de ma rigueur technique et de ma passion pour les infrastructures informatiques.</p>
+				<h2>Option RISC : L'Origine technique</h2>
+				<p>Au <strong>Lycée Pierre Poivre</strong>, j'ai suivi le Bac Pro SN avec l'option <strong>RISC</strong> (Réseaux Informatiques et Systèmes Communicants). Cette spécialité se concentre sur l'installation, la configuration et la maintenance des réseaux informatiques et des solutions de communication connectées.</p>
 			</section>
 
 			<section id="two">
-				<h2>Expérience Internationale : Erasmus+</h2>
+				<h2>Expériences en Entreprise</h2>
 				<div class="row">
 					<article class="col-12 work-item">
-						<h3 style="color: var(--gold);">Stage à Gelsenkirchen, Allemagne</h3>
-						<p>J'ai eu le privilège de réaliser un stage en immersion européenne au sein de l'entreprise <strong>Maxi-Median-Shop</strong>. Ce fut une opportunité unique de confronter mes compétences techniques à un environnement international.</p>
-						<ul>
-							<li><span class="lang-badge">Anglais</span> Communication principale utilisée pour les échanges techniques et professionnels.</li>
-							<li><span class="lang-badge">Allemand</span> Apprentissage des bases et des formules de politesse pour l'accueil de la clientèle.</li>
-							<li>Maintenance logicielle, diagnostic matériel et préparation de systèmes pour la vente.</li>
-							<li>Développement d'une grande capacité d'adaptation et d'autonomie en milieu étranger.</li>
-						</ul>
+						<h3>Local & International</h3>
+						<p>Mes périodes de formation ont été divisées entre des stages au <strong>Lycée Pierre Poivre</strong> et une immersion européenne via <strong>Erasmus+</strong> en Allemagne (Gelsenkirchen) à la boutique <strong>Maxi-Median-Shop</strong>.</p>
+						<div class="project-box">
+							<h4>Missions Principales :</h4>
+							<ul>
+								<li><strong>Réparation & Maintenance :</strong> Diagnostic matériel et remise en état de systèmes informatiques.</li>
+								<li><strong>Assistance Utilisateur :</strong> Support technique direct et résolution de problèmes logiciels.</li>
+								<li><strong>Découverte Serveur :</strong> Initiation à la gestion des <strong>GPO</strong> (Objets de stratégie de groupe) et à l'administration de base des serveurs.</li>
+							</ul>
+						</div>
 					</article>
 				</div>
 			</section>
 
 			<section id="three">
-				<h2>Compétences Fondamentales</h2>
-				<p>Grâce à mon cursus au Lycée Pierre Poivre et à mes stages, j'ai validé des compétences essentielles en :</p>
+				<h2>Projets Académiques & Techniques</h2>
 				<div class="row">
 					<div class="col-6 col-12-xsmall">
-						<ul>
-							<li>Installation et configuration de postes clients.</li>
-							<li>Maintenance préventive et curative.</li>
-						</ul>
+						<div class="project-box">
+							<h4>Téléphonie sur IP</h4>
+							<p>Travail pratique sur <strong>XiVO</strong>, un serveur de téléphonie open-source, pour comprendre la gestion des communications IP.</p>
+						</div>
 					</div>
 					<div class="col-6 col-12-xsmall">
-						<ul>
-							<li>Brassage de baies et câblage réseau.</li>
-							<li>Support utilisateur de premier niveau.</li>
-						</ul>
+						<div class="project-box">
+							<h4>IoT & Transmission</h4>
+							<p>Projet de <strong>Station Météo</strong> : Responsable de la transmission des données environnementales via une <strong>antenne LoRa</strong>.</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -162,9 +132,7 @@
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright">
-					<li>&copy; Nohan HA-HONG-LAC | Portfolio Professionnel</li>
-				</ul>
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Portfolio Technique</li></ul>
 			</div>
 		</footer>
 
