@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- STYLE DYNASTIE (COHÉRENCE ACCUEIL) --- */
+			/* --- CONFIGURATION DYNASTIE --- */
 			:root {
 				--gold: #D4AF37;
 				--deep-black: #0a0a0a;
@@ -26,7 +26,7 @@
 
 			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 
-			/* --- CERCLE PARFAIT --- */
+			/* --- CERCLE PARFAIT (AVATAR) --- */
 			.image.avatar { 
 				display: inline-block !important;
 				width: 150px !important; 
@@ -45,7 +45,7 @@
 				border-radius: 50% !important;
 			}
 
-			/* --- NAVIGATION SANS POINTS --- */
+			/* --- NAVIGATION ÉPURÉE --- */
 			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
 			#nav ul li { padding: 0 !important; }
 
@@ -59,11 +59,19 @@
 
 			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
+			/* --- TITRES ET SECTIONS --- */
 			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; }
 			h3 { color: var(--gold) !important; margin-top: 1.5em; }
 			strong { color: var(--gold) !important; }
-			.project-box { border: 1px solid rgba(212, 175, 55, 0.3); padding: 1.5em; border-radius: 8px; background: rgba(255, 255, 255, 0.02); margin-bottom: 1em; }
-			.lang-badge { color: var(--gold); border: 1px solid var(--gold); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; font-weight: bold; }
+			
+			.project-card { 
+				border: 1px solid rgba(212, 175, 55, 0.2); 
+				padding: 1.5em; 
+				border-radius: 10px; 
+				background: rgba(255, 255, 255, 0.03); 
+				height: 100%;
+			}
+			.lang-badge { color: var(--gold); border: 1px solid var(--gold); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-right: 5px; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -89,47 +97,44 @@
 		<div id="main">
 
 			<section id="one">
-				<h2>Cursus au Lycée Paul Langevin</h2>
-				<p>J'ai effectué mon <strong>Bac Pro SN</strong> (Systèmes Numériques) au sein du <strong>Lycée Paul Langevin</strong>. J'y ai suivi l'option <strong>RISC</strong> (Réseaux Informatiques et Systèmes Communicants), une spécialité dédiée à l'infrastructure réseau et aux solutions de communication professionnelles.</p>
+				<h2>1. Formation au Lycée Paul Langevin</h2>
+				<p>C'est au <strong>Lycée Paul Langevin</strong> que j'ai forgé mes premières compétences techniques en obtenant mon <strong>Bac Pro SN</strong> (Systèmes Numériques). </p>
+				<p>J'y ai suivi l'option <strong>RISC</strong> (Réseaux Informatiques et Systèmes Communicants), une spécialisation qui m'a permis de maîtriser l'installation et la maintenance des infrastructures réseaux, ainsi que les solutions de communication professionnelles.</p>
 			</section>
 
 			<section id="two">
-				<h2>Expériences Professionnelles</h2>
+				<h2>2. Expériences en Entreprise (Stages)</h2>
 				<div class="row">
-					<article class="col-12 work-item">
-						<h3>Stages Clés</h3>
-						<p>Mes périodes de formation en entreprise m'ont permis de passer du support de proximité à une dimension internationale.</p>
-						
-						<div class="project-box">
-							<h4>Lycée Pierre Poivre (Réunion)</h4>
-							<p>Missions d'<strong>assistance utilisateur</strong> et de <strong>réparation</strong> de parc informatique. C'est ici que j'ai commencé à découvrir l'administration serveur et la mise en place de <strong>GPO</strong> (Group Policy Objects).</p>
+					<div class="col-6 col-12-xsmall">
+						<div class="project-card">
+							<h3>Lycée Pierre Poivre (Local)</h3>
+							<p>Durant ce stage, j'ai assuré la <strong>réparation</strong> de matériel et l'<strong>assistance utilisateur</strong> de proximité. J'ai également eu une première approche de l'administration serveur via la gestion des <strong>GPO</strong> (Group Policy Objects).</p>
 						</div>
-
-						<div class="project-box">
-							<h4>Maxi-Median-Shop (Gelsenkirchen, Allemagne)</h4>
-							<p>Stage <strong>Erasmus+</strong> en immersion totale. Maintenance matérielle et logicielle intensive.</p>
-							<ul>
-								<li><span class="lang-badge">Anglais</span> Communication technique principale.</li>
-								<li><span class="lang-badge">Allemand</span> Formules de politesse et accueil client.</li>
-							</ul>
+					</div>
+					<div class="col-6 col-12-xsmall">
+						<div class="project-card">
+							<h3>Maxi-Median-Shop (Erasmus+)</h3>
+							<p>Une immersion internationale à <strong>Gelsenkirchen, Allemagne</strong>. J'y ai effectué de la maintenance matérielle et logicielle en boutique.</p>
+							<p><span class="lang-badge">Anglais</span> Langue de travail principale.<br>
+							<span class="lang-badge">Allemand</span> Utilisation de formules de politesse pour l'accueil client.</p>
 						</div>
-					</article>
+					</div>
 				</div>
 			</section>
 
 			<section id="three">
-				<h2>Projets Techniques RISC</h2>
+				<h2>3. Projets Techniques & Réalisations</h2>
 				<div class="row">
 					<div class="col-6 col-12-xsmall">
-						<div class="project-box">
-							<h4>Téléphonie IP (XiVO)</h4>
-							<p>Configuration et gestion d'un serveur de téléphonie <strong>XiVO</strong> en milieu scolaire pour simuler un standard d'entreprise.</p>
+						<div class="project-card">
+							<h3>Station Météo & LoRa</h3>
+							<p>Projet majeur consistant à mettre en place une station météo connectée. Ma mission principale portait sur la <strong>transmission des données</strong> environnementales à l'aide d'une <strong>antenne LoRa</strong> (longue portée).</p>
 						</div>
 					</div>
 					<div class="col-6 col-12-xsmall">
-						<div class="project-box">
-							<h4>IoT : Station Météo</h4>
-							<p>Responsable de la <strong>transmission des données</strong> environnementales. Utilisation d'une <strong>antenne LoRa</strong> pour assurer la communication longue portée du projet.</p>
+						<div class="project-card">
+							<h3>Téléphonie sur IP (XiVO)</h3>
+							<p>Dans le cadre scolaire, j'ai travaillé sur le déploiement et la configuration de <strong>XiVO</strong>, une solution de téléphonie IP open-source, pour simuler un standard téléphonique d'entreprise.</p>
 						</div>
 					</div>
 				</div>
@@ -139,7 +144,7 @@
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Excellence Technique</li></ul>
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Rigueur & Technologie</li></ul>
 			</div>
 		</footer>
 
