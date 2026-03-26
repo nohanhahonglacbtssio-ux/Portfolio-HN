@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- CONFIGURATION DYNASTIE --- */
+			/* --- STYLE PRESTIGE DYNASTIE --- */
 			:root {
 				--gold: #D4AF37;
 				--deep-black: #0a0a0a;
@@ -56,27 +56,30 @@
 
 			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; }
+			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; margin-bottom: 1em; }
 			h3 { color: var(--gold) !important; margin-top: 1em; }
 			strong { color: var(--gold) !important; }
 			
+			/* --- CARDS --- */
 			.mission-card { 
 				border: 1px solid rgba(212, 175, 55, 0.2); 
 				padding: 2em; 
 				border-radius: 12px; 
 				background: rgba(255, 255, 255, 0.02); 
-				margin-bottom: 2em;
+				margin-bottom: 2.5em;
+				transition: all 0.3s ease;
 			}
+			.mission-card:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); }
+
 			.tutor-note { 
 				border-left: 3px solid var(--gold); 
-				padding-left: 1.5em; 
+				padding: 1.5em; 
 				font-style: italic; 
 				background: rgba(212, 175, 55, 0.05); 
-				padding-top: 1em; 
-				padding-bottom: 1em; 
-				margin-top: 1em;
+				margin-top: 1.5em;
+				border-radius: 0 8px 8px 0;
 			}
-			.tech-stack { font-size: 0.85em; color: var(--gold); font-weight: bold; margin-top: 10px; display: block; }
+			.tech-stack { font-size: 0.85em; color: var(--gold); font-weight: bold; margin-top: 15px; display: block; text-transform: uppercase; letter-spacing: 1px; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -102,54 +105,91 @@
 		<div id="main">
 
 			<section id="one">
-				<h2>Missions de Stage (2ème Année)</h2>
-				
+				<h2>Projet Majeur : Cybersécurité (Stage 2)</h2>
 				<div class="mission-card">
-					<h3>Sécurisation des Accès & Analyse de Logs (Bastion + SIEM)</h3>
-					<p>Durant mon second stage, j'ai eu pour mission principale de déployer une infrastructure de sécurité open-source pour centraliser les accès distants et analyser les événements de sécurité du réseau.</p>
+					<h3>Déploiement Bastion & SIEM Open Source</h3>
+					<p>Réalisation d'une infrastructure de sécurité complète pour centraliser les accès et surveiller les menaces sur le réseau de l'organisation.</p>
 					
-					<h4>1. Mise en place du Bastion</h4>
-					<ul>
-						<li>Analyse comparative des solutions (Teleport, Bastillion, Guacamole).</li>
-						<li>Déploiement et configuration de <strong>Guacamole</strong> pour sécuriser les accès SSH et RDP.</li>
-						<li>Implémentation de l'<strong>Authentification Multi-Facteurs (MFA)</strong> et gestion des rôles.</li>
-					</ul>
-
-					<h4>2. Centralisation SIEM & Détection</h4>
-					<ul>
-						<li>Déploiement d'une solution <strong>SIEM (Wazuh / ELK Stack)</strong>.</li>
-						<li>Collecte des logs serveurs et équipements réseaux.</li>
-						<li>Développement de règles de corrélation pour détecter les <strong>attaques brute-force</strong> et tentatives d'intrusion.</li>
-						<li>Création de tableaux de bord de visualisation sous Kibana.</li>
-					</ul>
-
-					<h4>3. Tests & Simulations</h4>
-					<ul>
-						<li>Simulation d'attaques (Scans de ports, connexions suspectes) pour valider la détection.</li>
-						<li>Optimisation des alertes pour minimiser les faux positifs.</li>
-					</ul>
-					
-					<span class="tech-stack">Outils : Guacamole, Wazuh, ELK (Elasticsearch, Logstash, Kibana), MFA, SSH/RDP</span>
+					<div class="row">
+						<div class="col-6 col-12-xsmall">
+							<h4>Sécurisation Bastion</h4>
+							<ul>
+								<li>Solution retenue : <strong>Guacamole</strong>.</li>
+								<li>Sécurisation des accès <strong>SSH</strong> et <strong>RDP</strong>.</li>
+								<li>Double authentification (<strong>MFA</strong>).</li>
+							</ul>
+						</div>
+						<div class="col-6 col-12-xsmall">
+							<h4>Surveillance SIEM</h4>
+							<ul>
+								<li>Déploiement <strong>Wazuh / ELK Stack</strong>.</li>
+								<li>Analyse de logs et détection brute-force.</li>
+								<li>Tableaux de bord de visualisation.</li>
+							</ul>
+						</div>
+					</div>
 
 					<div class="tutor-note">
-						<strong>Appréciation du tuteur :</strong> "Nohan a fait preuve d'un réel investissement malgré les défis techniques rencontrés. Il a su rebondir avec détermination... un profil prometteur à suivre avec intérêt."
+						<strong>Appréciation du tuteur :</strong> "Nohan a fait preuve d'un réel investissement malgré les défis techniques rencontrés... un profil prometteur à suivre avec intérêt."
 					</div>
+					<span class="tech-stack">Outils : Guacamole, Wazuh, ELK Stack, MFA, Linux Debian</span>
 				</div>
 			</section>
 
 			<section id="two">
-				<h2>Missions Académiques SISR</h2>
+				<h2>Missions de Formation SISR</h2>
+
 				<div class="mission-card">
-					<h3>Administration Services Réseaux</h3>
-					<p>Configuration complète d'un domaine Active Directory avec mise en place de <strong>GPO</strong> et services <strong>DNS/DHCP</strong>.</p>
+					<h3>Infrastructure & Virtualisation</h3>
+					<p>Optimisation des ressources serveurs via un environnement virtualisé.</p>
+					<ul>
+						<li>Installation et configuration de l'hyperviseur <strong>Proxmox</strong>.</li>
+						<li>Gestion des containers <strong>LXC</strong> et machines virtuelles.</li>
+						<li>Isolation des services critiques.</li>
+					</ul>
+					<span class="tech-stack">Outils : Proxmox VE, LXC, KVM</span>
 				</div>
+
+				<div class="mission-card">
+					<h3>Administration Windows Server</h3>
+					<p>Gestion centralisée d'un parc informatique d'entreprise.</p>
+					<ul>
+						<li>Déploiement <strong>Active Directory (AD DS)</strong>.</li>
+						<li>Configuration de <strong>GPO</strong> pour le contrôle des postes de travail.</li>
+						<li>Gestion des services réseaux (<strong>DNS / DHCP</strong>).</li>
+					</ul>
+					<span class="tech-stack">Outils : Windows Server, AD, Group Policy</span>
+				</div>
+
+				<div class="mission-card">
+					<h3>Segmentation & Réseaux</h3>
+					<p>Architecture réseau sécurisée pour la protection des flux internes.</p>
+					<ul>
+						<li>Création de <strong>VLAN</strong> par service (Admin, RH, Invités).</li>
+						<li>Mise en place d'une <strong>DMZ</strong> pour isoler les services publics.</li>
+						<li>Filtrage des flux via pare-feu (Firewalling).</li>
+					</ul>
+					<span class="tech-stack">Concepts : VLAN tagging, DMZ, Routing, FW</span>
+				</div>
+
+				<div class="mission-card">
+					<h3>Gestion de Parc (ITSM)</h3>
+					<p>Automatisation du suivi matériel et des interventions techniques.</p>
+					<ul>
+						<li>Mise en place de <strong>GLPI</strong> pour le helpdesk.</li>
+						<li>Inventaire automatisé via <strong>OCS Inventory</strong>.</li>
+						<li>Rédaction de documentations d'exploitation.</li>
+					</ul>
+					<span class="tech-stack">Outils : GLPI, OCS, MySQL</span>
+				</div>
+
 			</section>
 
 		</div>
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Portfolio Technique</li></ul>
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Portfolio SISR</li></ul>
 			</div>
 		</footer>
 
