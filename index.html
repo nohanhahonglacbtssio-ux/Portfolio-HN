@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
-		<title>Nohan HA-HONG-LAC | Portfolio BTS SIO</title>
+		<title>Nohan HA-HONG-LAC | Portfolio Expert SIO</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- STYLE DYNASTIE --- */
+			/* --- CONFIGURATION DYNASTIE (NOIR & OR) --- */
 			:root {
 				--gold: #D4AF37;
 				--deep-black: #0a0a0a;
@@ -26,7 +26,7 @@
 
 			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 
-			/* --- CERCLE PARFAIT --- */
+			/* --- CERCLE PARFAIT (AVATAR) --- */
 			.image.avatar { 
 				display: inline-block !important;
 				width: 150px !important; 
@@ -45,7 +45,7 @@
 				border-radius: 50% !important;
 			}
 
-			/* --- NAVIGATION SANS POINTS --- */
+			/* --- NAVIGATION --- */
 			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
 			#nav ul li { padding: 0 !important; }
 
@@ -55,19 +55,22 @@
 				color: var(--gold) !important; 
 				margin-bottom: 12px;
 				text-transform: uppercase;
+				transition: all 0.3s ease;
 			}
 
-			.button.fit:hover { background: var(--gold) !important; color: #000 !important; }
+			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; }
+			/* --- TITRES ET CARTES --- */
+			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; }
 			strong { color: var(--gold) !important; }
+			.feature-card { border: 1px solid rgba(212, 175, 55, 0.2); padding: 1.5em; border-radius: 10px; background: rgba(255, 255, 255, 0.03); height: 100%; }
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<header id="header">
 			<div class="inner">
-				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
+				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Portrait Nohan" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
 				<p style="color: var(--gold); font-style: italic;">Étudiant BTS SIO</p>
 				
@@ -75,7 +78,7 @@
 					<ul>
 						<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
 						<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
-						<li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
+						<li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro RISC</a></li>
 						<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
 						<li><a href="veille.html" class="button fit">Veille Cyber</a></li>
 					</ul>
@@ -84,27 +87,51 @@
 		</header>
 
 		<div id="main">
+
 			<section id="one">
-				<h2>Expertise & Ambition</h2>
-				<p>Bienvenue sur mon portfolio professionnel. Étudiant en <strong>BTS SIO</strong> option SISR, je développe des compétences pointues en administration systèmes et réseaux.</p>
-				<p>Porté par une volonté de servir l'intérêt général, mon projet professionnel est d'intégrer la <strong>Gendarmerie Nationale</strong> au sein des unités <strong>N-TECH (Enquêteur en Technologies Numériques)</strong>.</p>
+				<h2>Vision & Engagement</h2>
+				<p>Actuellement en <strong>BTS SIO</strong> (option SISR), mon parcours est marqué par une double exigence : la maîtrise technique des infrastructures complexes et une volonté d'engagement au service de la nation.</p>
+				<p>Passionné par la défense numérique, mon objectif est d'intégrer la <strong>Gendarmerie Nationale</strong> pour devenir enquêteur <strong>N-TECH</strong>. Je m'y prépare en développant des compétences pointues en sécurisation de réseaux, administration système et analyse de vulnérabilités.</p>
 			</section>
 
 			<section id="two">
-				<h2>Domaines d'Intervention</h2>
+				<h2>Champs d'Expertise</h2>
 				<div class="row">
 					<article class="col-6 col-12-xsmall work-item">
-						<h3 style="color: var(--gold);">Cybersécurité</h3>
-						<p>Surveillance <strong>SIEM</strong>, analyse de logs, sécurisation des accès distants et isolation des services critiques via <strong>DMZ</strong>.</p>
+						<div class="feature-card">
+							<h3 style="color: var(--gold);">Sécurité & Réseaux</h3>
+							<p>Mise en place de <strong>VLAN</strong>, segmentation par <strong>DMZ</strong> et surveillance via <strong>SIEM</strong>. Expertise en configuration de serveurs de téléphonie <strong>XiVO</strong>.</p>
+						</div>
 					</article>
 					<article class="col-6 col-12-xsmall work-item">
-						<h3 style="color: var(--gold);">Infrastructures</h3>
-						<p>Administration <strong>Proxmox</strong>, Windows Server (Active Directory), Linux et segmentation réseau par <strong>VLAN</strong>.</p>
+						<div class="feature-card">
+							<h3 style="color: var(--gold);">Systèmes & Virtualisation</h3>
+							<p>Administration d'environnements <strong>Windows Server</strong> (AD, GPO) et <strong>Linux</strong>. Maîtrise de la virtualisation sous <strong>Proxmox</strong>.</p>
+						</div>
 					</article>
 				</div>
 			</section>
 
 			<section id="three">
+				<h2>Atouts Différenciants</h2>
+				<p>Au-delà de la technique, mon parcours international et mes projets de recherche font ma force :</p>
+				<div class="row">
+					<div class="col-4 col-12-small">
+						<strong>Mobilité Internationale</strong>
+						<p>Stage <strong>Erasmus+</strong> en Allemagne (Gelsenkirchen). Capacité d'adaptation en environnement étranger.</p>
+					</div>
+					<div class="col-4 col-12-small">
+						<strong>Langues</strong>
+						<p>Anglais technique (courant) et bases de politesse en Allemand.</p>
+					</div>
+					<div class="col-4 col-12-small">
+						<strong>Innovation IoT</strong>
+						<p>Transmission de données longue portée via protocole <strong>LoRa</strong>.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="four">
 				<h2>Me Contacter</h2>
 				<ul class="labeled-icons">
 					<li>
@@ -112,20 +139,22 @@
 						<a href="mailto:nohan.hahonglac.bts.sio@gmail.com" style="color:var(--gold)">nohan.hahonglac.bts.sio@gmail.com</a>
 					</li>
 					<li>
-						<h3 class="icon solid fa-home" style="color:var(--gold)"><span class="label">Lieu</span></h3>
+						<h3 class="icon solid fa-map-marker-alt" style="color:var(--gold)"><span class="label">Lieu</span></h3>
 						Saint-Joseph, La Réunion
 					</li>
 				</ul>
 			</section>
+
 		</div>
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC</li></ul>
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | 2024</li></ul>
 			</div>
 		</footer>
 
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
+
 	</body>
 </html>
