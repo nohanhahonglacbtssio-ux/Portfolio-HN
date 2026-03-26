@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
-		<title>Nohan HA-HONG-LAC | Portfolio BTS SIO</title>
+		<title>BAC PRO SN RISC | Nohan HA-HONG-LAC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- CONFIGURATION PRESTIGE DYNASTIE --- */
+			/* --- STYLE DYNASTIE (NOIR & OR) --- */
 			:root {
 				--gold: #D4AF37;
 				--deep-black: #0a0a0a;
@@ -26,7 +26,7 @@
 
 			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 
-			/* --- CERCLE PARFAIT --- */
+			/* --- CERCLE PARFAIT (AVATAR) --- */
 			.image.avatar { 
 				display: inline-block !important;
 				width: 150px !important; 
@@ -45,7 +45,7 @@
 				border-radius: 50% !important;
 			}
 
-			/* --- NAVIGATION MISE À JOUR --- */
+			/* --- NAVIGATION --- */
 			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
 			#nav ul li { padding: 0 !important; }
 
@@ -60,23 +60,32 @@
 			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
 			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; }
+			h3 { color: var(--gold) !important; margin-top: 1.5em; }
 			strong { color: var(--gold) !important; }
-			.feature-card { border: 1px solid rgba(212, 175, 55, 0.2); padding: 1.5em; border-radius: 10px; background: rgba(255, 255, 255, 0.03); height: 100%; }
+			
+			.project-card { 
+				border: 1px solid rgba(212, 175, 55, 0.2); 
+				padding: 1.5em; 
+				border-radius: 10px; 
+				background: rgba(255, 255, 255, 0.03); 
+				height: 100%;
+			}
+			.lang-badge { color: var(--gold); border: 1px solid var(--gold); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-right: 5px; }
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<header id="header">
 			<div class="inner">
-				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-				<p style="color: var(--gold); font-style: italic;">Étudiant BTS SIO</p>
+				<p style="color: var(--gold); font-style: italic;">Bac Pro SN RISC</p>
 				
 				<nav id="nav">
 					<ul>
+						<li><a href="index.html" class="button fit">Accueil</a></li>
 						<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
 						<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
-						<li><a href="bacpro-sn.html" class="button fit">BAC PRO SN</a></li>
 						<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
 						<li><a href="veille.html" class="button fit">Veille Cyber</a></li>
 					</ul>
@@ -85,42 +94,50 @@
 		</header>
 
 		<div id="main">
+
 			<section id="one">
-				<h2>Vision & Engagement</h2>
-				<p>Étudiant en <strong>BTS SIO</strong> option SISR, je me prépare à servir au sein de la <strong>Gendarmerie Nationale</strong> comme enquêteur <strong>N-TECH</strong>. Mon parcours lie expertise technique et sens du devoir.</p>
+				<h2>1. Bac Pro SN au Lycée Paul Langevin</h2>
+				<p>J'ai obtenu mon <strong>Bac Pro SN</strong> (Systèmes Numériques) au <strong>Lycée Paul Langevin</strong>, avec l'option <strong>RISC</strong> (Réseaux Informatiques et Systèmes Communicants).</p>
+				<p>Cette spécialisation m'a permis d'acquérir les bases essentielles en maintenance d'infrastructures réseaux et en solutions de communication.</p>
 			</section>
 
 			<section id="two">
-				<h2>Domaines d'Intervention</h2>
+				<h2>2. Expériences en Entreprise</h2>
 				<div class="row">
-					<article class="col-6 col-12-xsmall work-item">
-						<div class="feature-card">
-							<h3 style="color: var(--gold);">Sécurité & Réseaux</h3>
-							<p>Segmentation via <strong>DMZ</strong>, surveillance <strong>SIEM</strong> et gestion des <strong>VLAN</strong>.</p>
+					<div class="col-6 col-12-xsmall">
+						<div class="project-card">
+							<h3>Lycée Pierre Poivre</h3>
+							<p>Support de proximité : <strong>réparation</strong> de matériel et <strong>assistance utilisateur</strong>. Initiation à l'administration serveur (<strong>GPO</strong>).</p>
 						</div>
-					</article>
-					<article class="col-6 col-12-xsmall work-item">
-						<div class="feature-card">
-							<h3 style="color: var(--gold);">Infrastructure</h3>
-							<p>Administration <strong>Windows Server (GPO)</strong>, Linux et virtualisation <strong>Proxmox</strong>.</p>
+					</div>
+					<div class="col-6 col-12-xsmall">
+						<div class="project-card">
+							<h3>Maxi-Median-Shop (Allemagne)</h3>
+							<p>Stage <strong>Erasmus+</strong> à Gelsenkirchen. Maintenance intensive en boutique et accueil client multilingue.</p>
+							<p><span class="lang-badge">Anglais</span> <span class="lang-badge">Allemand</span></p>
 						</div>
-					</article>
+					</div>
 				</div>
 			</section>
 
 			<section id="three">
-				<h2>Me Contacter</h2>
-				<ul class="labeled-icons">
-					<li>
-						<h3 class="icon solid fa-envelope" style="color:var(--gold)"><span class="label">Email</span></h3>
-						<a href="mailto:nohan.hahonglac.bts.sio@gmail.com" style="color:var(--gold)">nohan.hahonglac.bts.sio@gmail.com</a>
-					</li>
-					<li>
-						<h3 class="icon solid fa-map-marker-alt" style="color:var(--gold)"><span class="label">Lieu</span></h3>
-						Saint-Joseph, La Réunion
-					</li>
-				</ul>
+				<h2>3. Projets Techniques</h2>
+				<div class="row">
+					<div class="col-6 col-12-xsmall">
+						<div class="project-card">
+							<h3>Station Météo & LoRa</h3>
+							<p>Mise en place de la transmission de données environnementales via une <strong>antenne LoRa</strong> longue portée.</p>
+						</div>
+					</div>
+					<div class="col-6 col-12-xsmall">
+						<div class="project-card">
+							<h3>Téléphonie sur IP</h3>
+							<p>Configuration de serveurs <strong>XiVO</strong> pour la gestion de standards téléphoniques d'entreprise.</p>
+						</div>
+					</div>
+				</div>
 			</section>
+
 		</div>
 
 		<footer id="footer">
