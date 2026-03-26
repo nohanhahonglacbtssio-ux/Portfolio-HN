@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- CONFIGURATION DYNASTIE (COHÉRENCE TOTALE) --- */
+			/* --- CONFIGURATION DYNASTIE --- */
 			:root {
 				--gold: #D4AF37;
 				--deep-black: #0a0a0a;
@@ -26,7 +26,6 @@
 
 			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 
-			/* --- CERCLE PARFAIT (AVATAR) --- */
 			.image.avatar { 
 				display: inline-block !important;
 				width: 150px !important; 
@@ -35,7 +34,6 @@
 				border: 2px solid var(--gold) !important;
 				overflow: hidden !important; 
 				padding: 0 !important;
-				background: none !important;
 			}
 
 			.image.avatar img {
@@ -45,7 +43,6 @@
 				border-radius: 50% !important;
 			}
 
-			/* --- NAVIGATION --- */
 			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
 			#nav ul li { padding: 0 !important; }
 
@@ -59,7 +56,6 @@
 
 			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-			/* --- STRUCTURE DES MISSIONS --- */
 			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; }
 			h3 { color: var(--gold) !important; margin-top: 1em; }
 			strong { color: var(--gold) !important; }
@@ -70,10 +66,16 @@
 				border-radius: 12px; 
 				background: rgba(255, 255, 255, 0.02); 
 				margin-bottom: 2em;
-				transition: transform 0.3s ease;
 			}
-			.mission-card:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); }
-			
+			.tutor-note { 
+				border-left: 3px solid var(--gold); 
+				padding-left: 1.5em; 
+				font-style: italic; 
+				background: rgba(212, 175, 55, 0.05); 
+				padding-top: 1em; 
+				padding-bottom: 1em; 
+				margin-top: 1em;
+			}
 			.tech-stack { font-size: 0.85em; color: var(--gold); font-weight: bold; margin-top: 10px; display: block; }
 		</style>
 	</head>
@@ -100,63 +102,54 @@
 		<div id="main">
 
 			<section id="one">
-				<h2>Missions SISR : Systèmes & Réseaux</h2>
-				<p>Au cours de mon <strong>BTS SIO option SISR</strong>, j'ai réalisé plusieurs missions techniques simulant des besoins réels d'entreprises. Ces projets m'ont permis de valider mes compétences en administration, sécurisation et gestion de parcs informatiques.</p>
+				<h2>Missions de Stage (2ème Année)</h2>
+				
+				<div class="mission-card">
+					<h3>Sécurisation des Accès & Analyse de Logs (Bastion + SIEM)</h3>
+					<p>Durant mon second stage, j'ai eu pour mission principale de déployer une infrastructure de sécurité open-source pour centraliser les accès distants et analyser les événements de sécurité du réseau.</p>
+					
+					<h4>1. Mise en place du Bastion</h4>
+					<ul>
+						<li>Analyse comparative des solutions (Teleport, Bastillion, Guacamole).</li>
+						<li>Déploiement et configuration de <strong>Guacamole</strong> pour sécuriser les accès SSH et RDP.</li>
+						<li>Implémentation de l'<strong>Authentification Multi-Facteurs (MFA)</strong> et gestion des rôles.</li>
+					</ul>
+
+					<h4>2. Centralisation SIEM & Détection</h4>
+					<ul>
+						<li>Déploiement d'une solution <strong>SIEM (Wazuh / ELK Stack)</strong>.</li>
+						<li>Collecte des logs serveurs et équipements réseaux.</li>
+						<li>Développement de règles de corrélation pour détecter les <strong>attaques brute-force</strong> et tentatives d'intrusion.</li>
+						<li>Création de tableaux de bord de visualisation sous Kibana.</li>
+					</ul>
+
+					<h4>3. Tests & Simulations</h4>
+					<ul>
+						<li>Simulation d'attaques (Scans de ports, connexions suspectes) pour valider la détection.</li>
+						<li>Optimisation des alertes pour minimiser les faux positifs.</li>
+					</ul>
+					
+					<span class="tech-stack">Outils : Guacamole, Wazuh, ELK (Elasticsearch, Logstash, Kibana), MFA, SSH/RDP</span>
+
+					<div class="tutor-note">
+						<strong>Appréciation du tuteur :</strong> "Nohan a fait preuve d'un réel investissement malgré les défis techniques rencontrés. Il a su rebondir avec détermination... un profil prometteur à suivre avec intérêt."
+					</div>
+				</div>
 			</section>
 
 			<section id="two">
-				
-				<div class="mission-card">
-					<h3>Infrastructure & Virtualisation</h3>
-					<p>Déploiement d'un environnement virtualisé pour une PME. Mise en place d'une infrastructure robuste permettant d'isoler les services et d'optimiser les ressources matérielles.</p>
-					<ul>
-						<li>Installation et configuration de l'hyperviseur <strong>Proxmox</strong>.</li>
-						<li>Création de machines virtuelles (VM) sous Linux et Windows Server.</li>
-						<li>Mise en place de sauvegardes automatisées.</li>
-					</ul>
-					<span class="tech-stack">Technologies : Proxmox, Debian, Windows Server</span>
-				</div>
-
+				<h2>Missions Académiques SISR</h2>
 				<div class="mission-card">
 					<h3>Administration Services Réseaux</h3>
-					<p>Configuration complète d'un domaine d'entreprise pour la gestion centralisée des utilisateurs et des ressources.</p>
-					<ul>
-						<li>Installation d'un contrôleur de domaine <strong>Active Directory</strong>.</li>
-						<li>Mise en place de stratégies de groupe (<strong>GPO</strong>) pour sécuriser les postes clients.</li>
-						<li>Configuration des services <strong>DHCP</strong> et <strong>DNS</strong>.</li>
-					</ul>
-					<span class="tech-stack">Technologies : AD DS, DNS, DHCP, GPO</span>
+					<p>Configuration complète d'un domaine Active Directory avec mise en place de <strong>GPO</strong> et services <strong>DNS/DHCP</strong>.</p>
 				</div>
-
-				<div class="mission-card">
-					<h3>Sécurisation & Segmentation</h3>
-					<p>Protection des données et du réseau interne via une architecture segmentée.</p>
-					<ul>
-						<li>Création de <strong>VLAN</strong> pour isoler les services (Comptabilité, Direction, Invités).</li>
-						<li>Mise en place d'une <strong>DMZ</strong> pour héberger les services publics en toute sécurité.</li>
-						<li>Configuration de règles de pare-feu (Firewall) restrictives.</li>
-					</ul>
-					<span class="tech-stack">Technologies : VLAN, DMZ, Firewall (pfsense/Stormshield)</span>
-				</div>
-
-				<div class="mission-card">
-					<h3>Gestion de Parc & Support</h3>
-					<p>Optimisation du suivi du matériel et des demandes d'assistance des utilisateurs.</p>
-					<ul>
-						<li>Déploiement de l'outil de gestion de tickets <strong>GLPI</strong>.</li>
-						<li>Inventaire automatique du parc informatique via <strong>OCS Inventory</strong>.</li>
-						<li>Rédaction de procédures techniques et guides utilisateurs.</li>
-					</ul>
-					<span class="tech-stack">Technologies : GLPI, OCS Inventory, SNMP</span>
-				</div>
-
 			</section>
 
 		</div>
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Portfolio Professionnel</li></ul>
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Portfolio Technique</li></ul>
 			</div>
 		</footer>
 
