@@ -5,97 +5,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* --- STYLE PRESTIGE DYNASTIE --- */
-			:root {
-				--gold: #D4AF37;
-				--deep-black: #0a0a0a;
-			}
-
-			body { 
-				background: radial-gradient(circle at top right, #1a1a1a, #050505) !important;
-				color: #e0e0e0 !important;
-				font-family: 'Georgia', serif !important;
-			}
-
-			#header { 
-				background-color: var(--deep-black) !important; 
-				border-right: 1px solid var(--gold) !important;
-				text-align: center;
-			}
-
-			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
-
-			.image.avatar { 
-				display: inline-block !important;
-				width: 150px !important; 
-				height: 150px !important; 
-				border-radius: 50% !important; 
-				border: 2px solid var(--gold) !important;
-				overflow: hidden !important; 
-				padding: 0 !important;
-			}
-
-			.image.avatar img {
-				width: 100% !important;
-				height: 100% !important;
-				object-fit: cover !important;
-				border-radius: 50% !important;
-			}
-
-			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
-			#nav ul li { padding: 0 !important; }
-
-			.button.fit { 
-				background: rgba(212, 175, 55, 0.05) !important; 
-				border: 1px solid rgba(212, 175, 55, 0.3) !important; 
-				color: var(--gold) !important; 
-				margin-bottom: 12px;
-				text-transform: uppercase;
-			}
-
-			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
-
-			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; margin-bottom: 1em; }
-			h3 { color: var(--gold) !important; margin-top: 1em; }
-			strong { color: var(--gold) !important; }
-			
-			/* --- CARDS --- */
-			.mission-card { 
-				border: 1px solid rgba(212, 175, 55, 0.2); 
-				padding: 2em; 
-				border-radius: 12px; 
-				background: rgba(255, 255, 255, 0.02); 
-				margin-bottom: 2.5em;
-				transition: all 0.3s ease;
-			}
-			.mission-card:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); }
-
-			.tutor-note { 
-				border-left: 3px solid var(--gold); 
-				padding: 1.5em; 
-				font-style: italic; 
-				background: rgba(212, 175, 55, 0.05); 
-				margin-top: 1.5em;
-				border-radius: 0 8px 8px 0;
-			}
-			.tech-stack { font-size: 0.85em; color: var(--gold); font-weight: bold; margin-top: 15px; display: block; text-transform: uppercase; letter-spacing: 1px; }
-		</style>
 	</head>
 	<body class="is-preload">
-
 		<header id="header">
 			<div class="inner">
-				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
-				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-				<p style="color: var(--gold); font-style: italic;">Expertise SISR</p>
-				
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<h1><strong>Parcours SISR</strong></h1>
+				<p style="color: var(--gold); font-style: italic;">Solutions d'Infrastructure, Systèmes et Réseaux</p>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html" class="button fit">Accueil</a></li>
-						<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
-						<li><a href="bacpro-sn.html" class="button fit">BAC PRO SN</a></li>
-						<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
+						<li><a href="contexte-bts.html" class="button fit">Contexte NovaTech</a></li>
 						<li><a href="veille.html" class="button fit">Veille Cyber</a></li>
 					</ul>
 				</nav>
@@ -104,94 +24,82 @@
 
 		<div id="main">
 
-			<section id="one">
-				<h2>Projet Majeur : Cybersécurité (Stage 2)</h2>
-				<div class="mission-card">
-					<h3>Déploiement Bastion & SIEM Open Source</h3>
-					<p>Réalisation d'une infrastructure de sécurité complète pour centraliser les accès et surveiller les menaces sur le réseau de l'organisation.</p>
-					
-					<div class="row">
-						<div class="col-6 col-12-xsmall">
-							<h4>Sécurisation Bastion</h4>
-							<ul>
-								<li>Solution retenue : <strong>Guacamole</strong>.</li>
-								<li>Sécurisation des accès <strong>SSH</strong> et <strong>RDP</strong>.</li>
-								<li>Double authentification (<strong>MFA</strong>).</li>
-							</ul>
-						</div>
-						<div class="col-6 col-12-xsmall">
-							<h4>Surveillance SIEM</h4>
-							<ul>
-								<li>Déploiement <strong>Wazuh / ELK Stack</strong>.</li>
-								<li>Analyse de logs et détection brute-force.</li>
-								<li>Tableaux de bord de visualisation.</li>
-							</ul>
+			<section id="stage1">
+				<h2>Stage 1 : Horizon PC (Maintenance & Cloud)</h2>
+				<p style="color: var(--gold); font-style: italic;">
+					📍 Saint-Joseph | 📅 Juin 2025 | 👤 Tuteur : Mr Robert
+				</p>
+				<p>Une première immersion axée sur le support de proximité et l'initiation aux technologies de virtualisation open-source.</p>
+				
+				<div class="row">
+					<div class="col-6 col-12-medium">
+						<div class="mission-card">
+							<h3>Support & Maintenance</h3>
+							<p>Diagnostic de pannes matérielles, remplacement de composants et masterisation de postes clients sous Windows 10/11.</p>
 						</div>
 					</div>
-
-					<div class="tutor-note">
-						<strong>Appréciation du tuteur :</strong> "Nohan a fait preuve d'un réel investissement malgré les défis techniques rencontrés... un profil prometteur à suivre avec intérêt."
+					<div class="col-6 col-12-medium">
+						<div class="mission-card">
+							<h3>Cloud & Travail Collaboratif</h3>
+							<p>Déploiement d'une instance <strong>Nextcloud</strong> pour le stockage de fichiers et mise en place d'un pare-feu <strong>IPFire</strong> pour sécuriser les accès distants.</p>
+						</div>
 					</div>
-					<span class="tech-stack">Outils : Guacamole, Wazuh, ELK Stack, MFA, Linux Debian</span>
+					<div class="col-12">
+						<div class="mission-card">
+							<h3>Projet Mentorat (Lycée Paul Langevin)</h3>
+							<p>Accompagnement technique sur le déploiement d'un socle de virtualisation <strong>Proxmox</strong> et l'installation d'un annuaire <strong>Active Directory</strong> pour la gestion centralisée des utilisateurs.</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section id="two">
-				<h2>Missions de Formation SISR</h2>
+			<section id="stage2">
+				<h2>Stage 2 : NovaTech IT (Services & Infrastructure)</h2>
+				<p style="color: var(--gold); font-style: italic;">
+					📍 Expertise en Administration Systèmes et Réseaux
+				</p>
 
-				<div class="mission-card">
-					<h3>Infrastructure & Virtualisation</h3>
-					<p>Optimisation des ressources serveurs via un environnement virtualisé.</p>
+				<div class="card">
+					<h3>Ingénierie de Virtualisation (Proxmox VE)</h3>
+					<p>Conception et gestion d'une infrastructure virtualisée robuste s'appuyant sur des conteneurs (LXC) et machines virtuelles (VM) pour optimiser les ressources matérielles.</p>
 					<ul>
-						<li>Installation et configuration de l'hyperviseur <strong>Proxmox</strong>.</li>
-						<li>Gestion des containers <strong>LXC</strong> et machines virtuelles.</li>
-						<li>Isolation des services critiques.</li>
+						<li><strong>Optimisation Stockage :</strong> Configuration de pools <strong>ZFS</strong> pour assurer la redondance des données et des snapshots rapides.</li>
+						<li><strong>Segmentation des Services :</strong> Isolation des serveurs critiques dans le <strong>VLAN 21 (DMZ)</strong> pour limiter la surface d'attaque.</li>
 					</ul>
-					<span class="tech-stack">Outils : Proxmox VE, LXC, KVM</span>
 				</div>
 
-				<div class="mission-card">
-					<h3>Administration Windows Server</h3>
-					<p>Gestion centralisée d'un parc informatique d'entreprise.</p>
-					<ul>
-						<li>Déploiement <strong>Active Directory (AD DS)</strong>.</li>
-						<li>Configuration de <strong>GPO</strong> pour le contrôle des postes de travail.</li>
-						<li>Gestion des services réseaux (<strong>DNS / DHCP</strong>).</li>
-					</ul>
-					<span class="tech-stack">Outils : Windows Server, AD, Group Policy</span>
-				</div>
+				<div class="row">
+					<div class="col-6 col-12-medium">
+						<div class="mission-card">
+							<h3>Supervision (Zabbix)</h3>
+							<p>Installation d'un serveur <strong>Zabbix (VM 103)</strong> sous Debian 12. Configuration d'alertes SNMP et agents pour monitorer en temps réel la charge CPU, l'espace disque et l'état des services réseau.</p>
+						</div>
+					</div>
 
-				<div class="mission-card">
-					<h3>Segmentation & Réseaux</h3>
-					<p>Architecture réseau sécurisée pour la protection des flux internes.</p>
-					<ul>
-						<li>Création de <strong>VLAN</strong> par service (Admin, RH, Invités).</li>
-						<li>Mise en place d'une <strong>DMZ</strong> pour isoler les services publics.</li>
-						<li>Filtrage des flux via pare-feu (Firewalling).</li>
-					</ul>
-					<span class="tech-stack">Concepts : VLAN tagging, DMZ, Routing, FW</span>
-				</div>
+					<div class="col-6 col-12-medium">
+						<div class="mission-card">
+							<h3>ITSM & Inventaire (GLPI)</h3>
+							<p>Déploiement de <strong>GLPI (VM 101)</strong> sous Ubuntu 24.04. Liaison avec une base de données <strong>MariaDB dédiée (VM 102)</strong> pour la gestion des tickets d'incidents et l'inventaire automatique du parc via agent.</p>
+						</div>
+					</div>
 
-				<div class="mission-card">
-					<h3>Gestion de Parc (ITSM)</h3>
-					<p>Automatisation du suivi matériel et des interventions techniques.</p>
-					<ul>
-						<li>Mise en place de <strong>GLPI</strong> pour le helpdesk.</li>
-						<li>Inventaire automatisé via <strong>OCS Inventory</strong>.</li>
-						<li>Rédaction de documentations d'exploitation.</li>
-					</ul>
-					<span class="tech-stack">Outils : GLPI, OCS, MySQL</span>
-				</div>
+					<div class="col-6 col-12-medium">
+						<div class="mission-card">
+							<h3>Hébergement Web Sécurisé</h3>
+							<p>Mise en production d'un serveur <strong>Apache/Nginx (VM 104)</strong> pour l'exposition des services internes, avec durcissement de la configuration système (Hardening).</p>
+						</div>
+					</div>
 
+					<div class="col-6 col-12-medium">
+						<div class="mission-card">
+							<h3>Services d'Annuaire ADDS</h3>
+							<p>Administration d'un contrôleur de domaine <strong>Windows Server</strong>. Gestion des rôles <strong>DNS</strong> et <strong>DHCP</strong>, création d'Unités d'Organisation (OU) et application de stratégies de groupe (GPO).</p>
+						</div>
+					</div>
+				</div>
 			</section>
 
 		</div>
-
-		<footer id="footer">
-			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Portfolio SISR</li></ul>
-			</div>
-		</footer>
 
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
