@@ -1,133 +1,215 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-    <head>
-        <title>NovaTech | Nohan HA-HONG-LAC</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <style>
-            /* --- CONFIGURATION DYNASTIE --- */
-            :root {
-                --gold: #D4AF37;
-                --deep-black: #0a0a0a;
-                --soft-white: #e0e0e0;
-            }
+	<head>
+		<title>Contexte NovaTech IT | Nohan HA-HONG-LAC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* --- STYLE PRESTIGE DYNASTIE --- */
+			:root {
+				--gold: #D4AF37;
+				--deep-black: #0a0a0a;
+			}
 
-            body { 
-                background: radial-gradient(circle at top right, #1a1a1a, #050505);
-                font-family: 'Georgia', serif !important; 
-                color: var(--soft-white);
-            }
+			body { 
+				background: radial-gradient(circle at top right, #1a1a1a, #050505) !important;
+				color: #e0e0e0 !important;
+				font-family: 'Georgia', serif !important;
+			}
 
-            /* Sidebar Prestige */
-            #header { 
-                background-color: var(--deep-black) !important; 
-                border-right: 1px solid var(--gold);
-                box-shadow: 5px 0 25px rgba(0,0,0,0.7);
-                text-align: center;
-            }
+			#header { 
+				background-color: var(--deep-black) !important; 
+				border-right: 1px solid var(--gold) !important;
+				text-align: center;
+			}
 
-            h1 strong { 
-                color: var(--gold) !important; 
-                text-transform: uppercase; 
-                letter-spacing: 4px; 
-                font-size: 1.2em;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            }
+			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 
-            .image.avatar { 
-                border: 1px solid var(--gold); 
-                padding: 4px; 
-                transition: transform 0.5s ease;
-                background: none;
-            }
+			.image.avatar { 
+				display: inline-block !important;
+				width: 150px !important; 
+				height: 150px !important; 
+				border-radius: 50% !important; 
+				border: 2px solid var(--gold) !important;
+				overflow: hidden !important; 
+				padding: 0 !important;
+			}
 
-            .image.avatar:hover { transform: scale(1.05) rotate(2deg); }
+			.image.avatar img {
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover !important;
+			}
 
-            /* Navigation & Boutons */
-            nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
-            nav ul li { margin-bottom: 15px; }
+			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
+			#nav ul li { padding: 0 !important; }
 
-            .button.fit { 
-                background: rgba(212, 175, 55, 0.05) !important; 
-                border: 1px solid rgba(212, 175, 55, 0.3) !important; 
-                color: var(--gold) !important; 
-                text-transform: uppercase; 
-                letter-spacing: 2px;
-                font-size: 0.75em !important;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                border-radius: 0; 
-            }
+			.button.fit { 
+				background: rgba(212, 175, 55, 0.05) !important; 
+				border: 1px solid rgba(212, 175, 55, 0.3) !important; 
+				color: var(--gold) !important; 
+				margin-bottom: 12px;
+				text-transform: uppercase;
+			}
 
-            .button.fit:hover { 
-                border-color: var(--gold) !important;
-                background: var(--gold) !important;
-                color: #000 !important;
-                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-                transform: translateY(-2px);
-            }
+			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-            /* Contenu Principal */
-            h2 { 
-                color: var(--gold); 
-                border-bottom: 2px solid var(--gold); 
-                display: inline-block;
-                padding-bottom: 5px;
-                margin-bottom: 1.5em;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
+			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; margin-bottom: 1em; }
+			h3 { color: var(--gold) !important; margin-top: 1.5em; }
+			
+			.info-box { 
+				border: 1px solid rgba(212, 175, 55, 0.2); 
+				padding: 1.5em; 
+				border-radius: 8px; 
+				background: rgba(255, 255, 255, 0.02); 
+				margin-bottom: 2em;
+			}
 
-            #main { padding: 5em; }
+			table { width: 100%; border-collapse: collapse; margin: 1em 0; }
+			table th { background: rgba(212, 175, 55, 0.1); color: var(--gold); text-align: left; padding: 10px; border-bottom: 2px solid var(--gold); }
+			table td { padding: 10px; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
 
-            strong { color: var(--gold); }
-            
-            section {
-                animation: fadeIn 1.2s ease-out;
-            }
+			.network-img {
+				width: 100%;
+				border-radius: 8px;
+				border: 1px solid var(--gold);
+				margin: 1em 0;
+				filter: grayscale(20%) brightness(0.8);
+				transition: 0.3s;
+			}
+			.network-img:hover { filter: grayscale(0%) brightness(1); }
 
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        </style>
-    </head>
-    <body class="is-preload">
-        <header id="header">
-            <div class="inner">
-                <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
-                <h1><strong>Nohan HA-HONG-LAC</strong></h1>
-                <p style="color: var(--gold); font-style: italic;">Contexte Professionnel</p>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="button fit">Accueil</a></li>
-                        <li><a href="cv.html" class="button fit">Parcours & CV</a></li>
-                        <li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
-                        <li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
-                        <li><a href="veille.html" class="button fit">Veille Cyber</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+			.security-evolution {
+				background: rgba(212, 175, 55, 0.05);
+				border-left: 4px solid var(--gold);
+				padding: 1.5em;
+				margin-top: 2em;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-        <div id="main">
-            <section id="one">
-                <header class="major">
-                    <h2>Infrastructure NovaTech IT</h2>
-                </header>
-                <p><strong>NovaTech IT</strong> est le contexte fil rouge utilisé durant ma formation. Il simule une entreprise de services du numérique gérant une infrastructure complexe et hybride.</p>
-                
-                <h3 style="color: var(--gold);">Environnement Technique</h3>
-                <ul>
-                    <li><strong>Virtualisation :</strong> Cluster de serveurs sous <strong>Proxmox VE</strong> assurant la haute disponibilité.</li>
-                    <li><strong>Services Réseau :</strong> Architecture segmentée via <strong>VLANs</strong>, pare-feu <strong>pfsense</strong> et routage inter-VLAN.</li>
-                    <li><strong>Systèmes :</strong> Gestion d'un parc mixte <strong>Windows Server</strong> (Active Directory, GPO) et serveurs <strong>Linux Debian/Ubuntu</strong>.</li>
-                    <li><strong>Supervision :</strong> Monitoring permanent des services critiques via <strong>Zabbix</strong> et remontée d'alertes.</li>
-                </ul>
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
+				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
+				<p style="color: var(--gold); font-style: italic;">Contexte NovaTech IT</p>
+				
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html" class="button fit">Accueil</a></li>
+						<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
+						<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
+						<li><a href="veille.html" class="button fit">Veille Cyber</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-                <h3 style="color: var(--gold);">Enjeux de Cybersécurité</h3>
-                <p>Le contexte NovaTech intègre des problématiques réelles de protection des données, de gestion des droits d'accès et de maintien en condition opérationnelle (MCO) face aux menaces actuelles.</p>
-            </section>
-        </div>
-    </body>
+		<div id="main">
+
+			<section id="one">
+				<h2>Présentation de l'Entreprise</h2>
+				<div class="info-box">
+					<p><strong>NovaTech IT</strong> est une entreprise spécialisée dans les services d'hébergement, les solutions informatiques et l'infogérance[cite: 7, 96].</p>
+					<p>L'organisation interne se structure autour de trois pôles majeurs[cite: 8, 97]:</p>
+					<ul>
+						<li><strong>Infrastructure & Réseau :</strong> Composé de 3 techniciens, dont John B., Nicolas A. et moi-même [cite: 10, 98-102].</li>
+						<li><strong>Administratif :</strong> Maya L. et Karim H. [cite: 10, 103-106].</li>
+						<li><strong>Accueil & Support :</strong> Élodie C. et Thomas S. [cite: 11, 107-109].</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="two">
+				<h2>Architecture Réseau & Segmentation</h2>
+				<p>L'infrastructure repose sur un routage inter-VLAN et une segmentation stricte pour isoler les services critiques[cite: 25, 132, 186].</p>
+				
+				<h3>Topologie Logique</h3>
+				<img src="images/reseau_novatech.jpg" alt="Schéma Réseau NovaTech" class="network-img" />
+				<p style="font-size: 0.8em; font-style: italic;">*Représentation des VLANs 110, 120, 130 et de la DMZ (VLAN 21).</p>
+
+				<h3>Plan d'adressage IP</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>VLAN</th>
+							<th>Rôle</th>
+							<th>Réseau / Passerelle</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>110</td>
+							<td>Clients Administratif</td>
+							<td>192.168.110.0/24 (GW: .1) [cite: 31, 136]</td>
+						</tr>
+						<tr>
+							<td>120</td>
+							<td>Accueil & Support</td>
+							<td>192.168.120.0/24 (GW: .1) [cite: 33, 136]</td>
+						</tr>
+						<tr>
+							<td>130</td>
+							<td>Infrastructure & Réseau</td>
+							<td>192.168.130.0/24 (GW: .1) [cite: 36, 136]</td>
+						</tr>
+						<tr>
+							<td>21</td>
+							<td>Services DMZ (Exposés)</td>
+							<td>172.17.1.0/24 (GW: .254) [cite: 38, 136]</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="three">
+				<h2>Services & Supervision</h2>
+				<div class="row">
+					<div class="col-6 col-12-xsmall">
+						<h3>Cœur du Système</h3>
+						<ul>
+							<li><strong>Hyperviseur :</strong> Proxmox VE (172.17.1.1) pour la virtualisation des services[cite: 42, 114, 138].</li>
+							<li><strong>Annuaire :</strong> Active Directory (172.17.1.2) centralisant le DNS et le DHCP [cite: 44, 70, 139, 172-174].</li>
+						</ul>
+					</div>
+					<div class="col-6 col-12-xsmall">
+						<h3>Gestion & Monitoring</h3>
+						<ul>
+							<li><strong>Supervision :</strong> Zabbix (172.17.1.4) pour le suivi des serveurs Linux/Windows[cite: 46, 50, 141, 153].</li>
+							<li><strong>Support IT :</strong> GLPI v10.0.19 (172.17.1.3) pour la gestion des incidents et demandes[cite: 45, 61, 64, 140, 161, 164].</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section id="four">
+				<h2>Évolution Cybersécurité (Projet Stage 2)</h2>
+				<div class="security-evolution">
+					<h3>Renforcement de l'Infrastructure</h3>
+					<p>Lors de mon second stage, j'ai fait évoluer ce contexte initial en déployant une couche de sécurité avancée :</p>
+					<ul>
+						<li><strong>Bastion :</strong> Déploiement de <strong>Guacamole</strong> pour sécuriser les accès distants SSH et RDP avec authentification multi-facteurs (MFA).</li>
+						<li><strong>SIEM :</strong> Mise en place de <strong>Wazuh / ELK Stack</strong> pour la centralisation des logs et la détection d'attaques brute-force ou scans de ports.</li>
+						<li><strong>Audit :</strong> Analyse de corrélation et création de tableaux de bord pour la visualisation des événements de sécurité.</li>
+					</ul>
+					<blockquote style="margin-top: 1em;">
+						"Un profil prometteur, à suivre avec intérêt." — <em>Appréciation du tuteur de stage</em>.
+					</blockquote>
+				</div>
+			</section>
+
+		</div>
+
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Documentation NovaTech IT</li></ul>
+			</div>
+		</footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
