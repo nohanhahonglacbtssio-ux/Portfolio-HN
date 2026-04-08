@@ -14,27 +14,51 @@
 			.image.avatar { display: inline-block !important; width: 150px !important; height: 150px !important; border-radius: 50% !important; border: 2px solid var(--gold) !important; overflow: hidden; padding: 0 !important; }
 			.image.avatar img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
 			
-			/* NAVIGATION */
 			.button.fit { background: rgba(212, 175, 55, 0.05) !important; border: 1px solid rgba(212, 175, 55, 0.3) !important; color: var(--gold) !important; margin-bottom: 12px; text-transform: uppercase; }
 			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-			/* CONTENU */
 			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; margin-bottom: 1em; }
 			h3 { color: var(--gold) !important; margin-top: 1.5em; display: flex; align-items: center; }
 			h3::before { content: "◈"; margin-right: 10px; font-size: 0.8em; }
 
 			.card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 10px; padding: 2em; margin-bottom: 2em; }
-			.tag { background: var(--gold); color: #000; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; text-transform: uppercase; margin-right: 5px; }
+			
+			/* --- TABLEAU AMÉLIORÉ --- */
+			.table-container { 
+				margin: 2em 0; 
+				border-radius: 12px; 
+				overflow: hidden; 
+				border: 1px solid rgba(212, 175, 55, 0.3);
+				background: rgba(10, 10, 10, 0.5);
+			}
+			table { margin: 0; width: 100%; border-collapse: collapse; }
+			table thead { background: rgba(212, 175, 55, 0.15); }
+			table th { 
+				color: var(--gold); 
+				font-weight: bold; 
+				text-transform: uppercase; 
+				font-size: 0.9em; 
+				padding: 1.2em;
+				letter-spacing: 1px;
+			}
+			table td { 
+				padding: 1.2em; 
+				border-bottom: 1px solid rgba(212, 175, 55, 0.1); 
+				vertical-align: middle;
+			}
+			table tbody tr:hover { background: rgba(212, 175, 55, 0.05); transition: 0.3s; }
+			
+			.vlan-tag { 
+				color: var(--gold); 
+				font-weight: bold; 
+				border: 1px solid var(--gold); 
+				padding: 4px 10px; 
+				border-radius: 4px; 
+				font-family: monospace;
+			}
 
-			/* TABLEAUX EXCEPTIONNELS */
-			.table-wrapper { border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 8px; overflow: hidden; }
-			table { margin: 0; width: 100%; }
-			table thead { background: rgba(212, 175, 55, 0.1); }
-			table th { color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
-			table td { border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
-
-			.quote-box { border-left: 4px solid var(--gold); padding: 1em 2em; background: rgba(212, 175, 55, 0.05); font-style: italic; margin: 2em 0; }
-			.network-map { width: 100%; border: 1px solid var(--gold); border-radius: 10px; margin: 1.5em 0; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2)); }
+			.quote-box { border-left: 4px solid var(--gold); padding: 1.5em 2em; background: rgba(212, 175, 55, 0.05); font-style: italic; margin: 2em 0; border-radius: 0 8px 8px 0; }
+			.network-map { width: 100%; border: 1px solid var(--gold); border-radius: 10px; margin: 1.5em 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -58,23 +82,23 @@
 		<div id="main">
 
 			<section id="one">
-				<h2>I. L'Organisation : NovaTech IT</h2>
+				<h2>I. Présentation : NovaTech IT</h2>
 				<div class="card">
-					<p><strong>NovaTech IT</strong> est un acteur clé des services d'hébergement et des solutions IT[cite: 5, 7, 96]. L'entreprise s'appuie sur une structure agile pour répondre aux besoins critiques de ses clients.</p>
+					<p>NovaTech IT est une entreprise spécialisée dans les services d'hébergement et les solutions IT. L'organisation s'appuie sur une structure technique solide pour garantir la haute disponibilité des services.</p>
 					<div class="row">
 						<div class="col-6 col-12-small">
 							<h3>Pôle Technique</h3>
 							<ul>
-								<li>John B. (Responsable Infra) [cite: 10, 99]</li>
-								<li><strong>Nohan H. (Technicien Réseau)</strong> [cite: 10, 101]</li>
-								<li>Nicolas A. (Technicien Réseau) [cite: 10, 102]</li>
+								<li>John B. (Responsable Infrastructure)</li>
+								<li><strong>Nohan H. (Technicien Réseau)</strong></li>
+								<li>Nicolas A. (Technicien Réseau)</li>
 							</ul>
 						</div>
 						<div class="col-6 col-12-small">
-							<h3>Pôles Support & Admin</h3>
+							<h3>Support & Administratif</h3>
 							<ul>
-								<li>Accueil : Élodie C. & Thomas S. [cite: 11, 107-109]</li>
-								<li>Admin : Maya L. & Karim H. [cite: 10, 103-106]</li>
+								<li>Accueil & Support : Élodie C. & Thomas S.</li>
+								<li>Administratif : Maya L. & Karim H.</li>
 							</ul>
 						</div>
 					</div>
@@ -82,46 +106,45 @@
 			</section>
 
 			<section id="two">
-				<h2>II. Architecture Réseau (VLANs & DMZ)</h2>
-				<p>L'infrastructure est segmentée pour garantir une isolation optimale entre les services administratifs et les services exposés (DMZ)[cite: 127, 145].</p>
+				<h2>II. Architecture & Plan d'Adressage</h2>
+				<p>L'infrastructure est segmentée en plusieurs réseaux virtuels afin d'isoler les flux administratifs, techniques et les services publics.</p>
 				
 				<img src="images/reseau_novatech.jpg" alt="Schéma Réseau" class="network-map">
-				<p style="text-align: center; font-size: 0.8em;"><em>Topologie logique de l'infrastructure NovaTech IT.</em></p>
 
-				<div class="table-wrapper">
+				<div class="table-container">
 					<table>
 						<thead>
 							<tr>
 								<th>VLAN</th>
 								<th>Rôle</th>
-								<th>Adressage Réseau</th>
+								<th>Réseau IP</th>
 								<th>Passerelle</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td><span class="tag">110</span></td>
+								<td><span class="vlan-tag">110</span></td>
 								<td>Clients Administratif</td>
-								<td>192.168.110.0/24 [cite: 31, 136]</td>
-								<td>192.168.110.1 [cite: 32, 136]</td>
+								<td>192.168.110.0/24</td>
+								<td>192.168.110.1</td>
 							</tr>
 							<tr>
-								<td><span class="tag">120</span></td>
+								<td><span class="vlan-tag">120</span></td>
 								<td>Accueil & Support</td>
-								<td>192.168.120.0/24 [cite: 33, 136]</td>
-								<td>192.168.120.1 [cite: 35, 136]</td>
+								<td>192.168.120.0/24</td>
+								<td>192.168.120.1</td>
 							</tr>
 							<tr>
-								<td><span class="tag">130</span></td>
+								<td><span class="vlan-tag">130</span></td>
 								<td>Infrastructure & Réseau</td>
-								<td>192.168.130.0/24 [cite: 36, 136]</td>
-								<td>192.168.130.1 [cite: 37, 136]</td>
+								<td>192.168.130.0/24</td>
+								<td>192.168.130.1</td>
 							</tr>
 							<tr>
-								<td><span class="tag">21</span></td>
-								<td>Services DMZ / Proxmox</td>
-								<td>172.17.1.0/24 [cite: 38, 136]</td>
-								<td>172.17.1.254 [cite: 39, 136]</td>
+								<td><span class="vlan-tag">21</span></td>
+								<td>Services DMZ (Exposés)</td>
+								<td>172.17.1.0/24</td>
+								<td>172.17.1.254</td>
 							</tr>
 						</tbody>
 					</table>
@@ -129,35 +152,17 @@
 			</section>
 
 			<section id="three">
-				<h2>III. Socle de Services (Stage 1)</h2>
-				<div class="row">
-					<div class="col-4 col-12-medium">
-						<h3>Supervision</h3>
-						<p><strong>Zabbix</strong> sur Debian 12. Monitoring des serveurs via agents sur les ports 10050/10051[cite: 52, 54, 148, 151].</p>
-					</div>
-					<div class="col-4 col-12-medium">
-						<h3>Gestion (ITSM)</h3>
-						<p><strong>GLPI v10.0.19</strong> sur Ubuntu 24.04. Gestion des incidents et inventaire matériel[cite: 61, 64, 161].</p>
-					</div>
-					<div class="col-4 col-12-medium">
-						<h3>Annuaire (AD)</h3>
-						<p><strong>Active Directory</strong> (DNS/DHCP) sur Windows Server. Centralisation des utilisateurs [cite: 70, 71, 172-174].</p>
-					</div>
-				</div>
-			</section>
-
-			<section id="four">
-				<h2>IV. Évolution : Sécurisation Haute Performance</h2>
-				<div class="card" style="border-color: var(--gold);">
-					<p>Pour répondre aux nouvelles menaces, mon second stage s'est concentré sur le déploiement de solutions de sécurité avancées:</p>
+				<h2>III. Objectifs de Sécurisation (Stage 2)</h2>
+				<div class="card">
+					<p>Dans le cadre de l'évolution de l'infrastructure, j'ai été chargé de déployer des solutions de sécurité avancées pour protéger les accès et monitorer les flux :</p>
 					<ul>
-						<li><strong>Bastion (Apache Guacamole) :</strong> Sécurisation des accès distants (SSH/RDP) avec isolation complète des flux et authentification forte (MFA).</li>
-						<li><strong>SIEM (Wazuh & ELK Stack) :</strong> Déploiement d'une solution de détection d'intrusions et d'analyse comportementale de logs en temps réel.</li>
-						<li><strong>Réponse sur Incident :</strong> Création de règles de corrélation pour identifier les tentatives de brute-force et les scans de ports suspects.</li>
+						<li><strong>Déploiement d'un Bastion :</strong> Installation et configuration d'Apache Guacamole pour sécuriser les accès distants via SSH et RDP avec authentification multi-facteurs (MFA).</li>
+						<li><strong>Mise en place d'un SIEM :</strong> Centralisation des logs avec Wazuh et la stack ELK pour détecter les tentatives d'intrusion et les scans de ports.</li>
+						<li><strong>Analyse & Supervision :</strong> Développement de règles de corrélation et création de tableaux de bord pour la visualisation en temps réel des événements de sécurité.</li>
 					</ul>
 					
 					<div class="quote-box">
-						"Nohan a su rebondir avec détermination pour déployer une solution fonctionnelle (Bastion + SIEM) en faisant preuve d'autonomie et de rigueur. Un profil prometteur." 
+						"Nohan a su rebondir avec détermination pour déployer une solution fonctionnelle (Bastion + SIEM) en faisant preuve d'autonomie et de rigueur. Un résultat concret et utile."
 					</div>
 				</div>
 			</section>
@@ -166,7 +171,7 @@
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Dossier E4 2026</li></ul>
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Dossier BTS SIO 2026</li></ul>
 			</div>
 		</footer>
 
