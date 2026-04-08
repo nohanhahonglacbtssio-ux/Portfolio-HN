@@ -23,13 +23,13 @@
 
 			.card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 10px; padding: 2em; margin-bottom: 2em; }
 			
-			/* --- TABLEAU ÉPURÉ ET LISIBLE --- */
+			/* --- TABLEAU FONCÉ OPTIMISÉ --- */
 			.table-container { 
 				margin: 2em 0; 
 				border-radius: 12px; 
 				overflow: hidden; 
 				border: 1px solid rgba(212, 175, 55, 0.3);
-				background: rgba(10, 10, 10, 0.5);
+				background: #0a0a0a; 
 			}
 			table { margin: 0; width: 100%; border-collapse: collapse; }
 			table thead { background: rgba(212, 175, 55, 0.15); }
@@ -42,12 +42,18 @@
 				letter-spacing: 1px;
 				text-align: left;
 			}
+			/* Lignes impaires en gris anthracite foncé */
+			table tbody tr:nth-child(odd) { background: #1a1a1a; }
+			/* Lignes paires en noir profond */
+			table tbody tr:nth-child(even) { background: #0a0a0a; }
+
 			table td { 
 				padding: 1.2em; 
-				border-bottom: 1px solid rgba(212, 175, 55, 0.1); 
+				border-bottom: 1px solid rgba(212, 175, 55, 0.05); 
 				vertical-align: middle;
+				color: #e0e0e0;
 			}
-			table tbody tr:hover { background: rgba(212, 175, 55, 0.05); transition: 0.3s; }
+			table tbody tr:hover { background: rgba(212, 175, 55, 0.1) !important; transition: 0.3s; }
 			
 			.vlan-tag { 
 				color: var(--gold); 
@@ -56,9 +62,9 @@
 				padding: 4px 10px; 
 				border-radius: 4px; 
 				font-family: monospace;
+				background: rgba(212, 175, 55, 0.05);
 			}
 
-			.quote-box { border-left: 4px solid var(--gold); padding: 1.5em 2em; background: rgba(212, 175, 55, 0.05); font-style: italic; margin: 2em 0; border-radius: 0 8px 8px 0; }
 			.network-map { width: 100%; border: 1px solid var(--gold); border-radius: 10px; margin: 1.5em 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 		</style>
 	</head>
@@ -85,21 +91,21 @@
 			<section id="one">
 				<h2>I. Présentation : NovaTech IT</h2>
 				<div class="card">
-					<p>NovaTech IT est une entreprise spécialisée dans les services d'hébergement et les solutions IT. L'organisation s'appuie sur une structure technique solide pour garantir la haute disponibilité des services.</p>
+					<p>NovaTech IT est une entreprise spécialisée dans les services d'hébergement, les solutions IT et l'infogérance[cite: 6, 7, 95, 96]. L'organisation s'appuie sur une structure technique solide pour garantir la haute disponibilité des services[cite: 17, 120].</p>
 					<div class="row">
 						<div class="col-6 col-12-small">
-							<h3>Pôle Technique</h3>
+							<h3>Pôle Infrastructure & Réseau</h3>
 							<ul>
-								<li>John B. (Responsable Infrastructure)</li>
-								<li><strong>Nohan H. (Technicien Réseau)</strong></li>
-								<li>Nicolas A. (Technicien Réseau)</li>
+								<li>John B. (Responsable Infrastructure) [cite: 10, 99]</li>
+								<li><strong>Nohan H. (Technicien Réseau) [cite: 10, 101]</strong></li>
+								<li>Nicolas A. (Technicien Réseau) [cite: 10, 102]</li>
 							</ul>
 						</div>
 						<div class="col-6 col-12-small">
 							<h3>Support & Administratif</h3>
 							<ul>
-								<li>Accueil & Support : Élodie C. & Thomas S.</li>
-								<li>Administratif : Maya L. & Karim H.</li>
+								<li>Accueil & Support : Élodie C. & Thomas S. [cite: 11, 108, 109]</li>
+								<li>Administratif : Maya L. & Karim H. [cite: 10, 104, 106]</li>
 							</ul>
 						</div>
 					</div>
@@ -108,7 +114,7 @@
 
 			<section id="two">
 				<h2>II. Architecture & Plan d'Adressage</h2>
-				<p>L'infrastructure est segmentée en plusieurs réseaux virtuels afin d'isoler les flux administratifs, techniques et les services exposés (DMZ).</p>
+				<p>L'infrastructure est segmentée en plusieurs réseaux virtuels (VLANs) afin d'isoler les flux administratifs, techniques et les services exposés en DMZ[cite: 14, 112, 127, 136].</p>
 				
 				<img src="images/reseau_novatech.jpg" alt="Schéma Réseau" class="network-map">
 
@@ -125,46 +131,30 @@
 						<tbody>
 							<tr>
 								<td><span class="vlan-tag">110</span></td>
-								<td>Clients Administratif</td>
-								<td>192.168.110.0/24</td>
-								<td>192.168.110.1</td>
+								<td>Clients Administratif [cite: 31, 136]</td>
+								<td>192.168.110.0/24 [cite: 31, 136]</td>
+								<td>192.168.110.1 [cite: 32, 136]</td>
 							</tr>
 							<tr>
 								<td><span class="vlan-tag">120</span></td>
-								<td>Accueil & Support</td>
-								<td>192.168.120.0/24</td>
-								<td>192.168.120.1</td>
+								<td>Accueil & Support [cite: 33, 136]</td>
+								<td>192.168.120.0/24 [cite: 33, 136]</td>
+								<td>192.168.120.1 [cite: 35, 136]</td>
 							</tr>
 							<tr>
 								<td><span class="vlan-tag">130</span></td>
-								<td>Infrastructure & Réseau</td>
-								<td>192.168.130.0/24</td>
-								<td>192.168.130.1</td>
+								<td>Infrastructure & Réseau [cite: 36, 136]</td>
+								<td>192.168.130.0/24 [cite: 36, 136]</td>
+								<td>192.168.130.1 [cite: 37, 136]</td>
 							</tr>
 							<tr>
 								<td><span class="vlan-tag">21</span></td>
-								<td>Services DMZ (Exposés)</td>
-								<td>172.17.1.0/24</td>
-								<td>172.17.1.254</td>
+								<td>Services DMZ (Exposés) [cite: 38, 136]</td>
+								<td>172.17.1.0/24 [cite: 38, 136]</td>
+								<td>172.17.1.254 [cite: 39, 136]</td>
 							</tr>
 						</tbody>
 					</table>
-				</div>
-			</section>
-
-			<section id="three">
-				<h2>III. Objectifs de Sécurisation (Stage 2)</h2>
-				<div class="card">
-					<p>Dans le cadre de l'évolution de l'infrastructure, j'ai été chargé de déployer des solutions de sécurité avancées pour protéger les accès et monitorer les flux :</p>
-					<ul>
-						<li><strong>Déploiement d'un Bastion :</strong> Installation d'Apache Guacamole pour sécuriser les accès distants via SSH et RDP avec authentification multi-facteurs (MFA).</li>
-						<li><strong>Mise en place d'un SIEM :</strong> Centralisation des logs avec Wazuh et la stack ELK pour détecter les tentatives d'intrusion et les scans de ports.</li>
-						<li><strong>Analyse & Supervision :</strong> Développement de règles de corrélation et création de tableaux de bord pour la visualisation en temps réel des événements de sécurité.</li>
-					</ul>
-					
-					<div class="quote-box">
-						"Nohan a su rebondir avec détermination pour déployer une solution fonctionnelle (Bastion + SIEM) en faisant preuve d'autonomie et de rigueur. Un résultat concret et utile."
-					</div>
 				</div>
 			</section>
 
