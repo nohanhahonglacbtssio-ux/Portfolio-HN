@@ -6,29 +6,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- STYLE DYNASTIE --- */
 			:root { --gold: #D4AF37; --deep-black: #0a0a0a; }
 			body { background: radial-gradient(circle at top right, #1a1a1a, #050505) !important; color: #e0e0e0 !important; font-family: 'Georgia', serif !important; }
 			#header { background-color: var(--deep-black) !important; border-right: 1px solid var(--gold) !important; text-align: center; }
 			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 			.image.avatar { display: inline-block !important; width: 150px !important; height: 150px !important; border-radius: 50% !important; border: 2px solid var(--gold) !important; overflow: hidden; padding: 0 !important; }
 			.image.avatar img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
-			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
+			
+			/* NAVIGATION */
 			.button.fit { background: rgba(212, 175, 55, 0.05) !important; border: 1px solid rgba(212, 175, 55, 0.3) !important; color: var(--gold) !important; margin-bottom: 12px; text-transform: uppercase; }
 			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-			/* --- TIMELINE ENRICHIE --- */
+			/* TIMELINE */
 			.timeline-container { border-left: 2px solid var(--gold); padding-left: 2em; margin-top: 2em; position: relative; }
-			.article-card { border: 1px solid rgba(212, 175, 55, 0.2); padding: 1.5em; border-radius: 8px; background: rgba(255, 255, 255, 0.02); margin-bottom: 2.5em; position: relative; }
+			.article-card { border: 1px solid rgba(212, 175, 55, 0.2); padding: 1.5em; border-radius: 8px; background: rgba(255, 255, 255, 0.02); margin-bottom: 2em; position: relative; }
 			.article-card::before { content: ''; position: absolute; left: -2.6em; top: 1.5em; width: 14px; height: 14px; background-color: var(--deep-black); border: 2px solid var(--gold); border-radius: 50%; }
 			
 			.date-badge { display: inline-block; background: var(--gold); color: #000; padding: 3px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; }
-			
-			/* Style spécifique pour le suivi */
 			.analysis-box { background: rgba(212, 175, 55, 0.07); border-left: 3px solid var(--gold); padding: 1em; margin-top: 1em; font-size: 0.9em; border-radius: 0 5px 5px 0; }
 			.analysis-box strong { color: var(--gold); text-transform: uppercase; font-size: 0.8em; }
-			
-			.source-tag { font-size: 0.8em; color: #888; font-style: italic; display: block; margin-top: 10px; }
+			.source-tag { font-size: 0.75em; color: #888; font-style: italic; display: block; margin-top: 10px; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -53,88 +50,163 @@
 		<div id="main">
 
 			<section id="one">
-				<h2>Flux de Veille : 18 Mois d'Actualité Cyber</h2>
-				<p>Thématique : <strong>L'Intelligence Artificielle au service de l'offensive et de la défense numérique.</strong></p>
+				<h2>Journal de Veille Technologique (18 Mois)</h2>
+				<p>Thématique : <strong>L'Intelligence Artificielle au cœur de la Cybersécurité Opérationnelle.</strong></p>
 
 				<div class="timeline-container">
 
 					<div class="article-card">
 						<span class="date-badge">Avril 2026</span>
 						<h3>L'IA Agentique : Automatisation totale des intrusions</h3>
-						<p>Apparition d'IA capables de chaîner des attaques sans intervention humaine (reconnaissance, exploitation, exfiltration).</p>
-						<div class="analysis-box">
-							<strong>Suivi & Impact SISR :</strong> La détection humaine est trop lente. Nécessité de basculer sur des réponses automatisées via <strong>SIEM/SOAR</strong>.
-						</div>
-						<span class="source-tag">Source : CrowdStrike Global Threat Report</span>
+						<p>Les agents IA autonomes sont désormais capables de mener des scans de vulnérabilités et des exfiltrations sans intervention humaine.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Nécessité de basculer sur des réponses automatisées (SOAR) pour contrer la vitesse de l'IA.</div>
+						<span class="source-tag">Source : CrowdStrike Intelligence Report 2026</span>
 					</div>
 
 					<div class="article-card">
-						<span class="date-badge">Janvier 2026</span>
-						<h3>Deepfakes temps réel en visioconférence</h3>
-						<p>Des attaquants usurpent l'identité de DSI lors de réunions Teams pour valider des ouvertures de ports critiques.</p>
-						<div class="analysis-box">
-							<strong>Suivi & Impact SISR :</strong> Le "voir pour croire" est mort. Renforcement des procédures de double validation hors-ligne obligatoire.
-						</div>
+						<span class="date-badge">Mars 2026</span>
+						<h3>Malware Polymorphe Auto-Généré</h3>
+						<p>Apparition de malwares qui modifient leur propre code en temps réel via l'IA pour échapper aux signatures des antivirus.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> L'analyse comportementale (EDR) devient la seule barrière efficace face au polymorphisme.</div>
 						<span class="source-tag">Source : SecurityWeek</span>
 					</div>
 
 					<div class="article-card">
-						<span class="date-badge">Octobre 2025</span>
-						<h3>Empoisonnement des données d'apprentissage (Data Poisoning)</h3>
-						<p>Nouvelle technique visant à corrompre les modèles d'IA de défense pour qu'ils ignorent certains types de malwares.</p>
-						<div class="analysis-box">
-							<strong>Suivi & Impact SISR :</strong> Vigilance sur l'intégrité des flux de logs envoyés vers notre instance <strong>Wazuh</strong>.
-						</div>
-						<span class="source-tag">Source : Journal du Net Cyber</span>
-					</div>
-
-					<div class="article-card">
-						<span class="date-badge">Juillet 2025</span>
-						<h3>L'IA accélère le cassage de mots de passe</h3>
-						<p>Des outils utilisant les réseaux neuronaux cassent des mots de passe complexes 8 caractères en moins d'une minute.</p>
-						<div class="analysis-box">
-							<strong>Suivi & Impact SISR :</strong> Accélération de la migration vers le <strong>Passwordless</strong> et le <strong>MFA FIDO2</strong> sur nos infrastructures.
-						</div>
+						<span class="date-badge">Février 2026</span>
+						<h3>Vishing 2.0 : Deepfakes vidéo en live</h3>
+						<p>Des cybercriminels utilisent des avatars vidéo en temps réel pour tromper les employés lors de réunions Zoom/Teams.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Révision des protocoles d'authentification des accès critiques (Zero Trust).</div>
 						<span class="source-tag">Source : BleepingComputer</span>
 					</div>
 
 					<div class="article-card">
-						<span class="date-badge">Mars 2025</span>
-						<h3>Analyse de vulnérabilités "0-day" assistée par LLM</h3>
-						<p>L'IA permet de scanner des milliers de lignes de code en quelques secondes pour trouver des failles inédites.</p>
-						<div class="analysis-box">
-							<strong>Suivi & Impact SISR :</strong> Mise en place de scans de vulnérabilités hebdomadaires plutôt que mensuels.
-						</div>
+						<span class="date-badge">Janvier 2026</span>
+						<h3>Rapport WEF : L'IA, risque cyber n°1</h3>
+						<p>Le Forum Économique Mondial classe la désinformation et la fraude par IA comme les menaces mondiales majeures pour 2026.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> La sécurité ne repose plus seulement sur la technique, mais sur la vérification de l'identité.</div>
+						<span class="source-tag">Source : World Economic Forum</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Décembre 2025</span>
+						<h3>AI-Botnets : DDoS de nouvelle génération</h3>
+						<p>Des botnets coordonnés par IA optimisent leurs pics de trafic pour saturer les firewalls de manière plus intelligente.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Importance du filtrage Geo-IP et de la protection Cloudflare/WAF.</div>
+						<span class="source-tag">Source : Cloudflare Blog</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Novembre 2025</span>
+						<h3>Automatisation du "Red Teaming" par IA</h3>
+						<p>Des outils permettent de simuler des attaques complexes sur une infrastructure en quelques clics.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Utilisation de ces outils pour tester la résistance de mon infrastructure <strong>Proxmox</strong>.</div>
 						<span class="source-tag">Source : The Hacker News</span>
 					</div>
 
 					<div class="article-card">
+						<span class="date-badge">Octobre 2025</span>
+						<h3>EU AI Act : La régulation impacte la Cyber</h3>
+						<p>La mise en œuvre de la loi européenne impose de nouvelles normes de sécurité pour les IA utilisées dans les infrastructures critiques.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Mise en conformité des outils de monitoring utilisant des modules IA.</div>
+						<span class="source-tag">Source : Europa.eu</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Septembre 2025</span>
+						<h3>Adversarial AI : Empoisonnement de modèles</h3>
+						<p>Techniques visant à "tromper" les IA de détection en injectant des données erronées dans leur apprentissage.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Surveillance de l'intégrité des flux de logs envoyés au <strong>SIEM</strong>.</div>
+						<span class="source-tag">Source : DarkReading</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Août 2025</span>
+						<h3>PassGAN : L'IA casse les mots de passe</h3>
+						<p>Une IA capable de deviner des mots de passe complexes en analysant les fuites de données mondiales.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Passage obligatoire au <strong>MFA (2FA)</strong> pour tous les utilisateurs du domaine.</div>
+						<span class="source-tag">Source : Home Security Heroes Research</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Juillet 2025</span>
+						<h3>Shadow AI : Le nouveau cauchemar des DSI</h3>
+						<p>Les employés utilisent des IA non autorisées, provoquant des fuites massives de données sensibles.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Mise en place de règles <strong>GPO</strong> pour restreindre l'accès aux sites IA non approuvés.</div>
+						<span class="source-tag">Source : ZDNet Cyber</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Juin 2025</span>
+						<h3>Reconnaissance réseau autonome</h3>
+						<p>Des scripts IA cartographient les ports ouverts et les services d'un serveur en un temps record.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Importance de la segmentation réseau par <strong>VLAN</strong> pour limiter la visibilité.</div>
+						<span class="source-tag">Source : ThreatPost</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Mai 2025</span>
+						<h3>Intégration de l'IA dans les SOAR</h3>
+						<p>Les outils d'orchestration de sécurité automatisent désormais la remédiation après une alerte.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Réflexion sur l'automatisation des bannissements d'IP sur mon <strong>Pare-feu</strong>.</div>
+						<span class="source-tag">Source : Elastic Security Blog</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Avril 2025</span>
+						<h3>Phishing hyper-personnalisé via OSINT</h3>
+						<p>L'IA croise les données LinkedIn et réseaux sociaux pour générer des mails de phishing infaillibles.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Campagnes de test de phishing internes pour sensibiliser les collaborateurs.</div>
+						<span class="source-tag">Source : KnowBe4</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Mars 2025</span>
+						<h3>Ransomware intelligent : Priorité à l'exfiltration</h3>
+						<p>Les malwares utilisent l'IA pour identifier les fichiers les plus "précieux" avant même de les chiffrer.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Protection renforcée du serveur de fichiers via des alertes de lecture massive.</div>
+						<span class="source-tag">Source : Sophos News</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Février 2025</span>
+						<h3>Le SIEM assisté par Langage Naturel</h3>
+						<p>Possibilité de requêter les logs ("Affiche-moi les échecs de connexion SSH") via un chat.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Gain de temps majeur pour l'administration quotidienne du <strong>SIEM Wazuh</strong>.</div>
+						<span class="source-tag">Source : Wazuh Documentation</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Janvier 2025</span>
+						<h3>MFA Fatigue 2.0</h3>
+						<p>L'IA envoie des vagues de notifications MFA aux moments où l'utilisateur est le plus susceptible de cliquer.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Adoption du MFA basé sur la localisation ou les empreintes digitales.</div>
+						<span class="source-tag">Source : Microsoft Security Blog</span>
+					</div>
+
+					<div class="article-card">
 						<span class="date-badge">Décembre 2024</span>
-						<h3>Industrialisation du Phishing polyglotte</h3>
-						<p>Disparition des fautes d'orthographe dans les mails frauduleux grâce à l'IA, rendant le phishing indétectable visuellement.</p>
-						<div class="analysis-box">
-							<strong>Suivi & Impact SISR :</strong> Focus sur la sensibilisation des utilisateurs et le filtrage mail basé sur l'analyse d'URL.
-						</div>
-						<span class="source-tag">Source : CERT-FR</span>
+						<h3>LLM pour l'Audit de Code</h3>
+						<p>Utilisation de modèles pour trouver des vulnérabilités dans les scripts de déploiement (IaC).</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Nettoyage de mes propres scripts Bash et PowerShell via analyse IA.</div>
+						<span class="source-tag">Source : GitHub Security</span>
 					</div>
 
 					<div class="article-card">
 						<span class="date-badge">Octobre 2024</span>
-						<h3>Lancement des SIEM "AI-Native"</h3>
-						<p>Généralisation des interfaces en langage naturel pour interroger les logs serveurs.</p>
-						<div class="analysis-box">
-							<strong>Suivi & Impact SISR :</strong> Début de mes recherches pour l'intégration de modules IA dans mon projet de stage <strong>Wazuh/ELK</strong>.
-						</div>
-						<span class="source-tag">Source : Elastic.co Blog</span>
+						<h3>Industrialisation du Cybercrime par IA</h3>
+						<p>Accès massif à des outils de création de malwares pour des attaquants non techniques.</p>
+						<div class="analysis-box"><strong>Suivi SISR :</strong> Début de ma veille ciblée sur l'IA face au constat de l'augmentation des attaques.</div>
+						<span class="source-tag">Source : ANSSI Reports</span>
 					</div>
 
 				</div>
 			</section>
+
 		</div>
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Veille E52</li></ul>
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Veille 2024-2026</li></ul>
 			</div>
 		</footer>
 
