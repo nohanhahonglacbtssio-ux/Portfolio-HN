@@ -1,137 +1,213 @@
 <!DOCTYPE HTML>
 <html lang="fr">
-    <head>
-        <title>Veille Cyber | Nohan HA-HONG-LAC</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <style>
-            /* --- CONFIGURATION DYNASTIE --- */
-            :root {
-                --gold: #D4AF37;
-                --deep-black: #0a0a0a;
-                --soft-white: #e0e0e0;
-            }
+	<head>
+		<title>Veille Cyber | Nohan HA-HONG-LAC</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* --- STYLE PRESTIGE DYNASTIE --- */
+			:root {
+				--gold: #D4AF37;
+				--deep-black: #0a0a0a;
+			}
 
-            body { 
-                background: radial-gradient(circle at top right, #1a1a1a, #050505);
-                font-family: 'Georgia', serif !important; 
-                color: var(--soft-white);
-            }
+			body { 
+				background: radial-gradient(circle at top right, #1a1a1a, #050505) !important;
+				color: #e0e0e0 !important;
+				font-family: 'Georgia', serif !important;
+			}
 
-            /* Sidebar Prestige */
-            #header { 
-                background-color: var(--deep-black) !important; 
-                border-right: 1px solid var(--gold);
-                box-shadow: 5px 0 25px rgba(0,0,0,0.7);
-                text-align: center;
-            }
+			#header { 
+				background-color: var(--deep-black) !important; 
+				border-right: 1px solid var(--gold) !important;
+				text-align: center;
+			}
 
-            h1 strong { 
-                color: var(--gold) !important; 
-                text-transform: uppercase; 
-                letter-spacing: 4px; 
-                font-size: 1.2em;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            }
+			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
 
-            .image.avatar { 
-                border: 1px solid var(--gold); 
-                padding: 4px; 
-                transition: transform 0.5s ease;
-                background: none;
-            }
+			.image.avatar { 
+				display: inline-block !important;
+				width: 150px !important; 
+				height: 150px !important; 
+				border-radius: 50% !important; 
+				border: 2px solid var(--gold) !important;
+				overflow: hidden !important; 
+				padding: 0 !important;
+			}
 
-            .image.avatar:hover { transform: scale(1.05) rotate(2deg); }
+			.image.avatar img {
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover !important;
+				border-radius: 50% !important;
+			}
 
-            /* Navigation & Boutons */
-            nav ul { list-style: none; padding: 0; margin-top: 2.5em; }
-            nav ul li { margin-bottom: 15px; }
+			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
+			#nav ul li { padding: 0 !important; }
 
-            .button.fit { 
-                background: rgba(212, 175, 55, 0.05) !important; 
-                border: 1px solid rgba(212, 175, 55, 0.3) !important; 
-                color: var(--gold) !important; 
-                text-transform: uppercase; 
-                letter-spacing: 2px;
-                font-size: 0.75em !important;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                border-radius: 0; 
-            }
+			.button.fit { 
+				background: rgba(212, 175, 55, 0.05) !important; 
+				border: 1px solid rgba(212, 175, 55, 0.3) !important; 
+				color: var(--gold) !important; 
+				margin-bottom: 12px;
+				text-transform: uppercase;
+				transition: all 0.3s ease;
+			}
 
-            .button.fit:hover { 
-                border-color: var(--gold) !important;
-                background: var(--gold) !important;
-                color: #000 !important;
-                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-                transform: translateY(-2px);
-            }
+			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-            /* Contenu Principal */
-            h2 { 
-                color: var(--gold); 
-                border-bottom: 2px solid var(--gold); 
-                display: inline-block;
-                padding-bottom: 5px;
-                margin-bottom: 1.5em;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
+			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; margin-bottom: 1em; }
+			h3 { color: var(--gold) !important; margin-top: 0; }
+			strong { color: var(--gold) !important; }
+			
+			/* --- TIMELINE VEILLE --- */
+			.timeline-container {
+				border-left: 2px solid var(--gold);
+				padding-left: 2em;
+				margin-top: 2em;
+				position: relative;
+			}
+			
+			.article-card { 
+				border: 1px solid rgba(212, 175, 55, 0.2); 
+				padding: 1.5em; 
+				border-radius: 8px; 
+				background: rgba(255, 255, 255, 0.02); 
+				margin-bottom: 2em;
+				position: relative;
+			}
+			
+			/* Le petit point doré sur la frise */
+			.article-card::before {
+				content: '';
+				position: absolute;
+				left: -2.6em;
+				top: 1.5em;
+				width: 14px;
+				height: 14px;
+				background-color: var(--deep-black);
+				border: 2px solid var(--gold);
+				border-radius: 50%;
+			}
 
-            #main { padding: 5em; }
+			.date-badge { 
+				display: inline-block;
+				background: var(--gold); 
+				color: #000; 
+				padding: 3px 10px; 
+				border-radius: 4px; 
+				font-size: 0.8em; 
+				font-weight: bold; 
+				margin-bottom: 10px;
+				text-transform: uppercase;
+			}
 
-            strong { color: var(--gold); }
-            
-            section {
-                animation: fadeIn 1.2s ease-out;
-            }
+			.source-tag {
+				font-size: 0.85em;
+				color: #888;
+				font-style: italic;
+				display: block;
+				margin-top: 10px;
+			}
+			
+			.tools-box {
+				border: 1px dashed var(--gold);
+				padding: 1.5em;
+				border-radius: 8px;
+				background: rgba(212, 175, 55, 0.03);
+				margin-bottom: 2em;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
 
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        </style>
-    </head>
-    <body class="is-preload">
-        <header id="header">
-            <div class="inner">
-                <a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Nohan" /></a>
-                <h1><strong>Nohan HA-HONG-LAC</strong></h1>
-                <p style="color: var(--gold); font-style: italic;">Veille Technologique</p>
-                <nav>
-                    <ul>
-                        <li><a href="index.html" class="button fit">Accueil</a></li>
-                        <li><a href="cv.html" class="button fit">Parcours & CV</a></li>
-                        <li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
-                        <li><a href="bacpro-sn.html" class="button fit">Fondations Bac Pro</a></li>
-                        <li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
+				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
+				<p style="color: var(--gold); font-style: italic;">Veille Cyber & N-TECH</p>
+				
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html" class="button fit">Accueil</a></li>
+						<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
+						<li><a href="bacpro-sn.html" class="button fit">BAC PRO SN</a></li>
+						<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
+						<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-        <div id="main">
-            <section id="one">
-                <header class="major">
-                    <h2>Veille Technologique & Cyber</h2>
-                </header>
-                <p>Ma veille porte sur l'évolution de la <strong>cybercriminalité</strong> et des outils de <strong>Forensics</strong> (investigation numérique). Cette démarche s'inscrit directement dans mon projet professionnel d'intégrer les unités <strong>N-TECH</strong> de la Gendarmerie Nationale.</p>
-                
-                <h3 style="color: var(--gold);">Thématiques Surveillées</h3>
-                <ul>
-                    <li><strong>Menaces Emergentes :</strong> Analyse des nouveaux types de Ransomwares et des attaques par ingénierie sociale.</li>
-                    <li><strong>Investigation :</strong> Étude des méthodes de récupération de preuves numériques et d'analyse de supports (postes, mobiles).</li>
-                    <li><strong>Vulnérabilités :</strong> Suivi des failles "Zero-Day" via les bulletins de l'ANSSI.</li>
-                </ul>
+		<div id="main">
 
-                <h3 style="color: var(--gold);">Méthodologie et Outils</h3>
-                <p>Pour assurer une veille efficace et structurée, j'utilise plusieurs flux d'informations :</p>
-                <ul>
-                    <li><strong>Flux RSS :</strong> Centralisation des actualités via <em>Feedly</em> (Cybermalveillance.gouv.fr, Le Monde Informatique).</li>
-                    <li><strong>Pratique :</strong> Entraînement régulier sur des plateformes comme <em>TryHackMe</em> pour comprendre les vecteurs d'attaque.</li>
-                    <li><strong>Newsletters :</strong> Abonnement aux alertes critiques du CERT-FR.</li>
-                </ul>
-            </section>
-        </div>
-    </body>
+			<section id="one">
+				<h2>Méthodologie de Veille</h2>
+				<p>Dans un secteur informatique en mutation constante, la veille technologique est indispensable, d'autant plus dans l'optique d'intégrer les unités d'investigation numérique (N-TECH). Mon objectif est de rester informé des nouvelles vulnérabilités et des évolutions des architectures de sécurité.</p>
+				
+				<div class="tools-box">
+					<h3 style="margin-bottom: 10px;">Mes outils de curation :</h3>
+					<ul style="margin-bottom: 0;">
+						<li><strong>Agrégateurs de flux RSS :</strong> Feedly pour centraliser les sources.</li>
+						<li><strong>Alertes :</strong> Google Alerts sur des mots-clés spécifiques (SIEM, Ransomware, GPO bypass).</li>
+						<li><strong>Sources de confiance :</strong> CERT-FR, ANSSI, The Hacker News, BleepingComputer.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="two">
+				<h2>Thème : L'IA en Cybersécurité (Attaque vs Défense)</h2>
+				<p>J'ai choisi d'orienter ma veille des 18 derniers mois sur l'impact de l'Intelligence Artificielle. Ce thème fait écho à ma mission de stage sur les <strong>SIEM</strong> : alors que les attaquants automatisent la création de malwares via l'IA, les administrateurs systèmes (SISR) doivent utiliser cette même IA pour détecter les anomalies comportementales.</p>
+
+				<div class="timeline-container">
+
+					<div class="article-card">
+						<span class="date-badge">Juin 2024</span>
+						<h3>Deepfakes & Social Engineering : Le cauchemar des accès distants</h3>
+						<p>Des attaquants utilisent l'IA générative pour cloner la voix et l'image de dirigeants (attaques au président BEC) afin de contourner les procédures de réinitialisation de mots de passe ou de validation MFA auprès du support informatique.</p>
+						<span class="source-tag">Source : The Hacker News / BleepingComputer</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Février 2024</span>
+						<h3>Les SIEM intègrent l'IA prédictive pour contrer les menaces</h3>
+						<p>Évolution majeure des outils de supervision : des solutions comme Elastic Security et Wazuh intègrent désormais des algorithmes de Machine Learning pour analyser les logs en temps réel et détecter les comportements déviants (anomalies réseau, brute-force masqué) sans dépendre uniquement des signatures de virus classiques.</p>
+						<span class="source-tag">Source : SecurityWeek / Documentation ELK</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Octobre 2023</span>
+						<h3>WormGPT & FraudGPT : L'émergence du Dark-IA</h3>
+						<p>Apparition sur les forums clandestins de modèles de langages (LLM) créés spécifiquement pour les cybercriminels. Contrairement à ChatGPT, ils n'ont aucune restriction éthique et permettent de rédiger des emails de phishing indétectables ou de générer des scripts Python malveillants à la volée.</p>
+						<span class="source-tag">Source : KrebsonSecurity / Rapports ANSSI</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Janvier 2023</span>
+						<h3>ChatGPT secoue le monde de la Cybersécurité</h3>
+						<p>Quelques mois après le lancement public de ChatGPT, les premiers Proof of Concept (PoC) montrent que l'IA peut être utilisée par des "script kiddies" pour écrire des ransomwares basiques ou trouver des failles dans des codes sources existants. Début de la prise de conscience globale sur la double utilisation de l'IA.</p>
+						<span class="source-tag">Source : Wired / CERT-FR</span>
+					</div>
+
+				</div>
+			</section>
+
+			<section id="three">
+				<h2>Bilan et Impact Professionnel</h2>
+				<p>Cette veille de 18 mois m'a permis de comprendre que la sécurité périmétrique (un simple pare-feu) n'est plus suffisante. L'automatisation des attaques exige des réponses automatisées. C'est ce qui a motivé mon investissement dans le déploiement d'un <strong>SIEM avec analyse de logs (Wazuh)</strong> lors de mon dernier stage, afin de doter l'infrastructure d'une capacité de réaction face à ces menaces de nouvelle génération.</p>
+			</section>
+
+		</div>
+
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | 2024</li></ul>
+			</div>
+		</footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
