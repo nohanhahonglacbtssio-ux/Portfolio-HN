@@ -26,85 +26,86 @@
 		<div id="main">
 
 			<section id="stage1">
-				<h2>Stage 1 : Horizon PC (Maintenance & Réseaux)</h2>
+				<h2>Stage 1 : Horizon PC</h2>
 				<p style="color: var(--gold); font-weight: bold;">
 					📍 Saint-Joseph | 📅 Du 02/06/2025 au 27/06/2025 | 👤 Tuteur : M. Robert
 				</p>
-				<p>Au sein de l'entreprise <strong>Horizon PC</strong>, j'ai réalisé une immersion technique complète couvrant le support utilisateur jusqu'au déploiement d'infrastructures virtualisées sécurisées.</p>
+				<p>J’ai réalisé mon premier stage au sein de l’entreprise Horizon PC. Durant cette période, j’ai participé à plusieurs missions techniques allant de la maintenance de proximité au déploiement d'infrastructures de virtualisation.</p>
 				
 				<div class="row">
 					<div class="col-6 col-12-medium">
-						<div class="mission-card" style="height: 100%;">
-							<h3>Support & Maintenance</h3>
-							<p>Diagnostic et dépannage matériel de postes informatiques. Préparation, configuration et mise en service de postes clients prêts à l'emploi.</p>
-							<span class="tag">Hardware</span> <span class="tag">Windows</span>
+						<div class="mission-card">
+							<h3>Maintenance & Postes Clients</h3>
+							<p>Maintenance et dépannage de postes informatiques. Préparation et mise en service de postes clients pour les utilisateurs finaux.</p>
+							<span class="tag">Hardware</span> <span class="tag">Support</span>
 						</div>
 					</div>
 
 					<div class="col-6 col-12-medium">
-						<div class="mission-card" style="height: 100%;">
-							<h3>Infrastructure Virtuelle</h3>
-							<p>Déploiement de deux serveurs d'hypervision <strong>Proxmox VE</strong>. Mise en place d'une solution <strong>Proxmox Backup</strong> pour garantir la sauvegarde et la restauration des VM.</p>
-							<span class="tag">Proxmox</span> <span class="tag">Sauvegarde</span>
+						<div class="mission-card">
+							<h3>Virtualisation & Sauvegarde</h3>
+							<p>Déploiement de deux serveurs <strong>Proxmox</strong> accompagnés d’une solution <strong>Proxmox Backup</strong> pour la sécurisation des données.</p>
+							<span class="tag">Proxmox</span> <span class="tag">PBS</span>
 						</div>
 					</div>
 
 					<div class="col-6 col-12-medium">
-						<div class="mission-card" style="height: 100%;">
-							<h3>Services & Sécurité</h3>
-							<p>Installation d'un serveur <strong>Nextcloud</strong> pour le partage de fichiers. Configuration d'un pare-feu <strong>IPFire</strong> pour la protection périmétrique du réseau.</p>
-							<span class="tag">Cloud</span> <span class="tag">Sécurité</span>
+						<div class="mission-card">
+							<h3>Services Cloud & Sécurité</h3>
+							<p>Installation et configuration d’un serveur <strong>Nextcloud</strong> pour le partage de fichiers et mise en place d’un pare-feu <strong>IPFire</strong>.</p>
+							<span class="tag">Nextcloud</span> <span class="tag">IPFire</span>
 						</div>
 					</div>
 
 					<div class="col-6 col-12-medium">
-						<div class="mission-card" style="height: 100%;">
-							<h3>Projet Mentorat</h3>
-							<p>Participation à un projet collaboratif avec le <strong>Lycée Paul Langevin</strong> : accompagnement sur l'installation d'un environnement Proxmox et d'un Active Directory.</p>
-							<span class="tag">Mentorat</span> <span class="tag">ADDS</span>
+						<div class="mission-card">
+							<h3>Projet Mentorat Collaboratif</h3>
+							<p>Participation à un projet avec le <strong>lycée Paul Langevin</strong> : installation d’un environnement Proxmox et d’un Active Directory.</p>
+							<span class="tag">Collaboration</span> <span class="tag">ADDS</span>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<section id="stage2">
-				<h2>Stage 2 : NovaTech IT (Services & DMZ)</h2>
-				<p style="color: var(--gold); font-style: italic;">
-					📍 Expertise en Administration Systèmes et Réseaux
-				</p>
+				<h2>Stage 2 : NovaTech IT (Administration Système & Réseau)</h2>
+				<p style="color: var(--gold); font-style: italic;">Expertise technique sur infrastructure segmentée et virtualisée</p>
 
 				<div class="card">
-					<h3>Ingénierie de Virtualisation (Console Proxmox)</h3>
-					<p>Conception et gestion d'une infrastructure virtualisée s'appuyant sur des conteneurs (LXC) et machines virtuelles (VM) pour optimiser les ressources.</p>
+					<h3>Ingénierie de Virtualisation (Proxmox VE)</h3>
+					<p>Gestion d'un cluster d'hébergement pour les services critiques de l'entreprise, avec une attention particulière à la haute disponibilité et aux performances de stockage.</p>
 					<ul>
-						<li><strong>Optimisation :</strong> Configuration de pools <strong>ZFS</strong> pour la redondance et Snapshots de sécurité.</li>
-						<li><strong>Segmentation :</strong> Isolation des serveurs critiques (Web, DB, Zabbix, GLPI) dans le <strong>VLAN 21 (DMZ)</strong>.</li>
+						<li><strong>Stockage Avancé :</strong> Mise en place de pools <strong>ZFS</strong> et gestion des <strong>Snapshots</strong> pour la restauration rapide.</li>
+						<li><strong>Segmentation Réseau :</strong> Isolation des services dans le <strong>VLAN 21 (DMZ)</strong> pour sécuriser les flux exposés.</li>
 					</ul>
 				</div>
 
 				<div class="row">
 					<div class="col-6 col-12-medium">
 						<div class="mission-card">
+							<h3>Gestion ITSM (GLPI 10.0.19)</h3>
+							<p>Déploiement sur <strong>VM 101 (Ubuntu 24.04 LTS)</strong>. Configuration de la pile Apache/PHP et liaison avec <strong>MariaDB (VM 102)</strong>. Gestion des tickets d'incidents et de l'inventaire.</p>
+						</div>
+					</div>
+
+					<div class="col-6 col-12-medium">
+						<div class="mission-card">
 							<h3>Supervision (Zabbix)</h3>
-							<p>Installation d'un serveur <strong>Zabbix</strong> sous Debian 12. Monitorage SNMP et agents pour les ressources CPU, RAM et l'état des services.</p>
+							<p>Installation sur <strong>VM 103 (Debian 12)</strong>. Monitoring des ressources systèmes (CPU, RAM, Disque) et des services réseau via agents et protocoles SNMP.</p>
 						</div>
 					</div>
+
 					<div class="col-6 col-12-medium">
 						<div class="mission-card">
-							<h3>Gestion ITSM (GLPI)</h3>
-							<p>Déploiement de <strong>GLPI v10</strong> sous Ubuntu 24.04 avec base <strong>MariaDB</strong>. Mise en place du ticketing et de l'inventaire automatique.</p>
+							<h3>Active Directory & Services IP</h3>
+							<p>Contrôleur de domaine configuré sur l'IP <strong>172.17.1.2</strong>. Administration des rôles <strong>ADDS, DNS et DHCP</strong>. Intégration et gestion des postes Windows 11.</p>
 						</div>
 					</div>
+
 					<div class="col-6 col-12-medium">
 						<div class="mission-card">
-							<h3>Active Directory (ADDS)</h3>
-							<p>Administration d'un contrôleur de domaine <strong>Windows Server</strong>. Gestion des rôles DNS/DHCP et déploiement de stratégies de groupe (GPO).</p>
-						</div>
-					</div>
-					<div class="col-6 col-12-medium">
-						<div class="mission-card">
-							<h3>Hébergement Web</h3>
-							<p>Configuration de serveurs <strong>Apache/Nginx</strong> en environnement isolé pour l'exposition de services sécurisés.</p>
+							<h3>Serveur Web & Applicatif</h3>
+							<p>Configuration de la <strong>VM 104 (SRV-WEB)</strong> pour l'hébergement des services internes, avec sécurisation des accès et gestion des hôtes virtuels.</p>
 						</div>
 					</div>
 				</div>
