@@ -23,7 +23,7 @@
 
 			.card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 10px; padding: 2em; margin-bottom: 2em; }
 			
-			/* --- TABLEAU AMÉLIORÉ --- */
+			/* --- TABLEAU ÉPURÉ ET LISIBLE --- */
 			.table-container { 
 				margin: 2em 0; 
 				border-radius: 12px; 
@@ -40,6 +40,7 @@
 				font-size: 0.9em; 
 				padding: 1.2em;
 				letter-spacing: 1px;
+				text-align: left;
 			}
 			table td { 
 				padding: 1.2em; 
@@ -107,7 +108,7 @@
 
 			<section id="two">
 				<h2>II. Architecture & Plan d'Adressage</h2>
-				<p>L'infrastructure est segmentée en plusieurs réseaux virtuels afin d'isoler les flux administratifs, techniques et les services publics.</p>
+				<p>L'infrastructure est segmentée en plusieurs réseaux virtuels afin d'isoler les flux administratifs, techniques et les services exposés (DMZ).</p>
 				
 				<img src="images/reseau_novatech.jpg" alt="Schéma Réseau" class="network-map">
 
@@ -156,7 +157,7 @@
 				<div class="card">
 					<p>Dans le cadre de l'évolution de l'infrastructure, j'ai été chargé de déployer des solutions de sécurité avancées pour protéger les accès et monitorer les flux :</p>
 					<ul>
-						<li><strong>Déploiement d'un Bastion :</strong> Installation et configuration d'Apache Guacamole pour sécuriser les accès distants via SSH et RDP avec authentification multi-facteurs (MFA).</li>
+						<li><strong>Déploiement d'un Bastion :</strong> Installation d'Apache Guacamole pour sécuriser les accès distants via SSH et RDP avec authentification multi-facteurs (MFA).</li>
 						<li><strong>Mise en place d'un SIEM :</strong> Centralisation des logs avec Wazuh et la stack ELK pour détecter les tentatives d'intrusion et les scans de ports.</li>
 						<li><strong>Analyse & Supervision :</strong> Développement de règles de corrélation et création de tableaux de bord pour la visualisation en temps réel des événements de sécurité.</li>
 					</ul>
