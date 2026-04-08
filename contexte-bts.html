@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- STYLE PRESTIGE DYNASTIE --- */
+			/* --- STYLE PRESTIGE --- */
 			:root { --gold: #D4AF37; --deep-black: #0a0a0a; }
 			body { background: radial-gradient(circle at top right, #1a1a1a, #050505) !important; color: #e0e0e0 !important; font-family: 'Georgia', serif !important; }
 			#header { background-color: var(--deep-black) !important; border-right: 1px solid var(--gold) !important; text-align: center; }
@@ -20,61 +20,33 @@
 			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; margin-bottom: 1em; }
 			h3 { color: var(--gold) !important; margin-top: 1.5em; display: flex; align-items: center; }
 			h3::before { content: "◈"; margin-right: 10px; font-size: 0.8em; }
-
 			.card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 10px; padding: 2em; margin-bottom: 2em; }
-			
-			/* --- TABLEAU FONCÉ OPTIMISÉ --- */
-			.table-container { 
-				margin: 2em 0; 
-				border-radius: 12px; 
-				overflow: hidden; 
-				border: 1px solid rgba(212, 175, 55, 0.3);
-				background: #0a0a0a; 
-			}
+
+			/* --- TABLEAU FONCÉ --- */
+			.table-container { margin: 2em 0; border-radius: 12px; overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.3); background: #0a0a0a; }
 			table { margin: 0; width: 100%; border-collapse: collapse; }
 			table thead { background: rgba(212, 175, 55, 0.15); }
-			table th { 
-				color: var(--gold); 
-				font-weight: bold; 
-				text-transform: uppercase; 
-				font-size: 0.9em; 
-				padding: 1.2em;
-				letter-spacing: 1px;
-				text-align: left;
-			}
-			/* Lignes impaires en gris anthracite foncé */
+			table th { color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.9em; padding: 1.2em; text-align: left; }
 			table tbody tr:nth-child(odd) { background: #1a1a1a; }
-			/* Lignes paires en noir profond */
 			table tbody tr:nth-child(even) { background: #0a0a0a; }
+			table td { padding: 1.2em; border-bottom: 1px solid rgba(212, 175, 55, 0.05); color: #e0e0e0; vertical-align: middle; }
+			.vlan-tag { color: var(--gold); font-weight: bold; border: 1px solid var(--gold); padding: 4px 10px; border-radius: 4px; font-family: monospace; }
 
-			table td { 
-				padding: 1.2em; 
-				border-bottom: 1px solid rgba(212, 175, 55, 0.05); 
-				vertical-align: middle;
-				color: #e0e0e0;
-			}
-			table tbody tr:hover { background: rgba(212, 175, 55, 0.1) !important; transition: 0.3s; }
-			
-			.vlan-tag { 
-				color: var(--gold); 
-				font-weight: bold; 
-				border: 1px solid var(--gold); 
-				padding: 4px 10px; 
-				border-radius: 4px; 
-				font-family: monospace;
-				background: rgba(212, 175, 55, 0.05);
-			}
-
-			.network-map { width: 100%; border: 1px solid var(--gold); border-radius: 10px; margin: 1.5em 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+			/* --- EFFET ZOOM INTERACTIF --- */
+			.network-container { overflow: hidden; border-radius: 10px; border: 1px solid var(--gold); cursor: zoom-in; margin: 1.5em 0; }
+			.network-map { width: 100%; display: block; transition: transform 0.5s ease; }
+			.network-container:hover .network-map { transform: scale(1.03); }
+			.modal { display: none; position: fixed; z-index: 1000; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); }
+			.modal-content { margin: auto; display: block; width: 90%; max-width: 1300px; animation: zoom 0.3s; }
+			@keyframes zoom { from {transform:scale(0)} to {transform:scale(1)} }
+			.close-modal { position: absolute; top: 15px; right: 35px; color: var(--gold); font-size: 40px; cursor: pointer; }
 		</style>
 	</head>
 	<body class="is-preload">
-
 		<header id="header">
 			<div class="inner">
 				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-				<p style="color: var(--gold); font-style: italic;">Expertise NovaTech IT</p>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html" class="button fit">Accueil</a></li>
@@ -87,25 +59,24 @@
 		</header>
 
 		<div id="main">
-
-			<section id="one">
+			<section>
 				<h2>I. Présentation : NovaTech IT</h2>
 				<div class="card">
-					<p>NovaTech IT est une entreprise spécialisée dans les services d'hébergement, les solutions IT et l'infogérance[cite: 6, 7, 95, 96]. L'organisation s'appuie sur une structure technique solide pour garantir la haute disponibilité des services[cite: 17, 120].</p>
+					<p>NovaTech IT est spécialisée dans l'hébergement et les solutions IT. J'évolue au sein du pôle technique garantissant la disponibilité des infrastructures.</p>
 					<div class="row">
 						<div class="col-6 col-12-small">
-							<h3>Pôle Infrastructure & Réseau</h3>
+							<h3>Infrastructure & Réseau</h3>
 							<ul>
-								<li>John B. (Responsable Infrastructure) [cite: 10, 99]</li>
-								<li><strong>Nohan H. (Technicien Réseau) [cite: 10, 101]</strong></li>
-								<li>Nicolas A. (Technicien Réseau) [cite: 10, 102]</li>
+								<li>John B. (Responsable Infra)</li>
+								<li><strong>Nohan H. (Technicien Réseau)</strong></li>
+								<li>Nicolas A. (Technicien Réseau)</li>
 							</ul>
 						</div>
 						<div class="col-6 col-12-small">
 							<h3>Support & Administratif</h3>
 							<ul>
-								<li>Accueil & Support : Élodie C. & Thomas S. [cite: 11, 108, 109]</li>
-								<li>Administratif : Maya L. & Karim H. [cite: 10, 104, 106]</li>
+								<li>Accueil & Support : Élodie C. & Thomas S.</li>
+								<li>Administratif : Maya L. & Karim H.</li>
 							</ul>
 						</div>
 					</div>
@@ -114,59 +85,36 @@
 
 			<section id="two">
 				<h2>II. Architecture & Plan d'Adressage</h2>
-				<p>L'infrastructure est segmentée en plusieurs réseaux virtuels (VLANs) afin d'isoler les flux administratifs, techniques et les services exposés en DMZ[cite: 14, 112, 127, 136].</p>
+				<p>Segmentation réseau via VLANs pour isoler les services administratifs et la DMZ.</p>
 				
-				<img src="images/reseau_novatech.jpg" alt="Schéma Réseau" class="network-map">
+				<div class="network-container" onclick="openModal()">
+					<img src="images/reseau_novatech.jpg" alt="Schéma Réseau" class="network-map">
+				</div>
+				<p style="text-align: center; font-size: 0.8em; color: var(--gold);"><i>Cliquer pour agrandir le schéma technique</i></p>
 
 				<div class="table-container">
 					<table>
 						<thead>
-							<tr>
-								<th>VLAN</th>
-								<th>Rôle</th>
-								<th>Réseau IP</th>
-								<th>Passerelle</th>
-							</tr>
+							<tr><th>VLAN</th><th>Rôle</th><th>Réseau IP</th><th>Passerelle</th></tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td><span class="vlan-tag">110</span></td>
-								<td>Clients Administratif [cite: 31, 136]</td>
-								<td>192.168.110.0/24 [cite: 31, 136]</td>
-								<td>192.168.110.1 [cite: 32, 136]</td>
-							</tr>
-							<tr>
-								<td><span class="vlan-tag">120</span></td>
-								<td>Accueil & Support [cite: 33, 136]</td>
-								<td>192.168.120.0/24 [cite: 33, 136]</td>
-								<td>192.168.120.1 [cite: 35, 136]</td>
-							</tr>
-							<tr>
-								<td><span class="vlan-tag">130</span></td>
-								<td>Infrastructure & Réseau [cite: 36, 136]</td>
-								<td>192.168.130.0/24 [cite: 36, 136]</td>
-								<td>192.168.130.1 [cite: 37, 136]</td>
-							</tr>
-							<tr>
-								<td><span class="vlan-tag">21</span></td>
-								<td>Services DMZ (Exposés) [cite: 38, 136]</td>
-								<td>172.17.1.0/24 [cite: 38, 136]</td>
-								<td>172.17.1.254 [cite: 39, 136]</td>
-							</tr>
+							<tr><td><span class="vlan-tag">110</span></td><td>Clients Administratif</td><td>192.168.110.0/24</td><td>192.168.110.1</td></tr>
+							<tr><td><span class="vlan-tag">120</span></td><td>Accueil & Support</td><td>192.168.120.0/24</td><td>192.168.120.1</td></tr>
+							<tr><td><span class="vlan-tag">130</span></td><td>Infrastructure & Réseau</td><td>192.168.130.0/24</td><td>192.168.130.1</td></tr>
+							<tr><td><span class="vlan-tag">21</span></td><td>Services DMZ (Exposés)</td><td>172.17.1.0/24</td><td>172.17.1.254</td></tr>
 						</tbody>
 					</table>
 				</div>
 			</section>
-
 		</div>
 
-		<footer id="footer">
-			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Dossier BTS SIO 2026</li></ul>
-			</div>
-		</footer>
+		<div id="myModal" class="modal" onclick="this.style.display='none'">
+			<span class="close-modal">&times;</span>
+			<img class="modal-content" src="images/reseau_novatech.jpg">
+		</div>
 
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>function openModal(){ document.getElementById("myModal").style.display = "block"; }</script>
 	</body>
 </html>
