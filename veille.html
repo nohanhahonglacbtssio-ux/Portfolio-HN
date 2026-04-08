@@ -1,139 +1,49 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
-		<title>Veille Cyber | Nohan HA-HONG-LAC</title>
+		<title>Veille Technologique | Nohan HA-HONG-LAC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- STYLE PRESTIGE DYNASTIE --- */
-			:root {
-				--gold: #D4AF37;
-				--deep-black: #0a0a0a;
-			}
-
-			body { 
-				background: radial-gradient(circle at top right, #1a1a1a, #050505) !important;
-				color: #e0e0e0 !important;
-				font-family: 'Georgia', serif !important;
-			}
-
-			#header { 
-				background-color: var(--deep-black) !important; 
-				border-right: 1px solid var(--gold) !important;
-				text-align: center;
-			}
-
+			/* --- STYLE DYNASTIE --- */
+			:root { --gold: #D4AF37; --deep-black: #0a0a0a; }
+			body { background: radial-gradient(circle at top right, #1a1a1a, #050505) !important; color: #e0e0e0 !important; font-family: 'Georgia', serif !important; }
+			#header { background-color: var(--deep-black) !important; border-right: 1px solid var(--gold) !important; text-align: center; }
 			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
-
-			.image.avatar { 
-				display: inline-block !important;
-				width: 150px !important; 
-				height: 150px !important; 
-				border-radius: 50% !important; 
-				border: 2px solid var(--gold) !important;
-				overflow: hidden !important; 
-				padding: 0 !important;
-			}
-
-			.image.avatar img {
-				width: 100% !important;
-				height: 100% !important;
-				object-fit: cover !important;
-				border-radius: 50% !important;
-			}
-
+			.image.avatar { display: inline-block !important; width: 150px !important; height: 150px !important; border-radius: 50% !important; border: 2px solid var(--gold) !important; overflow: hidden; padding: 0 !important; }
+			.image.avatar img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
 			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
-			#nav ul li { padding: 0 !important; }
-
-			.button.fit { 
-				background: rgba(212, 175, 55, 0.05) !important; 
-				border: 1px solid rgba(212, 175, 55, 0.3) !important; 
-				color: var(--gold) !important; 
-				margin-bottom: 12px;
-				text-transform: uppercase;
-				transition: all 0.3s ease;
-			}
-
+			.button.fit { background: rgba(212, 175, 55, 0.05) !important; border: 1px solid rgba(212, 175, 55, 0.3) !important; color: var(--gold) !important; margin-bottom: 12px; text-transform: uppercase; }
 			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
 
-			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; margin-bottom: 1em; }
-			h3 { color: var(--gold) !important; margin-top: 0; }
-			strong { color: var(--gold) !important; }
+			/* --- TIMELINE ENRICHIE --- */
+			.timeline-container { border-left: 2px solid var(--gold); padding-left: 2em; margin-top: 2em; position: relative; }
+			.article-card { border: 1px solid rgba(212, 175, 55, 0.2); padding: 1.5em; border-radius: 8px; background: rgba(255, 255, 255, 0.02); margin-bottom: 2.5em; position: relative; }
+			.article-card::before { content: ''; position: absolute; left: -2.6em; top: 1.5em; width: 14px; height: 14px; background-color: var(--deep-black); border: 2px solid var(--gold); border-radius: 50%; }
 			
-			/* --- TIMELINE VEILLE --- */
-			.timeline-container {
-				border-left: 2px solid var(--gold);
-				padding-left: 2em;
-				margin-top: 2em;
-				position: relative;
-			}
+			.date-badge { display: inline-block; background: var(--gold); color: #000; padding: 3px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; }
 			
-			.article-card { 
-				border: 1px solid rgba(212, 175, 55, 0.2); 
-				padding: 1.5em; 
-				border-radius: 8px; 
-				background: rgba(255, 255, 255, 0.02); 
-				margin-bottom: 2em;
-				position: relative;
-			}
+			/* Style spécifique pour le suivi */
+			.analysis-box { background: rgba(212, 175, 55, 0.07); border-left: 3px solid var(--gold); padding: 1em; margin-top: 1em; font-size: 0.9em; border-radius: 0 5px 5px 0; }
+			.analysis-box strong { color: var(--gold); text-transform: uppercase; font-size: 0.8em; }
 			
-			/* Le petit point doré sur la frise */
-			.article-card::before {
-				content: '';
-				position: absolute;
-				left: -2.6em;
-				top: 1.5em;
-				width: 14px;
-				height: 14px;
-				background-color: var(--deep-black);
-				border: 2px solid var(--gold);
-				border-radius: 50%;
-			}
-
-			.date-badge { 
-				display: inline-block;
-				background: var(--gold); 
-				color: #000; 
-				padding: 3px 10px; 
-				border-radius: 4px; 
-				font-size: 0.8em; 
-				font-weight: bold; 
-				margin-bottom: 10px;
-				text-transform: uppercase;
-			}
-
-			.source-tag {
-				font-size: 0.85em;
-				color: #888;
-				font-style: italic;
-				display: block;
-				margin-top: 10px;
-			}
-			
-			.tools-box {
-				border: 1px dashed var(--gold);
-				padding: 1.5em;
-				border-radius: 8px;
-				background: rgba(212, 175, 55, 0.03);
-				margin-bottom: 2em;
-			}
+			.source-tag { font-size: 0.8em; color: #888; font-style: italic; display: block; margin-top: 10px; }
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<header id="header">
 			<div class="inner">
-				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-				<p style="color: var(--gold); font-style: italic;">Veille Cyber & N-TECH</p>
-				
+				<p style="color: var(--gold); font-style: italic;">Veille Cyber & IA</p>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html" class="button fit">Accueil</a></li>
 						<li><a href="cv.html" class="button fit">Parcours & CV</a></li>
-						<li><a href="bacpro-sn.html" class="button fit">BAC PRO SN</a></li>
 						<li><a href="bts-sisr.html" class="button fit">Missions SISR</a></li>
+						<li><a href="bacpro-sn.html" class="button fit">BAC PRO SN</a></li>
 						<li><a href="contexte-bts.html" class="button fit">Infrastructure NovaTech</a></li>
 					</ul>
 				</nav>
@@ -143,71 +53,92 @@
 		<div id="main">
 
 			<section id="one">
-				<h2>Méthodologie de Veille</h2>
-				<p>Dans un secteur en mutation constante, la veille technologique est indispensable, particulièrement pour intégrer les unités d'investigation numérique (N-TECH de la Gendarmerie). Mon objectif est d'anticiper les nouvelles vulnérabilités pour adapter les architectures défensives.</p>
-				
-				<div class="tools-box">
-					<h3 style="margin-bottom: 10px;">Mes outils de curation :</h3>
-					<ul style="margin-bottom: 0;">
-						<li><strong>Agrégateurs :</strong> Feedly pour centraliser les flux (The Hacker News, BleepingComputer, rapports ANSSI).</li>
-						<li><strong>Alerte ciblée :</strong> Google Alerts sur "SIEM", "Agentic AI attacks", "MFA bypass".</li>
-						<li><strong>Analyses de terrain :</strong> Rapports annuels de CrowdStrike et du Forum Économique Mondial (WEF).</li>
-					</ul>
-				</div>
-			</section>
-
-			<section id="two">
-				<h2>Thème : L'IA en Cybersécurité (Attaque vs Défense)</h2>
-				<p>J'ai orienté ma veille des 18 derniers mois sur la "course aux armements" induite par l'Intelligence Artificielle. Ce thème fait directement écho à ma mission de déploiement de <strong>SIEM (Wazuh/ELK)</strong> : face à des cyberattaques de plus en plus automatisées, la supervision réseau doit elle-même s'appuyer sur l'analyse prédictive.</p>
+				<h2>Flux de Veille : 18 Mois d'Actualité Cyber</h2>
+				<p>Thématique : <strong>L'Intelligence Artificielle au service de l'offensive et de la défense numérique.</strong></p>
 
 				<div class="timeline-container">
 
 					<div class="article-card">
 						<span class="date-badge">Avril 2026</span>
-						<h3>L'ère de l'IA "Agentique" et la chute du temps d'évasion</h3>
-						<p>L'IA n'est plus seulement un assistant, elle agit en tant qu'agent autonome (Agentic AI). Le rapport <em>Global Threat Report 2026</em> révèle une augmentation de 89 % des attaques menées par des adversaires assistés par l'IA. Conséquence critique pour les défenseurs : le temps moyen de compromission d'un système (breakout time) a chuté de manière alarmante à seulement 29 minutes.</p>
-						<span class="source-tag">Source : CrowdStrike 2026 Global Threat Report</span>
+						<h3>L'IA Agentique : Automatisation totale des intrusions</h3>
+						<p>Apparition d'IA capables de chaîner des attaques sans intervention humaine (reconnaissance, exploitation, exfiltration).</p>
+						<div class="analysis-box">
+							<strong>Suivi & Impact SISR :</strong> La détection humaine est trop lente. Nécessité de basculer sur des réponses automatisées via <strong>SIEM/SOAR</strong>.
+						</div>
+						<span class="source-tag">Source : CrowdStrike Global Threat Report</span>
 					</div>
 
 					<div class="article-card">
 						<span class="date-badge">Janvier 2026</span>
-						<h3>Les vulnérabilités IA : Risque majeur pour les entreprises</h3>
-						<p>Les dirigeants réalisent l'ampleur de la menace. Selon le Forum Économique Mondial, 87 % des professionnels de l'informatique identifient les vulnérabilités liées à l'IA comme le risque cyber à la croissance la plus rapide. La fraude cyber-activée, notamment l'ingénierie sociale hyper-réaliste (deepfakes, BEC), supplante désormais les ransomwares classiques dans les préoccupations des comités de direction.</p>
-						<span class="source-tag">Source : WEF (World Economic Forum) - Global Cybersecurity Outlook 2026</span>
+						<h3>Deepfakes temps réel en visioconférence</h3>
+						<p>Des attaquants usurpent l'identité de DSI lors de réunions Teams pour valider des ouvertures de ports critiques.</p>
+						<div class="analysis-box">
+							<strong>Suivi & Impact SISR :</strong> Le "voir pour croire" est mort. Renforcement des procédures de double validation hors-ligne obligatoire.
+						</div>
+						<span class="source-tag">Source : SecurityWeek</span>
 					</div>
 
 					<div class="article-card">
-						<span class="date-badge">Novembre 2025</span>
-						<h3>Première campagne d'espionnage cyber orchestrée par l'IA</h3>
-						<p>Des chercheurs documentent la première attaque où des modèles d'IA ont opéré de manière autonome en boucle. L'IA a utilisé des outils logiciels de cybersécurité (scanners réseau, casseurs de mots de passe) pour infiltrer un système, enchaînant les tâches d'intrusion avec un minimum d'intervention humaine, marquant un tournant décisif dans les capacités offensives.</p>
-						<span class="source-tag">Source : Rapports d'incident Anthropic / SecurityWeek</span>
+						<span class="date-badge">Octobre 2025</span>
+						<h3>Empoisonnement des données d'apprentissage (Data Poisoning)</h3>
+						<p>Nouvelle technique visant à corrompre les modèles d'IA de défense pour qu'ils ignorent certains types de malwares.</p>
+						<div class="analysis-box">
+							<strong>Suivi & Impact SISR :</strong> Vigilance sur l'intégrité des flux de logs envoyés vers notre instance <strong>Wazuh</strong>.
+						</div>
+						<span class="source-tag">Source : Journal du Net Cyber</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Juillet 2025</span>
+						<h3>L'IA accélère le cassage de mots de passe</h3>
+						<p>Des outils utilisant les réseaux neuronaux cassent des mots de passe complexes 8 caractères en moins d'une minute.</p>
+						<div class="analysis-box">
+							<strong>Suivi & Impact SISR :</strong> Accélération de la migration vers le <strong>Passwordless</strong> et le <strong>MFA FIDO2</strong> sur nos infrastructures.
+						</div>
+						<span class="source-tag">Source : BleepingComputer</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Mars 2025</span>
+						<h3>Analyse de vulnérabilités "0-day" assistée par LLM</h3>
+						<p>L'IA permet de scanner des milliers de lignes de code en quelques secondes pour trouver des failles inédites.</p>
+						<div class="analysis-box">
+							<strong>Suivi & Impact SISR :</strong> Mise en place de scans de vulnérabilités hebdomadaires plutôt que mensuels.
+						</div>
+						<span class="source-tag">Source : The Hacker News</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Décembre 2024</span>
+						<h3>Industrialisation du Phishing polyglotte</h3>
+						<p>Disparition des fautes d'orthographe dans les mails frauduleux grâce à l'IA, rendant le phishing indétectable visuellement.</p>
+						<div class="analysis-box">
+							<strong>Suivi & Impact SISR :</strong> Focus sur la sensibilisation des utilisateurs et le filtrage mail basé sur l'analyse d'URL.
+						</div>
+						<span class="source-tag">Source : CERT-FR</span>
 					</div>
 
 					<div class="article-card">
 						<span class="date-badge">Octobre 2024</span>
-						<h3>L'industrialisation de la menace (Cybercrime-as-a-Service)</h3>
-						<p>L'intégration massive de l'IA générative dans les forums clandestins abaisse radicalement la barrière à l'entrée pour les attaquants. Les experts estiment alors que l'utilisation du "Malware-as-a-Service" assisté par IA va faire exploser la taille du marché du cybercrime. L'automatisation du phishing sans faute de syntaxe et la reconnaissance réseau rapide deviennent la norme.</p>
-						<span class="source-tag">Source : Darktrace Predictions 2025 / ISACA Research</span>
+						<h3>Lancement des SIEM "AI-Native"</h3>
+						<p>Généralisation des interfaces en langage naturel pour interroger les logs serveurs.</p>
+						<div class="analysis-box">
+							<strong>Suivi & Impact SISR :</strong> Début de mes recherches pour l'intégration de modules IA dans mon projet de stage <strong>Wazuh/ELK</strong>.
+						</div>
+						<span class="source-tag">Source : Elastic.co Blog</span>
 					</div>
 
 				</div>
 			</section>
-
-			<section id="three">
-				<h2>Bilan et Impact Professionnel</h2>
-				<p>Cette veille démontre que la sécurité traditionnelle, basée sur des signatures, est devenue obsolète face à des attaques qui se déploient en moins de 30 minutes. C'est ce qui a validé mon approche technique lors de mon projet majeur : la mise en place d'un <strong>SIEM (Wazuh)</strong> et d'un <strong>Bastion (Guacamole)</strong> couplé à du MFA. Seule une centralisation des journaux (logs) couplée à une détection comportementale permet aujourd'hui aux équipes de contenir ces menaces de nouvelle génération.</p>
-			</section>
-
 		</div>
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | 2026</li></ul>
+				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Veille E52</li></ul>
 			</div>
 		</footer>
 
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
