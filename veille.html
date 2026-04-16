@@ -6,25 +6,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Style Dynastie - Cohérence visuelle totale */
+			/* Style Dynastie - Excellence & Lisibilité */
 			.pro-box { 
 				border: 1px solid rgba(212, 175, 55, 0.3); 
 				padding: 2em; 
 				margin-bottom: 2em; 
 				background: rgba(10, 10, 10, 0.5);
 				border-radius: 4px;
-				transition: all 0.3s ease;
 			}
-			.pro-box:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); }
+			.timeline-container { border-left: 2px solid var(--gold); padding-left: 2em; margin-top: 2em; position: relative; }
+			.article-card { 
+				border: 1px solid rgba(212, 175, 55, 0.2); 
+				padding: 1.5em; 
+				border-radius: 8px; 
+				background: rgba(255, 255, 255, 0.02); 
+				margin-bottom: 2em; 
+				position: relative; 
+				transition: transform 0.3s ease;
+			}
+			.article-card:hover { transform: translateX(10px); border-color: var(--gold); }
+			.article-card::before { 
+				content: ''; position: absolute; left: -2.65em; top: 1.5em; 
+				width: 16px; height: 16px; background-color: #000; 
+				border: 2px solid var(--gold); border-radius: 50%; 
+			}
 			
-			.timeline-item { border-left: 2px solid var(--gold); padding-left: 20px; margin-left: 10px; margin-bottom: 30px; position: relative; }
-			.timeline-item::before { content: ''; position: absolute; left: -9px; top: 5px; width: 16px; height: 16px; background: var(--gold); border-radius: 50%; }
-			
-			.date-tag { color: var(--gold); font-weight: bold; font-size: 0.85em; text-transform: uppercase; margin-bottom: 5px; display: block; }
-			.impact-box { background: rgba(212, 175, 55, 0.1); border-left: 3px solid var(--gold); padding: 10px 15px; margin-top: 10px; font-size: 0.9em; }
-			.impact-title { color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.75em; display: block; margin-bottom: 5px; }
-			
-			.method-icon { color: var(--gold); font-size: 1.5em; margin-bottom: 10px; display: block; }
+			.date-badge { display: inline-block; background: var(--gold); color: #000; padding: 3px 12px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
+			.analysis-box { background: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--gold); padding: 1em; margin-top: 1em; font-size: 0.95em; border-radius: 0 5px 5px 0; }
+			.analysis-box strong { color: var(--gold); text-transform: uppercase; font-size: 0.8em; display: block; margin-bottom: 5px; }
+			.source-tag { font-size: 0.75em; color: #888; font-style: italic; display: block; margin-top: 10px; text-align: right; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -49,117 +59,157 @@
 
 			<section id="intro">
 				<header class="major">
-					<h2>Veille Technologique & Stratégique</h2>
+					<h2>Journal de Veille (18 mois)</h2>
 				</header>
-				<p>Ma veille porte sur <strong>l’influence de l’Intelligence Artificielle (IA) dans la Cybersécurité</strong>. Dans mon futur métier d'administrateur, comprendre comment l'IA est utilisée pour attaquer ou pour défendre les réseaux est devenu une compétence indispensable.</p>
-			</section>
+				<p>Thématique centrale : <strong>L’Intelligence Artificielle appliquée à la Cybersécurité Opérationnelle</strong>. Cette étude retrace l'évolution des menaces et des solutions de défense que j'ai suivies durant ma formation.</p>
+				
+				<div class="timeline-container">
 
-			<section id="methodology">
-				<h3>Ma Méthodologie de Recherche</h3>
-				<div class="row">
-					<div class="col-4 col-12-small">
-						<i class="method-icon fas fa-rss"></i>
-						<h4>Flux Automatisés</h4>
-						<p>Utilisation de <strong>Feedly</strong> pour centraliser les actualités de sites comme <em>Le Monde Informatique</em> ou <em>ZDNet</em>.</p>
+					<div class="article-card">
+						<span class="date-badge">Avril 2026</span>
+						<h3>L'IA Agentique : Automatisation des intrusions</h3>
+						<p>Apparition d'agents IA capables de mener des recherches de failles et de voler des données de manière totalement autonome.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Nécessité de mettre en place des réponses automatiques pour contrer la vitesse d'exécution de l'IA.</div>
+						<span class="source-tag">Source : CrowdStrike Report</span>
 					</div>
-					<div class="col-4 col-12-small">
-						<i class="method-icon fas fa-bell"></i>
-						<h4>Alertes Ciblées</h4>
-						<p>Configuration de <strong>Google Alerts</strong> sur les mots-clés "IA", "Cybersécurité" et "Menaces Réseaux".</p>
+
+					<div class="article-card">
+						<span class="date-badge">Mars 2026</span>
+						<h3>Virus Polymorphes auto-générés</h3>
+						<p>Des programmes malveillants qui modifient leur propre code en permanence pour ne pas être reconnus par les antivirus.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> L'analyse du comportement des fichiers devient la seule barrière efficace contre ces virus changeants.</div>
+						<span class="source-tag">Source : SecurityWeek</span>
 					</div>
-					<div class="col-4 col-12-small">
-						<i class="method-icon fab fa-linkedin"></i>
-						<h4>Réseaux Experts</h4>
-						<p>Suivi des publications de l'<strong>ANSSI</strong> et d'experts en sécurité pour obtenir des analyses de terrain concrètes.</p>
+
+					<div class="article-card">
+						<span class="date-badge">Février 2026</span>
+						<h3>Vishing 2.0 : Deepfakes vidéo en direct</h3>
+						<p>Trucage vidéo en temps réel pour usurper l'identité de responsables lors de réunions à distance.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Renforcement indispensable des protocoles de vérification d'identité pour les accès sensibles.</div>
+						<span class="source-tag">Source : BleepingComputer</span>
 					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Janvier 2026</span>
+						<h3>Rapport WEF : L'IA, risque cyber majeur</h3>
+						<p>Le Forum Économique Mondial classe la fraude par IA comme la menace mondiale numéro 1 pour l'année.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> La sécurité repose désormais sur la vérification humaine autant que sur la technique.</div>
+						<span class="source-tag">Source : World Economic Forum</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Décembre 2025</span>
+						<h3>Attaques réseaux saturantes par IA</h3>
+						<p>Des réseaux de machines (botnets) pilotés par IA qui ciblent intelligemment les points faibles des pare-feu.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Importance d'utiliser des protections Cloud capables de filtrer les flux de données massivement.</div>
+						<span class="source-tag">Source : Cloudflare Blog</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Novembre 2025</span>
+						<h3>Tests de résistance automatisés</h3>
+						<p>Des outils permettent de simuler des attaques complexes sur une infrastructure en seulement quelques clics.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> J'utilise ces concepts pour tester la solidité de mes propres installations (Proxmox).</div>
+						<span class="source-tag">Source : The Hacker News</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Octobre 2025</span>
+						<h3>Régulation : Le "EU AI Act"</h3>
+						<p>Mise en place de la loi européenne encadrant l'utilisation de l'intelligence artificielle dans les systèmes critiques.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Obligation de vérifier que nos outils de surveillance respectent ces nouvelles normes.</div>
+						<span class="source-tag">Source : Europa.eu</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Septembre 2025</span>
+						<h3>Empoisonnement de données (Adversarial AI)</h3>
+						<p>Techniques visant à "tromper" les systèmes de détection en leur envoyant de fausses informations d'apprentissage.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Surveillance accrue de la qualité des journaux d'événements (logs) envoyés aux serveurs de sécurité.</div>
+						<span class="source-tag">Source : DarkReading</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Août 2025</span>
+						<h3>PassGAN : L'IA contre les mots de passe</h3>
+						<p>Une IA capable de deviner des mots de passe complexes en analysant les habitudes mondiales.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Le passage à la double authentification (MFA) devient une sécurité obligatoire pour tous.</div>
+						<span class="source-tag">Source : Home Security Heroes</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Juillet 2025</span>
+						<h3>Shadow AI : Le danger des outils non maîtrisés</h3>
+						<p>Les employés utilisent des IA publiques pour traiter des données confidentielles, créant des fuites d'informations.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Mise en place de règles de restriction (GPO) pour bloquer les outils risqués.</div>
+						<span class="source-tag">Source : ZDNet</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Juin 2025</span>
+						<h3>Exploration réseau autonome</h3>
+						<p>L'IA cartographie les services et les failles d'un serveur en un temps record.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Nécessité de bien séparer les réseaux (VLAN) pour limiter la visibilité des attaquants.</div>
+						<span class="source-tag">Source : ThreatPost</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Mai 2025</span>
+						<h3>Automatisation de la réparation</h3>
+						<p>Les outils de sécurité commencent à réparer automatiquement les systèmes après une alerte.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Réflexion sur l'automatisation du blocage des adresses suspectes sur mon Pare-feu.</div>
+						<span class="source-tag">Source : Elastic Security</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Avril 2025</span>
+						<h3>Emails de piège (Phishing) personnalisés</h3>
+						<p>L'IA utilise les réseaux sociaux pour créer des messages de piège parfaits et indétectables.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Organisation de campagnes de test internes pour sensibiliser les utilisateurs.</div>
+						<span class="source-tag">Source : KnowBe4</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Mars 2025</span>
+						<h3>Ransomware intelligent</h3>
+						<p>Les virus ciblent d'abord les fichiers les plus précieux avant de bloquer tout l'ordinateur.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Protection renforcée des serveurs de fichiers avec des alertes de lecture massive.</div>
+						<span class="source-tag">Source : Sophos News</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Février 2025</span>
+						<h3>Gestion de sécurité simplifiée</h3>
+						<p>Possibilité de poser des questions simples à son système de sécurité ("Qui s'est connecté hier ?").</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Gain de temps majeur pour la surveillance quotidienne du réseau.</div>
+						<span class="source-tag">Source : Wazuh Documentation</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Janvier 2025</span>
+						<h3>MFA Fatigue : Harcèlement de notifications</h3>
+						<p>L'IA envoie des vagues de demandes de validation pour fatiguer l'utilisateur et le forcer à cliquer.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Utilisation de méthodes de validation plus sûres (empreinte digitale ou localisation).</div>
+						<span class="source-tag">Source : Microsoft Security</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Décembre 2024</span>
+						<h3>Audit de code par Intelligence Artificielle</h3>
+						<p>Utilisation de modèles pour trouver des erreurs dans les scripts de configuration.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> J'utilise l'IA pour vérifier et nettoyer mes propres scripts (PowerShell / Bash).</div>
+						<span class="source-tag">Source : GitHub Security</span>
+					</div>
+
+					<div class="article-card">
+						<span class="date-badge">Octobre 2024</span>
+						<h3>Démocratisation du Cybercrime</h3>
+						<p>Des outils d'attaque puissants deviennent accessibles à des personnes sans connaissances techniques.</p>
+						<div class="analysis-box"><strong>Analyse Professionnelle :</strong> Début de ma veille ciblée face à l'augmentation mondiale des attaques.</div>
+						<span class="source-tag">Source : Rapports ANSSI</span>
+					</div>
+
 				</div>
-			</section>
-
-			<hr />
-
-			<section id="timeline">
-				<h3>Historique des Analyses (2024 - 2026)</h3>
-
-				<div class="timeline-item">
-					<span class="date-tag">Avril 2026 | IA Agentique</span>
-					<h4>L'apparition des agents IA autonomes</h4>
-					<p>L'IA est désormais capable de chercher seule des failles de sécurité dans un réseau sans aide humaine.</p>
-					<div class="impact-box">
-						<span class="impact-title">Analyse Métier</span>
-						L'informaticien doit automatiser les défenses car l'attaque va désormais plus vite que l'humain.
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<span class="date-tag">Mars 2026 | Malwares Polymorphes</span>
-					<h4>Des virus qui se modifient tout seuls</h4>
-					<p>Les virus changent de forme en temps réel pour ne pas être repérés par les antivirus classiques.</p>
-					<div class="impact-box">
-						<span class="impact-title">Analyse Métier</span>
-						Il devient crucial d'utiliser des outils qui analysent le "comportement" d'un fichier plutôt que son nom.
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<span class="date-tag">Février 2026 | Vishing & Deepfakes</span>
-					<h4>Le trucage vidéo en direct</h4>
-					<p>Utilisation d'images de synthèse pour se faire passer pour un responsable lors de réunions vidéo à distance.</p>
-					<div class="impact-box">
-						<span class="impact-title">Analyse Métier</span>
-						La vérification de l'identité des personnes doit être renforcée, même en vidéo.
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<span class="date-tag">Octobre 2025 | Régulation Européenne</span>
-					<h4>Mise en place de l'IA Act en Europe</h4>
-					<p>La loi encadre désormais l'utilisation de l'intelligence artificielle pour garantir la protection des données.</p>
-					<div class="impact-box">
-						<span class="impact-title">Analyse Métier</span>
-						Mise en conformité obligatoire des logiciels de surveillance du réseau.
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<span class="date-tag">Août 2025 | Sécurité des accès</span>
-					<h4>L'IA capable de deviner les mots de passe</h4>
-					<p>Des modèles d'IA analysent les fuites de données pour craquer les mots de passe, même complexes, en un temps record.</p>
-					<div class="impact-box">
-						<span class="impact-title">Analyse Métier</span>
-						Généralisation de la double authentification (code sur téléphone) pour tous les employés.
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<span class="date-tag">Juillet 2025 | Shadow AI</span>
-					<h4>Le risque des IA non autorisées en entreprise</h4>
-					<p>Les employés utilisent des IA publiques (comme ChatGPT) pour traiter des documents secrets de l'entreprise.</p>
-					<div class="impact-box">
-						<span class="impact-title">Analyse Métier</span>
-						Besoin de créer des règles informatiques strictes (GPO) pour bloquer les outils risqués.
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<span class="date-tag">Avril 2025 | Phishing Ciblé</span>
-					<h4>Des emails de piège personnalisés par l'IA</h4>
-					<p>L'IA fouille les réseaux sociaux pour écrire des emails de piège parfaits, sans aucune faute d'orthographe.</p>
-					<div class="impact-box">
-						<span class="impact-title">Analyse Métier</span>
-						L'importance de former les collègues à repérer ces nouveaux pièges de plus en plus réalistes.
-					</div>
-				</div>
-
-				<div class="timeline-item">
-					<span class="date-tag">Octobre 2024 | Industrialisation</span>
-					<h4>Le début du cybercrime de masse</h4>
-					<p>L'IA permet à des personnes sans connaissances techniques de créer des virus puissants très facilement.</p>
-					<div class="impact-box">
-						<span class="impact-title">Analyse Métier</span>
-						Face à l'augmentation du nombre d'attaques, la surveillance du réseau doit être constante (24h/24).
-					</div>
-				</div>
-
 			</section>
 
 		</div>
@@ -167,13 +217,12 @@
 		<footer id="footer">
 			<div class="inner">
 				<ul class="copyright">
-					<li>&copy; Nohan HA-HONG-LAC | Veille Technologique 2024-2026</li>
+					<li>&copy; Nohan HA-HONG-LAC | Veille 2024-2026</li>
 				</ul>
 			</div>
 		</footer>
 
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
