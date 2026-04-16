@@ -1,10 +1,32 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
-		<title>Mon Parcours SISR | Nohan HA-HONG-LAC</title>
+		<title>Parcours Professionnel SISR | Nohan HA-HONG-LAC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Accentuation du style Dynastie */
+			.pro-box { 
+				border: 1px solid rgba(212, 175, 55, 0.3); 
+				padding: 2em; 
+				margin-bottom: 2em; 
+				background: rgba(10, 10, 10, 0.5);
+				transition: border-color 0.3s ease;
+			}
+			.pro-box:hover { border-color: var(--gold); }
+			.competence-tag { 
+				font-size: 0.75em; 
+				text-transform: uppercase; 
+				letter-spacing: 1px; 
+				color: var(--gold); 
+				border: 1px solid var(--gold); 
+				padding: 2px 8px; 
+				margin-right: 5px;
+				display: inline-block;
+				margin-bottom: 10px;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -12,11 +34,11 @@
 			<div class="inner">
 				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-				<p style="color: var(--gold); font-style: italic;">Spécialiste en Infrastructure & Réseaux</p>
+				<p style="color: var(--gold); font-style: italic;">Expertise en Solutions d'Infrastructure, Systèmes et Réseaux</p>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html" class="button fit">Accueil</a></li>
-						<li><a href="bts-sisr.html" class="button fit active">Mon Parcours & Missions</a></li>
+						<li><a href="bts-sisr.html" class="button fit active">Missions Professionnelles</a></li>
 						<li><a href="veille.html" class="button fit">Veille Technologique</a></li>
 					</ul>
 				</nav>
@@ -27,55 +49,68 @@
 
 			<section id="intro">
 				<header class="major">
-					<h2>Comprendre mon métier : Le BTS SIO SISR</h2>
+					<h2>Le BTS SIO Option SISR</h2>
 				</header>
-				<p>Le <strong>BTS SIO option SISR</strong> forme les "architectes" de l'ombre en informatique. Mon rôle est de m'assurer que les ordinateurs, les serveurs et les réseaux d'une entreprise fonctionnent sans interruption, qu'ils soient rapides et surtout, qu'ils soient protégés contre les menaces.</p>
+				<p>La spécialité <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux) se concentre sur l'analyse, la conception et la maintenance des infrastructures informatiques. Mon rôle consiste à garantir la <strong>disponibilité</strong>, la <strong>sécurité</strong> et l'<strong>intégrité</strong> des services numériques essentiels à l'organisation.</p>
 			</section>
 
-			<section id="competencies">
-				<h3>Ce que je sais faire (en clair)</h3>
+			<section id="strategy">
+				<h3>Domaines d'Expertise Technique</h3>
 				<div class="row">
-					<article class="col-6 col-12-xsmall">
-						<h4>🛠️ Maintenance & Support</h4>
-						<p>Je gère le parc informatique : installation de nouveaux postes, dépannage des utilisateurs et gestion de l'inventaire pour que chaque employé ait les bons outils.</p>
-					</article>
-					<article class="col-6 col-12-xsmall">
-						<h4>🌐 Réseaux & Connectivité</h4>
-						<p>Je configure les "routes" par lesquelles passent les données. Je m'assure que le WiFi et les connexions entre bureaux soient stables et sécurisés.</p>
-					</article>
-					<article class="col-6 col-12-xsmall">
-						<h4>☁️ Virtualisation & Serveurs</h4>
-						<p>J'optimise le matériel en créant plusieurs serveurs virtuels sur une seule machine physique. Cela permet d'économiser de l'énergie et de l'espace.</p>
-					</article>
-					<article class="col-6 col-12-xsmall">
-						<h4>🛡️ Cybersécurité & Sauvegarde</h4>
-						<p>Je mets en place des "coffres-forts" numériques. Si un problème survient, je suis capable de restaurer les données pour que l'activité ne s'arrête jamais.</p>
-					</article>
+					<div class="col-6 col-12-small">
+						<h4>Administration Systèmes</h4>
+						<p>Gestion centralisée des identités via <strong>Active Directory</strong>, déploiement de stratégies de groupe (GPO) et optimisation des services serveurs (Windows & Linux).</p>
+					</div>
+					<div class="col-6 col-12-small">
+						<h4>Infrastructures Réseaux</h4>
+						<p>Configuration d'équipements actifs (Switchs, Routeurs), segmentation réseau (VLAN) et mise en œuvre de solutions de connectivité sécurisées (VPN).</p>
+					</div>
+					<div class="col-6 col-12-small">
+						<h4>Virtualisation & Cloud</h4>
+						<p>Exploitation d'hyperviseurs de type 1 (<strong>Proxmox VE</strong>), gestion de conteneurs et optimisation des ressources matérielles via la virtualisation système.</p>
+					</div>
+					<div class="col-6 col-12-small">
+						<h4>Cybersécurité & Continuité</h4>
+						<p>Mise en place de solutions de sauvegarde (Veeam, ZFS), supervision d'infrastructure (Zabbix) et sécurisation périmétrique.</p>
+					</div>
 				</div>
 			</section>
 
 			<hr />
 
-			<section id="stages">
-				<h3>Mes expériences sur le terrain</h3>
+			<section id="missions">
+				<h3>Parcours et Réalisations</h3>
 
-				<div class="box">
-					<h4>Mairie de Saint-Joseph <span style="float:right; color:var(--gold);">2026</span></h4>
-					<p><strong>Ma mission :</strong> Accompagner les services de la ville dans leur quotidien informatique.</p>
+				<div class="pro-box">
+					<span class="competence-tag">Stage Professionnel</span>
+					<h4>Mairie de Saint-Joseph <span style="float:right; color:var(--gold);">Mai - Juin 2026</span></h4>
+					<p><strong>Problématique :</strong> Optimisation et maintien en condition opérationnelle du parc informatique municipal.</p>
 					<ul>
-						<li>Préparation et installation des ordinateurs pour les agents municipaux.</li>
-						<li>Assistance technique rapide pour résoudre les problèmes de connexion ou de logiciels.</li>
-						<li>Vérification de la sécurité des accès au réseau de la mairie.</li>
+						<li>Administration du parc informatique et déploiement de masters personnalisés.</li>
+						<li>Intervention de niveau 1 et 2 sur les incidents réseaux et systèmes.</li>
+						<li>Sensibilisation des utilisateurs aux bonnes pratiques de sécurité informatique.</li>
 					</ul>
 				</div>
 
-				<div class="box">
-					<h4>Horizon PC <span style="float:right; color:var(--gold);">2025</span></h4>
-					<p><strong>Ma mission :</strong> Assurer la maintenance et la mise en place de solutions de stockage.</p>
+				<div class="pro-box">
+					<span class="competence-tag">Stage Professionnel</span>
+					<h4>Horizon PC <span style="float:right; color:var(--gold);">Juin - Juillet 2025</span></h4>
+					<p><strong>Problématique :</strong> Sécurisation des données clients et mise en place d'infrastructures de stockage.</p>
 					<ul>
-						<li>Mise en place de systèmes de partage de fichiers sécurisés (Cloud privé).</li>
-						<li>Réparation et optimisation de serveurs pour des clients professionnels.</li>
-						<li>Installation de protections (pare-feu) pour bloquer les intrusions.</li>
+						<li>Déploiement de serveurs de stockage en réseau (NAS) avec redondance de données.</li>
+						<li>Configuration de pare-feux (IPFire) pour la protection des flux réseaux.</li>
+						<li>Mise en œuvre de solutions de Cloud privé pour le travail collaboratif.</li>
+					</ul>
+				</div>
+
+				<div class="pro-box" style="border-left: 3px solid var(--gold);">
+					<span class="competence-tag">Projet Académique</span>
+					<h4>Projet NovaTech IT <span style="float:right; color:var(--gold);">2025 - 2026</span></h4>
+					<p><strong>Problématique :</strong> Création ex-nihilo d'une infrastructure d'entreprise virtualisée et supervisée.</p>
+					<ul>
+						<li>Architecture d'un cluster de virtualisation haute disponibilité sous Proxmox.</li>
+						<li>Intégration d'un système de gestion de parc et de tickets (GLPI 10).</li>
+						<li>Déploiement d'une solution de supervision proactive avec alertes en temps réel (Zabbix).</li>
 					</ul>
 				</div>
 			</section>
@@ -85,7 +120,7 @@
 		<footer id="footer">
 			<div class="inner">
 				<ul class="copyright">
-					<li>&copy; Nohan HA-HONG-LAC</li>
+					<li>&copy; Nohan HA-HONG-LAC | Portfolio Professionnel</li>
 				</ul>
 			</div>
 		</footer>
