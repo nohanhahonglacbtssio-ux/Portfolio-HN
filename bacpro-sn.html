@@ -1,94 +1,45 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
-		<title>Bac Pro SN RISC | Nohan HA-HONG-LAC</title>
+		<title>Bac Pro SN | Nohan HA-HONG-LAC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- CONFIGURATION DYNASTIE --- */
-			:root {
-				--gold: #D4AF37;
-				--deep-black: #0a0a0a;
+			.pro-box { 
+				border: 1px solid rgba(212, 175, 55, 0.3); 
+				padding: 2em; 
+				margin-bottom: 2em; 
+				background: rgba(10, 10, 10, 0.5);
+				transition: border-color 0.3s ease;
 			}
-
-			body { 
-				background: radial-gradient(circle at top right, #1a1a1a, #050505) !important;
-				color: #e0e0e0 !important;
-				font-family: 'Georgia', serif !important;
+			.pro-box:hover { border-color: var(--gold); }
+			.competence-tag { 
+				font-size: 0.75em; 
+				text-transform: uppercase; 
+				letter-spacing: 1px; 
+				color: var(--gold); 
+				border: 1px solid var(--gold); 
+				padding: 2px 8px; 
+				margin-right: 5px;
+				display: inline-block;
+				margin-bottom: 10px;
 			}
-
-			#header { 
-				background-color: var(--deep-black) !important; 
-				border-right: 1px solid var(--gold) !important;
-				text-align: center;
-			}
-
-			h1 strong { color: var(--gold) !important; text-transform: uppercase; letter-spacing: 3px; }
-
-			/* --- CERCLE PARFAIT (AVATAR) --- */
-			.image.avatar { 
-				display: inline-block !important;
-				width: 150px !important; 
-				height: 150px !important; 
-				border-radius: 50% !important; 
-				border: 2px solid var(--gold) !important;
-				overflow: hidden !important; 
-				padding: 0 !important;
-				background: none !important;
-			}
-
-			.image.avatar img {
-				width: 100% !important;
-				height: 100% !important;
-				object-fit: cover !important;
-				border-radius: 50% !important;
-			}
-
-			/* --- NAVIGATION ÉPURÉE --- */
-			#nav ul { list-style: none !important; padding: 0 !important; margin-top: 2em !important; }
-			#nav ul li { padding: 0 !important; }
-
-			.button.fit { 
-				background: rgba(212, 175, 55, 0.05) !important; 
-				border: 1px solid rgba(212, 175, 55, 0.3) !important; 
-				color: var(--gold) !important; 
-				margin-bottom: 12px;
-				text-transform: uppercase;
-			}
-
-			.button.fit:hover { background: var(--gold) !important; color: #000 !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
-
-			/* --- TITRES ET SECTIONS --- */
-			h2 { color: var(--gold) !important; border-bottom: 2px solid var(--gold) !important; text-transform: uppercase; padding-bottom: 0.5em; }
-			h3 { color: var(--gold) !important; margin-top: 1.5em; }
-			strong { color: var(--gold) !important; }
-			
-			.project-card { 
-				border: 1px solid rgba(212, 175, 55, 0.2); 
-				padding: 1.5em; 
-				border-radius: 10px; 
-				background: rgba(255, 255, 255, 0.03); 
-				height: 100%;
-			}
-			.lang-badge { color: var(--gold); border: 1px solid var(--gold); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; margin-right: 5px; }
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<header id="header">
 			<div class="inner">
-				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Portrait" /></a>
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-				<p style="color: var(--gold); font-style: italic;">Fondations : Bac Pro SN RISC</p>
-				
+				<p style="color: var(--gold); font-style: italic;">Diplômé Bac Pro Systèmes Numériques</p>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html" class="button fit">Accueil</a></li>
-						<li><a href="bts-sisr.html" class="button fit">BTS SIO</a></li>
-						<li><a href="cv.html" class="button fit active">Mon CV</a></li>
-						<li><a href="veille.html" class="button fit">Veille techonologique</a></li>
-						<li><a href="contexte-bts.html" class="button fit">Projet NovaTech IT</a></li>
+						<li><a href="bts-sisr.html" class="button fit">Missions BTS</a></li>
+						<li><a href="bac-pro.html" class="button fit active">Parcours Bac Pro</a></li>
+						<li><a href="veille.html" class="button fit">Veille Technologique</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -96,47 +47,49 @@
 
 		<div id="main">
 
-			<section id="one">
-				<h2>1. Formation au Lycée Paul Langevin</h2>
-				<p>C'est au <strong>Lycée Paul Langevin</strong> que j'ai forgé mes premières compétences techniques en obtenant mon <strong>Bac Pro SN</strong> (Systèmes Numériques). </p>
-				<p>J'y ai suivi l'option <strong>RISC</strong> (Réseaux Informatiques et Systèmes Communicants), une spécialisation qui m'a permis de maîtriser l'installation et la maintenance des infrastructures réseaux, ainsi que les solutions de communication professionnelles.</p>
+			<section id="intro">
+				<header class="major">
+					<h2>Baccalauréat Professionnel SN</h2>
+				</header>
+				<p>Le <strong>Bac Pro Systèmes Numériques (SN)</strong> a constitué la base de mon expertise. Cette formation m'a permis d'acquérir des compétences fondamentales en installation, mise en service et maintenance de systèmes interconnectés, avec une rigueur orientée vers le service client.</p>
 			</section>
 
-			<section id="two">
-				<h2>2. Expériences en Entreprise (Stages)</h2>
+			<section id="fields">
+				<h3>Compétences Fondamentales Acquises</h3>
 				<div class="row">
-					<div class="col-6 col-12-xsmall">
-						<div class="project-card">
-							<h3>Lycée Pierre Poivre (Local)</h3>
-							<p>Durant ce stage, j'ai assuré la <strong>réparation</strong> de matériel et l'<strong>assistance utilisateur</strong> de proximité. J'ai également eu une première approche de l'administration serveur via la gestion des <strong>GPO</strong> (Group Policy Objects).</p>
-						</div>
+					<div class="col-6 col-12-small">
+						<h4>Infrastructure Physique</h4>
+						<p>Maîtrise du câblage réseau, pose de baies de brassage et déploiement de l'infrastructure passive nécessaire aux réseaux locaux.</p>
 					</div>
-					<div class="col-6 col-12-xsmall">
-						<div class="project-card">
-							<h3>Maxi-Median-Shop (Erasmus+)</h3>
-							<p>Une immersion internationale à <strong>Gelsenkirchen, Allemagne</strong>. J'y ai effectué de la maintenance matérielle et logicielle en boutique.</p>
-							<p><span class="lang-badge">Anglais</span> Langue de travail principale.<br>
-							<span class="lang-badge">Allemand</span> Utilisation de formules de politesse pour l'accueil client.</p>
-						</div>
+					<div class="col-6 col-12-small">
+						<h4>Maintenance Hardware</h4>
+						<p>Diagnostic de pannes matérielles, remplacement de composants défectueux et optimisation des performances des postes de travail.</p>
+					</div>
+					<div class="col-6 col-12-small">
+						<h4>Installation logicielle</h4>
+						<p>Préparation de postes de travail, installation de systèmes d'exploitation (Windows/Linux) et configuration de logiciels métiers.</p>
+					</div>
+					<div class="col-6 col-12-small">
+						<h4>Relation Client</h4>
+						<p>Accompagnement de l'utilisateur final, rédaction de comptes-rendus d'intervention et conseil technique de premier niveau.</p>
 					</div>
 				</div>
 			</section>
 
-			<section id="three">
-				<h2>3. Projets Techniques & Réalisations</h2>
-				<div class="row">
-					<div class="col-6 col-12-xsmall">
-						<div class="project-card">
-							<h3>Station Météo & LoRa</h3>
-							<p>Projet majeur consistant à mettre en place une station météo connectée. Ma mission principale portait sur la <strong>transmission des données</strong> environnementales à l'aide d'une <strong>antenne LoRa</strong> (longue portée).</p>
-						</div>
-					</div>
-					<div class="col-6 col-12-xsmall">
-						<div class="project-card">
-							<h3>Téléphonie sur IP (XiVO)</h3>
-							<p>Dans le cadre scolaire, j'ai travaillé sur le déploiement et la configuration de <strong>XiVO</strong>, une solution de téléphonie IP open-source, pour simuler un standard téléphonique d'entreprise.</p>
-						</div>
-					</div>
+			<hr />
+
+			<section id="experiences">
+				<h3>Expériences en Milieu Professionnel (PFMP)</h3>
+
+				<div class="pro-box">
+					<span class="competence-tag">Maintenance & Réseaux</span>
+					<h4>Interventions en Entreprise <span style="float:right; color:var(--gold);">2022 - 2024</span></h4>
+					<p><strong>Objectif :</strong> Assurer la continuité de service des équipements informatiques et numériques.</p>
+					<ul>
+						<li>Audit et recensement des équipements du parc informatique.</li>
+						<li>Mise en service de périphériques réseaux (Imprimantes, Points d'accès WiFi).</li>
+						<li>Dépannage de proximité et résolution de conflits logiciels sur site.</li>
+					</ul>
 				</div>
 			</section>
 
@@ -144,7 +97,9 @@
 
 		<footer id="footer">
 			<div class="inner">
-				<ul class="copyright"><li>&copy; Nohan HA-HONG-LAC | Rigueur & Technologie</li></ul>
+				<ul class="copyright">
+					<li>&copy; Nohan HA-HONG-LAC</li>
+				</ul>
 			</div>
 		</footer>
 
