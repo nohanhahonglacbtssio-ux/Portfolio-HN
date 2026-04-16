@@ -1,23 +1,80 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
-		<title>Nohan HA-HONG-LAC | Portfolio SISR</title>
+		<title>Portfolio | Nohan HA-HONG-LAC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Style Dynastie - Noir Profond & Or */
+			:root { --gold: #D4AF37; --deep-black: #0a0a0a; }
+			
+			.doc-section {
+				display: flex;
+				gap: 20px;
+				margin-bottom: 3em;
+				justify-content: center;
+			}
+			
+			.btn-prestige {
+				background: transparent !important;
+				border: 2px solid var(--gold) !important;
+				color: var(--gold) !important;
+				padding: 15px 30px !important;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-weight: bold;
+				transition: all 0.3s ease;
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				text-decoration: none;
+			}
+			
+			.btn-prestige:hover {
+				background: var(--gold) !important;
+				color: #000 !important;
+				box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+				transform: translateY(-3px);
+			}
+
+			.intro-box {
+				border-left: 3px solid var(--gold);
+				padding: 2em;
+				background: rgba(255, 255, 255, 0.02);
+				margin-bottom: 2.5em;
+			}
+
+			.expertise-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 20px;
+				margin-top: 2em;
+			}
+
+			.expertise-card {
+				border: 1px solid rgba(212, 175, 55, 0.2);
+				padding: 1.5em;
+				text-align: center;
+				transition: border-color 0.3s;
+			}
+
+			.expertise-card:hover { border-color: var(--gold); }
+			.expertise-card i { color: var(--gold); font-size: 2em; margin-bottom: 0.5em; }
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<header id="header">
 			<div class="inner">
-				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Photo de Nohan" /></a>
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="Photo de Nohan" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-				<p style="color: var(--gold); font-style: italic;">Étudiant en BTS SIO option SISR</p>
-				
+				<p style="color: var(--gold); font-style: italic;">Expert en Solutions d'Infrastructure, Systèmes et Réseaux</p>
 				<nav id="nav">
 					<ul>
-						<li><a href="bts-sisr.html" class="button fit">BTS SIO</a></li>						
-						<li><a href="bacpro-sn.html" class="button fit">Bac Pro</a></li>
+						<li><a href="index.html" class="button fit active">Accueil</a></li>
+						<li><a href="bts-sisr.html" class="button fit">Missions BTS SIO</a></li>
+						<li><a href="bac-pro.html" class="button fit">Parcours Bac Pro</a></li>
 						<li><a href="veille.html" class="button fit">Veille Technologique</a></li>
 					</ul>
 				</nav>
@@ -26,52 +83,66 @@
 
 		<div id="main">
 
-			<section id="one">
-				<header class="major">
-					<h2>Futur Administrateur Systèmes et Réseaux</h2>
-				</header>
-				<p>Actuellement étudiant au Lycée Pierre Poivre en <strong>BTS SIO option SISR</strong>, je me passionne pour la conception et la sécurisation des infrastructures informatiques. Mon parcours combine des expériences en administration système, sécurité réseau et support utilisateur.</p>
-				
-				<ul class="actions">
-					<li><a href="cv.html" class="button primary">Voir mon parcours</a></li>
-				</ul>
+			<section id="documents">
+				<div class="doc-section">
+					<a href="documents/CV_Nohan.pdf" target="_blank" class="btn-prestige">
+						<i class="fas fa-file-pdf"></i> Mon CV
+					</a>
+					<a href="documents/Tableau_Synthese_Nohan.pdf" target="_blank" class="btn-prestige">
+						<i class="fas fa-table"></i> Tableau de Synthèse
+					</a>
+				</div>
 			</section>
 
-			<section id="synthesis-section">
-				<h2>Tableau de Synthèse (Épreuve E5)</h2>
-				<p>Consultez mon tableau de synthèse officiel (Annexe VI-1) récapitulant l'ensemble des compétences validées durant ma formation et mes stages à la <strong>Mairie de Saint-Joseph</strong> et chez <strong>Horizon PC</strong>.</p>
-				
-				<ul class="actions">
-					<li>
-						<a href="images/Tableau_de_Synthese_Nohan.pdf" class="button icon solid fa-file-pdf" target="_blank" style="border-color: var(--gold); color: var(--gold);">
-							Consulter le Tableau de Synthèse (PDF)
-						</a>
-					</li>
-				</ul>
+			<section id="about">
+				<header class="major">
+					<h2>Profil Professionnel</h2>
+				</header>
+				<div class="intro-box">
+					<p>Passionné par les infrastructures numériques et la cybersécurité, je prépare actuellement un <strong>BTS SIO option SISR</strong>. Mon parcours, débuté par un Bac Pro Systèmes Numériques, m'a permis de forger une solide base technique alliée à une rigueur opérationnelle indispensable pour garantir la disponibilité et la sécurité des systèmes d'information.</p>
+				</div>
 			</section>
 
 			<section id="skills">
-				<h2>Compétences Techniques</h2>
-				<div class="row">
-					<div class="col-6 col-12-xsmall">
-						<div class="skill-row">
-							<span class="skill-name">Virtualisation (Proxmox VE)</span>
-							<div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-						</div>
-						<div class="skill-row">
-							<span class="skill-name">Supervision (Zabbix)</span>
-							<div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-						</div>
+				<h3>Domaines d'Intervention</h3>
+				<div class="expertise-grid">
+					<div class="expertise-card">
+						<i class="fas fa-server"></i>
+						<h4>Systèmes</h4>
+						<p>Administration Windows/Linux, Active Directory et Virtualisation Proxmox.</p>
 					</div>
-					<div class="col-6 col-12-xsmall">
-						<div class="skill-row">
-							<span class="skill-name">Active Directory (ADDS)</span>
-							<div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-						</div>
-						<div class="skill-row">
-							<span class="skill-name">Gestion ITSM (GLPI)</span>
-							<div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-						</div>
+					<div class="expertise-card">
+						<i class="fas fa-network-wired"></i>
+						<h4>Réseaux</h4>
+						<p>Configuration de switchs, routeurs, segmentation VLAN et services VPN.</p>
+					</div>
+					<div class="expertise-card">
+						<i class="fas fa-shield-alt"></i>
+						<h4>Cybersécurité</h4>
+						<p>Supervision (Zabbix/Wazuh), gestion des sauvegardes et veille IA.</p>
+					</div>
+				</div>
+			</section>
+
+			<hr />
+
+			<section id="explore">
+				<h3>Explorer mon parcours</h3>
+				<div class="row">
+					<div class="col-4 col-12-small">
+						<ul class="actions stacked">
+							<li><a href="bts-sisr.html" class="button primary fit">Missions Professionnelles</a></li>
+						</ul>
+					</div>
+					<div class="col-4 col-12-small">
+						<ul class="actions stacked">
+							<li><a href="bac-pro.html" class="button primary fit">Parcours Scolaire</a></li>
+						</ul>
+					</div>
+					<div class="col-4 col-12-small">
+						<ul class="actions stacked">
+							<li><a href="veille.html" class="button primary fit">Veille Technologique</a></li>
+						</ul>
 					</div>
 				</div>
 			</section>
@@ -81,7 +152,7 @@
 		<footer id="footer">
 			<div class="inner">
 				<ul class="copyright">
-					<li>&copy; Nohan HA-HONG-LAC</li>
+					<li>&copy; Nohan HA-HONG-LAC | Portfolio 2026</li>
 				</ul>
 			</div>
 		</footer>
