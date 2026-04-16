@@ -6,33 +6,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Styles spécifiques pour la lisibilité */
+			/* Style Dynastie - Cohérence visuelle totale */
 			.pro-box { 
 				border: 1px solid rgba(212, 175, 55, 0.3); 
 				padding: 2em; 
 				margin-bottom: 2em; 
 				background: rgba(10, 10, 10, 0.5);
 				border-radius: 4px;
+				transition: all 0.3s ease;
 			}
-			.method-card {
-				background: rgba(255, 255, 255, 0.03);
-				padding: 1.5em;
-				border-bottom: 2px solid var(--gold);
-				height: 100%;
-			}
-			.tool-tag { 
-				color: var(--gold); 
-				font-weight: bold;
-				text-transform: uppercase;
-				font-size: 0.7em;
-				letter-spacing: 1px;
-				display: block;
-				margin-bottom: 0.5em;
-			}
-			.status-icon {
-				color: var(--gold);
-				margin-right: 10px;
-			}
+			.pro-box:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); }
+			
+			.timeline-item { border-left: 2px solid var(--gold); padding-left: 20px; margin-left: 10px; margin-bottom: 30px; position: relative; }
+			.timeline-item::before { content: ''; position: absolute; left: -9px; top: 5px; width: 16px; height: 16px; background: var(--gold); border-radius: 50%; }
+			
+			.date-tag { color: var(--gold); font-weight: bold; font-size: 0.85em; text-transform: uppercase; margin-bottom: 5px; display: block; }
+			.impact-box { background: rgba(212, 175, 55, 0.1); border-left: 3px solid var(--gold); padding: 10px 15px; margin-top: 10px; font-size: 0.9em; }
+			.impact-title { color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.75em; display: block; margin-bottom: 5px; }
+			
+			.method-icon { color: var(--gold); font-size: 1.5em; margin-bottom: 10px; display: block; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -41,7 +33,7 @@
 			<div class="inner">
 				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				<h1><strong>Nohan HA-HONG-LAC</strong></h1>
-				<p style="color: var(--gold); font-style: italic;">Anticipation & Innovation Technologique</p>
+				<p style="color: var(--gold); font-style: italic;">Expertise Cyber & Intelligence Artificielle</p>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html" class="button fit">Accueil</a></li>
@@ -57,58 +49,117 @@
 
 			<section id="intro">
 				<header class="major">
-					<h2>Ma Veille Technologique</h2>
+					<h2>Veille Technologique & Stratégique</h2>
 				</header>
-				<p>Dans un monde numérique qui évolue chaque jour, la <strong>veille technologique</strong> est ma boussole. Elle me permet de rester informé des dernières innovations et des nouvelles menaces afin de proposer des solutions toujours modernes et sécurisées.</p>
+				<p>Ma veille porte sur <strong>l’influence de l’Intelligence Artificielle (IA) dans la Cybersécurité</strong>. Dans mon futur métier d'administrateur, comprendre comment l'IA est utilisée pour attaquer ou pour défendre les réseaux est devenu une compétence indispensable.</p>
 			</section>
 
-			<section id="subject">
-				<div class="pro-box">
-					<h3 style="color: var(--gold);">Thématique : L'Intelligence Artificielle en Cybersécurité</h3>
-					<p>Je m'intéresse particulièrement à la dualité de l'IA : comment elle devient un bouclier pour protéger les réseaux, mais aussi comment elle est détournée par des personnes malveillantes pour créer des attaques plus sophistiquées.</p>
-				</div>
-			</section>
-
-			<section id="method">
-				<h3>Comment je reste à jour ?</h3>
+			<section id="methodology">
+				<h3>Ma Méthodologie de Recherche</h3>
 				<div class="row">
 					<div class="col-4 col-12-small">
-						<div class="method-card">
-							<h4 class="icon solid fa-rss"><span class="label">RSS</span> Flux Automatisés</h4>
-							<p>J'utilise <strong>Feedly</strong> pour regrouper les articles de sites de référence comme <em>Le Monde Informatique</em> ou <em>ZDNet</em> en un seul endroit.</p>
-						</div>
+						<i class="method-icon fas fa-rss"></i>
+						<h4>Flux Automatisés</h4>
+						<p>Utilisation de <strong>Feedly</strong> pour centraliser les actualités de sites comme <em>Le Monde Informatique</em> ou <em>ZDNet</em>.</p>
 					</div>
 					<div class="col-4 col-12-small">
-						<div class="method-card">
-							<h4 class="icon solid fa-bell"><span class="label">Alertes</span> Alertes Ciblées</h4>
-							<p>Grâce aux <strong>Google Alerts</strong>, je reçois une notification immédiate dès qu'un sujet majeur sur l'IA ou la sécurité réseau est publié.</p>
-						</div>
+						<i class="method-icon fas fa-bell"></i>
+						<h4>Alertes Ciblées</h4>
+						<p>Configuration de <strong>Google Alerts</strong> sur les mots-clés "IA", "Cybersécurité" et "Menaces Réseaux".</p>
 					</div>
 					<div class="col-4 col-12-small">
-						<div class="method-card">
-							<h4 class="icon brands fa-linkedin"><span class="label">LinkedIn</span> Réseaux d'Experts</h4>
-							<p>Je suis des spécialistes en cybersécurité pour comprendre les réalités du terrain et les retours d'expérience en entreprise.</p>
-						</div>
+						<i class="method-icon fab fa-linkedin"></i>
+						<h4>Réseaux Experts</h4>
+						<p>Suivi des publications de l'<strong>ANSSI</strong> et d'experts en sécurité pour obtenir des analyses de terrain concrètes.</p>
 					</div>
 				</div>
 			</section>
 
 			<hr />
 
-			<section id="news">
-				<h3>Analyses de l'actualité</h3>
-				
-				<div class="pro-box">
-					<span class="tool-tag">Innovation Protection</span>
-					<h4>🛡️ La défense prédictive</h4>
-					<p>Aujourd'hui, les outils de sécurité n'attendent plus de connaître un virus pour le bloquer. Ils utilisent l'IA pour analyser le "comportement" d'un fichier. Si une action semble anormale, le système intervient avant même que le dégât ne soit fait.</p>
+			<section id="timeline">
+				<h3>Historique des Analyses (2024 - 2026)</h3>
+
+				<div class="timeline-item">
+					<span class="date-tag">Avril 2026 | IA Agentique</span>
+					<h4>L'apparition des agents IA autonomes</h4>
+					<p>L'IA est désormais capable de chercher seule des failles de sécurité dans un réseau sans aide humaine.</p>
+					<div class="impact-box">
+						<span class="impact-title">Analyse Métier</span>
+						L'informaticien doit automatiser les défenses car l'attaque va désormais plus vite que l'humain.
+					</div>
 				</div>
 
-				<div class="pro-box">
-					<span class="tool-tag">Évolution des Menaces</span>
-					<h4>⚠️ Le Phishing par Intelligence Artificielle</h4>
-					<p>L'actualité montre une hausse des emails de piège (phishing) extrêmement crédibles. Grâce à l'IA, les pirates génèrent des textes sans fautes et très personnalisés, ce qui oblige à renforcer la vigilance des utilisateurs et les filtres de sécurité.</p>
+				<div class="timeline-item">
+					<span class="date-tag">Mars 2026 | Malwares Polymorphes</span>
+					<h4>Des virus qui se modifient tout seuls</h4>
+					<p>Les virus changent de forme en temps réel pour ne pas être repérés par les antivirus classiques.</p>
+					<div class="impact-box">
+						<span class="impact-title">Analyse Métier</span>
+						Il devient crucial d'utiliser des outils qui analysent le "comportement" d'un fichier plutôt que son nom.
+					</div>
 				</div>
+
+				<div class="timeline-item">
+					<span class="date-tag">Février 2026 | Vishing & Deepfakes</span>
+					<h4>Le trucage vidéo en direct</h4>
+					<p>Utilisation d'images de synthèse pour se faire passer pour un responsable lors de réunions vidéo à distance.</p>
+					<div class="impact-box">
+						<span class="impact-title">Analyse Métier</span>
+						La vérification de l'identité des personnes doit être renforcée, même en vidéo.
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<span class="date-tag">Octobre 2025 | Régulation Européenne</span>
+					<h4>Mise en place de l'IA Act en Europe</h4>
+					<p>La loi encadre désormais l'utilisation de l'intelligence artificielle pour garantir la protection des données.</p>
+					<div class="impact-box">
+						<span class="impact-title">Analyse Métier</span>
+						Mise en conformité obligatoire des logiciels de surveillance du réseau.
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<span class="date-tag">Août 2025 | Sécurité des accès</span>
+					<h4>L'IA capable de deviner les mots de passe</h4>
+					<p>Des modèles d'IA analysent les fuites de données pour craquer les mots de passe, même complexes, en un temps record.</p>
+					<div class="impact-box">
+						<span class="impact-title">Analyse Métier</span>
+						Généralisation de la double authentification (code sur téléphone) pour tous les employés.
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<span class="date-tag">Juillet 2025 | Shadow AI</span>
+					<h4>Le risque des IA non autorisées en entreprise</h4>
+					<p>Les employés utilisent des IA publiques (comme ChatGPT) pour traiter des documents secrets de l'entreprise.</p>
+					<div class="impact-box">
+						<span class="impact-title">Analyse Métier</span>
+						Besoin de créer des règles informatiques strictes (GPO) pour bloquer les outils risqués.
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<span class="date-tag">Avril 2025 | Phishing Ciblé</span>
+					<h4>Des emails de piège personnalisés par l'IA</h4>
+					<p>L'IA fouille les réseaux sociaux pour écrire des emails de piège parfaits, sans aucune faute d'orthographe.</p>
+					<div class="impact-box">
+						<span class="impact-title">Analyse Métier</span>
+						L'importance de former les collègues à repérer ces nouveaux pièges de plus en plus réalistes.
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<span class="date-tag">Octobre 2024 | Industrialisation</span>
+					<h4>Le début du cybercrime de masse</h4>
+					<p>L'IA permet à des personnes sans connaissances techniques de créer des virus puissants très facilement.</p>
+					<div class="impact-box">
+						<span class="impact-title">Analyse Métier</span>
+						Face à l'augmentation du nombre d'attaques, la surveillance du réseau doit être constante (24h/24).
+					</div>
+				</div>
+
 			</section>
 
 		</div>
@@ -116,7 +167,7 @@
 		<footer id="footer">
 			<div class="inner">
 				<ul class="copyright">
-					<li>&copy; Nohan HA-HONG-LAC | Veille Technologique</li>
+					<li>&copy; Nohan HA-HONG-LAC | Veille Technologique 2024-2026</li>
 				</ul>
 			</div>
 		</footer>
