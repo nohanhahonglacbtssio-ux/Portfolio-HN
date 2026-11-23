@@ -36,4 +36,102 @@
         .btn-outline:hover { background: rgba(212, 175, 55, 0.16); border-color: var(--gold); transform: translateY(-2px); }
         .section-heading { font-size: 1.15rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px; }
         .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1.4rem; margin-bottom: 1.8rem; }
-        .summary-card { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 18px; padding: 1.75rem 1.5rem; display: flex; flex-direction: column; align-items
+        .summary-card { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 18px; padding: 1.75rem 1.5rem; display: flex; flex-direction: column; align-items: flex-start; transition: 0.35s; cursor: pointer; }
+        .summary-card:hover, .summary-card.active { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--gold-glow); }
+        .icon-box { width: 50px; height: 50px; border-radius: 14px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--gold); margin-bottom: 1.2rem; transition: 0.3s; }
+        .summary-card:hover .icon-box, .summary-card.active .icon-box { background: var(--gold); color: #000; }
+        .card-title { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+        .card-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1.5rem; flex-grow: 1; }
+        .card-link { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .preview-panel { background: rgba(18, 18, 22, 0.9); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 16px; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); }
+        .preview-info { flex: 1; min-width: 260px; }
+        .preview-info h4 { color: var(--gold); font-size: 1.05rem; margin-bottom: 0.35rem; }
+        .preview-info p { color: #d4d4d8; font-size: 0.9rem; line-height: 1.5; }
+        .footer { margin-top: 2.5rem; text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+        @media (max-width: 768px) { .hero-card { padding: 2rem 1.5rem; } .top-bar { flex-direction: column; align-items: flex-start; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="top-bar">
+            <a href="index.html" class="brand-title">Nohan <span>HA-HONG-LAC</span></a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="parcours.html" class="nav-link">Parcours Scolaire</a>
+                <a href="competences.html" class="nav-link">Compétences</a>
+                <a href="experiences.html" class="nav-link">Expériences Pro</a>
+                <a href="projets.html" class="nav-link">Réalisations & Projets</a>
+            </nav>
+        </header>
+
+        <section class="hero-card">
+            <div class="hero-content">
+                <span class="hero-badge">Administrateur Systèmes & Réseaux</span>
+                <h1 class="hero-title">Nohan HA-HONG-LAC</h1>
+                <p class="hero-desc">
+                    Âgé de 21 ans et diplômé d'un <strong>BTS SIO option SISR</strong>, je me spécialise dans le déploiement d'infrastructures, la virtualisation et la cybersécurité opérationnelle. Originaire de La Réunion et installé à Marseille, je conçois et sécurise des environnements systèmes et réseaux fiables.
+                </p>
+                <div class="hero-actions">
+                    <a href="images/CV_Nohan.pdf" target="_blank" class="btn-gold"><i class="fas fa-file-pdf"></i> Consulter mon CV</a>
+                    <a href="images/Tableau_de_Synthese_Nohan.pdf" target="_blank" class="btn-outline"><i class="fas fa-table"></i> Tableau de Synthèse E5</a>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-heading"><i class="fas fa-compass"></i> Explorer mon parcours</h2>
+        <div class="cards-grid">
+            <div class="summary-card active" onmouseover="updatePreview('parcours', this)" onclick="window.location.href='parcours.html'">
+                <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
+                <h3 class="card-title">Parcours Scolaire</h3>
+                <p class="card-text">Du Bac Pro Systèmes Numériques jusqu'à l'obtention du BTS SIO SISR au Lycée Pierre Poivre.</p>
+                <a href="parcours.html" class="card-link">Voir la formation <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="summary-card" onmouseover="updatePreview('competences', this)" onclick="window.location.href='competences.html'">
+                <div class="icon-box"><i class="fas fa-microchip"></i></div>
+                <h3 class="card-title">Compétences</h3>
+                <p class="card-text">Administration Windows/Linux, Active Directory, virtualisation Proxmox, réseaux Cisco et sécurité.</p>
+                <a href="competences.html" class="card-link">Voir les savoir-faire <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="summary-card" onmouseover="updatePreview('experiences', this)" onclick="window.location.href='experiences.html'">
+                <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                <h3 class="card-title">Expériences Pro</h3>
+                <p class="card-text">Stages techniques en BTS et Bac Pro (La Réunion & Allemagne), complétés par un emploi étudiant.</p>
+                <a href="experiences.html" class="card-link">Voir le terrain <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="summary-card" onmouseover="updatePreview('projets', this)" onclick="window.location.href='projets.html'">
+                <div class="icon-box"><i class="fas fa-rocket"></i></div>
+                <h3 class="card-title">Réalisations & Projets</h3>
+                <p class="card-text">Déploiement d'un SIEM Wazuh, bastion Guacamole, supervision Zabbix, GLPI et challenges CTF.</p>
+                <a href="projets.html" class="card-link">Voir les projets <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="preview-panel" id="previewPanel">
+            <div class="preview-info">
+                <h4 id="previewTitle">Aperçu : Parcours Scolaire</h4>
+                <p id="previewDesc">Découvrez mon cursus complet : obtention du Bac Pro Systèmes Numériques (2024) suivie du BTS Services Informatiques aux Organisations option SISR (2026).</p>
+            </div>
+            <a href="parcours.html" id="previewBtn" class="btn-outline"><span>Ouvrir la page</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <footer class="footer">© 2026 Nohan HA-HONG-LAC — Portfolio Professionnel SISR</footer>
+    </div>
+
+    <script>
+        const previews = {
+            parcours: { title: "Aperçu : Parcours Scolaire", desc: "Découvrez mon cursus complet : obtention du Bac Pro Systèmes Numériques (2024) suivie du BTS Services Informatiques aux Organisations option SISR (2026) au Lycée Pierre Poivre.", link: "parcours.html" },
+            competences: { title: "Aperçu : Compétences Techniques", desc: "Administration de serveurs (Windows Server, Debian), segmentation réseau (VLAN, Cisco, HAProxy), virtualisation (Proxmox, Docker) et cybersécurité (Wazuh, Zabbix, Stormshield).", link: "competences.html" },
+            experiences: { title: "Aperçu : Expériences Professionnelles", desc: "Missions en entreprise (déploiement Wazuh & Guacamole en 2026, stage à la Mairie de Saint-Philippe en 2025, mobilité Erasmus+ en Allemagne) et expérience salariée chez E.Leclerc.", link: "experiences.html" },
+            projets: { title: "Aperçu : Réalisations & Projets", desc: "Détail de mes infrastructures déployées en laboratoire et en stage : SIEM Wazuh, Bastion Guacamole, Active Directory, GLPI, Zabbix, haute disponibilité web et challenges CTF.", link: "projets.html" }
+        };
+        function updatePreview(key, element) {
+            document.querySelectorAll('.summary-card').forEach(c => c.classList.remove('active'));
+            element.classList.add('active');
+            const data = previews[key];
+            document.getElementById('previewTitle').textContent = data.title;
+            document.getElementById('previewDesc').textContent = data.desc;
+            document.getElementById('previewBtn').href = data.link;
+        }
+    </script>
+</body>
+</html>
